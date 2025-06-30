@@ -1,0 +1,2 @@
+<script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
+<dotlottie-player src="https://lottie.host/46f59e45-8d81-4506-88a7-9e0215e8a746/Kv8OkYrzHS.lottie" background="transparent" speed="1" style="width: 300px; height: 300px" loop autoplay></dotlottie-player>

@@ -10,7 +10,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     
     <!-- GSAP Library -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
 
     <script type="importmap">
         {
@@ -20,66 +22,166 @@
             }
         }
     </script>
-    <script>
-        
-        window.addEventListener('scroll', function() {
-          var header = document.querySelector('header');
-          header.classList.toggle('navbar-fixed', window.scrollY > 0);
-        });
-      </script>
-      
     
     <script type="module" src="avatar.js"></script>
-    <script type="module" src="animations.js"></script>
+    <script src="fullpage-scroll.js"></script>
     <style>
-        html {
-            scroll-behavior: smooth;
+        /* FullPage Scroll setup */
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .fullpage-container {
+            position: relative;
+            height: 100vh;
+            width: 100%;
+        }
+        
+        /* Navigation dots styling */
+        .fp-navigation {
+            position: fixed;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 1000;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        
+        .fp-nav-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.5);
+            border: 2px solid rgba(255, 255, 255, 0.8);
+            display: block;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+        
+        .fp-nav-dot.active {
+            background-color: rgba(255, 255, 255, 0.9);
+            transform: scale(1.2);
+        }
+        
+        .fp-nav-dot:hover {
+            background-color: rgba(255, 255, 255, 0.8);
+        }
+        
+        /* Section styling */
+        section {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .section-content {
+            position: relative;
+            z-index: 2;
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Parallax backgrounds */
+        .parallax-bg,
+        [class*="parallax-bg-"] {
+            position: absolute;
+            top: -10%;
+            left: 0;
+            width: 100%;
+            height: 120%;
+            z-index: -1;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
         }
     </style>
 </head>
 
 <body>
-    <header>
-        <nav class="text-center sticky-nav">
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About Me</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li><a href="resume.pdf" download class="cursor-pointer flex justify-between bg-gray-800 px-3 py-2 rounded-full text-white tracking-wider shadow-xl hover:bg-gray-900 hover:scale-105 duration-500 hover:ring-1 font-mono w-[150px]"> Resume</a> </li>
+    <!-- Enhanced Parallax Background Elements -->
+    <div class="parallax-bg">
+        <div class="parallax-layer" data-parallax="-0.5"></div>
+        <div class="parallax-layer" data-parallax="-0.3"></div>
+        <div class="parallax-layer" data-parallax="-0.1"></div>
+    </div>
 
-            </ul>
+    <header>
+        <nav class="navbar-enhanced">
+            <div class="nav-container">
+                <div class="nav-brand">
+                </div>
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="#home" class="nav-link">
+                            <span class="nav-text">Home</span>
+                            <div class="nav-underline"></div>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#about" class="nav-link">
+                            <span class="nav-text">About</span>
+                            <div class="nav-underline"></div>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#projects" class="nav-link">
+                            <span class="nav-text">Projects</span>
+                            <div class="nav-underline"></div>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#contact" class="nav-link">
+                            <span class="nav-text">Contact</span>
+                            <div class="nav-underline"></div>
+                        </a>
+                    </li>
+                    <li class="nav-item resume-item">
+                        <a href="resume.pdf" download class="resume-btn">
+                            <span class="resume-text">Resume</span>
+                            <div class="resume-glow"></div>
+                        </a>
+                    </li>
+                </ul>
+                <div class="nav-toggle">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
         </nav>
     </header>
         
-    <div class="content">
-        <section id="home">
-            <div id='avatar-container'>
-                <div id='avatar-loading'>LOADING... 0%</div>
+    <!-- Sections will be automatically wrapped by fullpage-scroll.js -->
+    <section id="home" class="parallax-section">
+        <div class="parallax-bg-home" data-parallax="-0.4"></div>
+        <div class="section-content">
+            <div id='avatar-container' data-parallax="0.2">
+                <div id='avatar-loading'>
+                    <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
+                    <dotlottie-player src="https://lottie.host/3f84d67b-c678-4630-a8bc-d5ca74d675e5/HBt6t1hsCH.lottie" background="transparent" speed="1" style="width: 300px; height: 300px" loop autoplay></dotlottie-player>
+                </div>
             </div>
-            <h1 class="hero-title">Hi 👋</h1>
-            <h1>I'm <span class='gradient-text'>Mohamed Aziz Bahloul</span></h1>
-        </section>
-    
-        <section id="contact">
-          <div>
-            <div class="card-container-1">
-              <a class="github-link-1" href="https://github.com/AzizBahloul" target="_blank">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="#fff" height="1em" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg>
-              </a>
-              <a class="linkedin-link-1" href="www.linkedin.com/in/mohamed-aziz-bahloul-371ba01a4" target="_blank">
-                <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512" fill="#fff"><path d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"></path></svg>
-              </a>
-              <a class="facebook-link-1" href="https://www.facebook.com/siazizbahloul/" target="_blank">
-                <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512" fill="#fff"><path d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"></path></svg>
-              </a>
-            </div>
-          </div>
-        </section>
-     
-        
-        <section id="about" class="container">
-            <div class="terminal-loader">
+            <h1 class="hero-title parallax-text" data-parallax="0.1">Hi 👋</h1>
+            <h1 class="parallax-text" data-parallax="0.3">I'm <span class='gradient-text'>Mohamed Aziz Bahloul</span></h1>
+        </div>
+    </section>
+
+    <section id="about" class="container parallax-section">
+        <div class="parallax-bg-about" data-parallax="-0.3"></div>
+        <div class="section-content">
+            <div class="terminal-loader parallax-element" data-parallax="0.1">
                 <div class="terminal-header">
                     <div class="terminal-title">Status</div>
                     <div class="terminal-controls">
@@ -92,39 +194,60 @@
                     Motivated software engineering student with a strong academic background and a passion for learning
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-
-        <section id="projects" class="card-container">
-            <a href="pages\Ai\AI.html" class="card-link">
-                <div class="card">
-                    <img src="assets/ai/ai1.jpg" alt="AI">
-                    <div class="card-content">
-                        <h2>AI</h2>
+    <section id="projects" class="parallax-section">
+        <div class="parallax-bg-projects" data-parallax="-0.6"></div>
+        <div class="section-content">
+            <div class="card-container">
+                <a href="pages\Ai\AI.html" class="card-link parallax-element" data-parallax="0.1">
+                    <div class="card">
+                        <img src="assets/ai/ai1.jpg" alt="AI">
+                        <div class="card-content">
+                            <h2>AI</h2>
+                        </div>
                     </div>
-                </div>
-            </a>
-            
-            <a href="pages\web\web.html" class="card-link">
-                <div class="card">
-                    <img src="assets/web/html.jpg" alt="Web Development">
-                    <div class="card-content">
-                        <h2>Web </h2>
+                </a>
+                
+                <a href="pages\web\web.html" class="card-link parallax-element" data-parallax="0.2">
+                    <div class="card">
+                        <img src="assets/web/html.jpg" alt="Web Development">
+                        <div class="card-content">
+                            <h2>Web </h2>
+                        </div>
                     </div>
-                </div>
-            </a>
-            <a href="" class="card-link">
+                </a>
        
-            <a href="pages\mobile\mobile.html" class="card-link">
-                <div class="card2">
-                    <img src="assets/mobile/smartphone2.png" alt="Mobile">
-                    <div class="card-content">
-                        <h2>Mobile</h2>
+                <a href="pages\mobile\mobile.html" class="card-link parallax-element" data-parallax="0.3">
+                    <div class="card2">
+                        <img src="assets/mobile/smartphone2.png" alt="Mobile">
+                        <div class="card-content">
+                            <h2>Mobile</h2>
+                        </div>
                     </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="parallax-section">
+        <div class="parallax-bg-contact" data-parallax="-0.4"></div>
+        <div class="section-content">
+            <div data-parallax="0.1">
+                <div class="card-container-1">
+                    <a class="github-link-1" href="https://github.com/AzizBahloul" target="_blank" data-parallax="0.2">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="#fff" height="1em" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg>
+                    </a>
+                    <a class="linkedin-link-1" href="www.linkedin.com/in/mohamed-aziz-bahloul-371ba01a4" target="_blank" data-parallax="0.25">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512" fill="#fff"><path d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"></path></svg>
+                    </a>
+                    <a class="facebook-link-1" href="https://www.facebook.com/siazizbahloul/" target="_blank" data-parallax="0.3">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512" fill="#fff"><path d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"></path></svg>
+                    </a>
                 </div>
-            </a>
-        </section>
-    </div>
+            </div>
+        </div>
+    </section>
 </body>
 </html>

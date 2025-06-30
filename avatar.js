@@ -14,7 +14,6 @@ function loadModel() {
     },
     (xhr) => {
       const percentCompletion = Math.round((xhr.loaded / xhr.total) * 100);
-      document.getElementById('avatar-loading').innerText = `LOADING... ${percentCompletion}%`;
       console.log(`Loading model... ${percentCompletion}%`);
     },
     (error) => {
