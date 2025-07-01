@@ -53,6 +53,7 @@ class FullPageScroll {
         this.bindEvents();
         this.goToSection(0, false); // Start at first section
         this.setupSectionAnimations();
+        this.setupLottieAnimations(); // Add this line
         
         console.log('✅ Enhanced FullPage scroll system initialized');
     }
@@ -605,6 +606,45 @@ class FullPageScroll {
         this.sections.forEach((section, i) => {
             section.classList.toggle('active', i === newIndex);
         });
+    }
+
+    // Add Lottie animation initialization and debugging
+    setupLottieAnimations() {
+        console.log('🎬 Setting up Lottie animations...');
+        
+        // Wait for Lottie player component to be ready
+        setTimeout(() => {
+            const lottieElements = document.querySelectorAll('dotlottie-player');
+            console.log(`Found ${lottieElements.length} Lottie players`);
+            
+            lottieElements.forEach((player, index) => {
+                // Ensure player is visible
+                player.style.visibility = 'visible';
+                player.style.opacity = '1';
+                player.style.display = 'block';
+                
+                // Add loading event listeners
+                player.addEventListener('ready', () => {
+                    console.log(`✅ Lottie player ${index + 1} ready`);
+                    player.play();
+                });
+                
+                player.addEventListener('load', () => {
+                    console.log(`📽️ Lottie player ${index + 1} loaded`);
+                });
+                
+                player.addEventListener('error', (e) => {
+                    console.error(`❌ Lottie player ${index + 1} error:`, e);
+                });
+                
+                // Force play if not already playing
+                setTimeout(() => {
+                    if (player.currentState !== 'playing') {
+                        player.play();
+                    }
+                }, 1000);
+            });
+        }, 500);
     }
 
     // Public API methods

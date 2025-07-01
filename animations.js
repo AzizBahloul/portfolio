@@ -106,11 +106,12 @@ if (!prefersReducedMotion && window.innerWidth > 768) {
         }
     });
 
-    // Depth-based parallax for cards
-    gsap.utils.toArray('.card, .card2').forEach((card, i) => {
+    // Depth-based parallax for cards with enhanced effects
+    gsap.utils.toArray('.card').forEach((card, i) => {
         gsap.to(card, {
-            y: () => -30 - (i * 10),
-            rotationX: () => 2 + (i * 1),
+            y: () => -20 - (i * 8),
+            rotationX: () => 1 + (i * 0.5),
+            rotationY: () => 1 + (i * 0.3),
             ease: "none",
             scrollTrigger: {
                 trigger: card,
@@ -119,6 +120,22 @@ if (!prefersReducedMotion && window.innerWidth > 768) {
                 scrub: 1
             }
         });
+        
+        // Enhanced animation for lottie players
+        const lottiePlayer = card.querySelector('dotlottie-player');
+        if (lottiePlayer) {
+            gsap.to(lottiePlayer, {
+                rotationY: () => 5 + (i * 2),
+                scale: () => 1.05 + (i * 0.02),
+                ease: "none",
+                scrollTrigger: {
+                    trigger: card,
+                    start: "top bottom",
+                    end: "bottom top",
+                    scrub: 2
+                }
+            });
+        }
     });
 
     // Terminal loader parallax with typewriter reveal

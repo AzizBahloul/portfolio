@@ -7,14 +7,38 @@
     <link rel="stylesheet" href="AI.css">
 </head>
 <body>
-    <nav class="navbar">
-        <ul>
-            <li><a href="../../">Home</a></li>
-            <li><a href="../web/web.html">Web</a></li>
-            <li><a href="../Ai/AI.html">AI</a></li>
-            <li><a href="../mobile/mobile.html">Mobile</a></li>
-        </ul>
-    </nav>
+    <header>
+        <nav class="navbar-enhanced">
+            <div class="nav-container">
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="../../" class="nav-link">
+                            <span class="nav-text">Home</span>
+                            <div class="nav-underline"></div>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="../web/web.html" class="nav-link">
+                            <span class="nav-text">Web</span>
+                            <div class="nav-underline"></div>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="../Ai/AI.html" class="nav-link active">
+                            <span class="nav-text">AI</span>
+                            <div class="nav-underline"></div>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="../mobile/mobile.html" class="nav-link">
+                            <span class="nav-text">Mobile</span>
+                            <div class="nav-underline"></div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
     <main>
         <ul class='slider'>
 
@@ -79,9 +103,17 @@
             </li>
             
         </ul>
-        <nav class='nav'>
-            <ion-icon class='btn prev' name="arrow-back-outline"></ion-icon>
-            <ion-icon class='btn next' name="arrow-forward-outline"></ion-icon>
+        <nav class='nav-controls'>
+            <button class='btn prev-btn'>
+                <ion-icon class='btn prev' name="arrow-back-outline"></ion-icon>
+                <span class='btn-text'>Previous</span>
+                <div class='btn-glow'></div>
+            </button>
+            <button class='btn next-btn'>
+                <ion-icon class='btn next' name="arrow-forward-outline"></ion-icon>
+                <span class='btn-text'>Next</span>
+                <div class='btn-glow'></div>
+            </button>
         </nav>
     </main>
 

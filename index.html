@@ -25,6 +25,8 @@
     
     <script type="module" src="avatar.js"></script>
     <script src="fullpage-scroll.js"></script>
+    <!-- Lottie Animation Player -->
+    <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
     <style>
         /* FullPage Scroll setup */
         html, body {
@@ -202,29 +204,65 @@
         <div class="section-content">
             <div class="card-container">
                 <a href="pages\Ai\AI.html" class="card-link parallax-element" data-parallax="0.1">
-                    <div class="card">
-                        <img src="assets/ai/ai1.jpg" alt="AI">
+                    <div class="card ai-card">
+                        <div class="card-animation">
+                            <dotlottie-player 
+                                src="https://lottie.host/e919da44-c907-4f89-a513-ccec788df198/lPRQrnzXn9.lottie" 
+                                background="transparent" 
+                                speed="1.2" 
+                                style="width: 100%; height: 200px; min-height: 200px;" 
+                                loop 
+                                autoplay
+                                mode="normal">
+                            </dotlottie-player>
+                        </div>
                         <div class="card-content">
                             <h2>AI</h2>
+                            <p>Artificial Intelligence Projects</p>
                         </div>
+                        <div class="card-glow"></div>
                     </div>
                 </a>
                 
                 <a href="pages\web\web.html" class="card-link parallax-element" data-parallax="0.2">
-                    <div class="card">
-                        <img src="assets/web/html.jpg" alt="Web Development">
-                        <div class="card-content">
-                            <h2>Web </h2>
+                    <div class="card web-card">
+                        <div class="card-animation">
+                            <dotlottie-player 
+                                src="https://lottie.host/437cadb1-c7da-44ac-8576-d522a6d83c06/YMyK5gIFll.lottie" 
+                                background="transparent" 
+                                speed="1.2" 
+                                style="width: 100%; height: 200px; min-height: 200px;" 
+                                loop 
+                                autoplay
+                                mode="normal">
+                            </dotlottie-player>
                         </div>
+                        <div class="card-content">
+                            <h2>Web</h2>
+                            <p>Full-Stack Web Development</p>
+                        </div>
+                        <div class="card-glow"></div>
                     </div>
                 </a>
        
                 <a href="pages\mobile\mobile.html" class="card-link parallax-element" data-parallax="0.3">
-                    <div class="card2">
-                        <img src="assets/mobile/smartphone2.png" alt="Mobile">
+                    <div class="card mobile-card">
+                        <div class="card-animation">
+                            <dotlottie-player 
+                                src="https://lottie.host/61843bb3-fd17-41f5-9fd2-00cd81abbdc6/DkpB1d8Sjc.lottie" 
+                                background="transparent" 
+                                speed="1.2" 
+                                style="width: 100%; height: 200px; min-height: 200px;" 
+                                loop 
+                                autoplay
+                                mode="normal">
+                            </dotlottie-player>
+                        </div>
                         <div class="card-content">
                             <h2>Mobile</h2>
+                            <p>Mobile App Development</p>
                         </div>
+                        <div class="card-glow"></div>
                     </div>
                 </a>
             </div>
