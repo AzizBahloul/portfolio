@@ -24,6 +24,29 @@ body {
   overflow-x: hidden;
 }
 
+body.dark-mode {
+  background: linear-gradient(135deg, #181818, #23233a, #2d1b69);
+  color: #e0e0e0;
+}
+
+body.dark-mode .navbar-enhanced {
+  background: rgba(24, 24, 24, 0.92);
+  border-color: rgba(255,255,255,0.08);
+}
+
+body.dark-mode .card, body.dark-mode .terminal-loader {
+  background: #23233a;
+  color: #e0e0e0;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.5);
+}
+
+body.dark-mode .parallax-bg-home,
+body.dark-mode .parallax-bg-about,
+body.dark-mode .parallax-bg-projects,
+body.dark-mode .parallax-bg-contact {
+  filter: brightness(0.7) contrast(1.1);
+}
+
 /* Header & Navigation styles */
 header {
   padding: 1rem 2rem;
@@ -1237,4 +1260,328 @@ dotlottie-player {
   .card-animation dotlottie-player {
     height: 160px !important;
   }
+}
+
+#darkModeToggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-left: 1rem;
+  padding: 0.3rem;
+  border-radius: 50%;
+  transition: background 0.2s;
+  outline: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#darkModeToggle:hover {
+  background: rgba(177, 8, 189, 0.12);
+}
+#darkModeIcon {
+  transition: color 0.3s;
+  color: #b108bd;
+}
+body.dark-mode #darkModeIcon {
+  color: #58baff;
+}
+
+/* Enhanced Skills Section */
+#skills-chart {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2.2rem;
+  min-height: 400px;
+  width: 100%;
+  max-width: 420px;
+  margin: 0 auto;
+}
+.skill-row {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: 1.2rem;
+  position: relative;
+  animation: floatSkill 3.5s ease-in-out infinite;
+}
+.skill-icon {
+  font-size: 2rem;
+  margin-right: 0.5rem;
+  filter: drop-shadow(0 0 8px #b108bd88);
+  animation: glowSkill 2.5s alternate infinite;
+}
+.skill-label {
+  font-weight: 700;
+  min-width: 90px;
+  color: #fff;
+  letter-spacing: 0.5px;
+}
+.skill-bar-bg {
+  background: #181828;
+  border-radius: 12px;
+  height: 18px;
+  width: 100%;
+  overflow: hidden;
+  box-shadow: 0 2px 12px #b108bd22;
+  position: relative;
+}
+.skill-bar {
+  background: linear-gradient(90deg, #b108bd, #58baff 80%);
+  height: 100%;
+  width: 0%;
+  border-radius: 12px;
+  box-shadow: 0 0 16px #58baff88, 0 0 8px #b108bd88;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transition: width 1.4s cubic-bezier(.77,0,.18,1);
+}
+.skill-percent {
+  font-size: 1.1em;
+  font-weight: 600;
+  color: #58baff;
+  margin-left: 0.7rem;
+  min-width: 38px;
+  text-shadow: 0 0 8px #b108bd88;
+}
+@keyframes glowSkill {
+  0% { filter: drop-shadow(0 0 8px #b108bd88); }
+  100% { filter: drop-shadow(0 0 18px #58baffcc); }
+}
+@keyframes floatSkill {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+  100% { transform: translateY(0px); }
+}
+@media (max-width: 600px) {
+  #skills-chart { max-width: 98vw; }
+  .skill-label { min-width: 60px; font-size: 0.98em; }
+  .skill-icon { font-size: 1.5rem; }
+}
+
+/* Testimonials Section Animation */
+#testimonials-container {
+  min-height: 180px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  animation: fadeInUp 1s ease;
+}
+
+.glass-navbar {
+  width: 100vw;
+  background: rgba(24, 24, 40, 0.55);
+  backdrop-filter: blur(18px) saturate(1.2);
+  -webkit-backdrop-filter: blur(18px) saturate(1.2);
+  border-radius: 0 0 32px 32px;
+  box-shadow: 0 8px 32px #18182833;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1200;
+  padding: 0 0;
+  border-bottom: 1.5px solid #23233a44;
+}
+.glass-nav-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0.7rem 2.2rem 0.4rem 2.2rem;
+  position: relative;
+}
+.glass-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+}
+.glass-title {
+  font-family: 'Inter', 'Fira Mono', monospace;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 1.5px;
+  text-shadow: 0 0 8px #b108bd33;
+}
+.neural-svg {
+  filter: drop-shadow(0 0 8px #58baff44);
+}
+.glass-nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 2.2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  transition: all 0.3s cubic-bezier(.77,0,.18,1);
+}
+.glass-nav-link {
+  color: #e0e0e0;
+  font-size: 1.08rem;
+  font-family: 'Inter', 'Fira Mono', monospace;
+  text-decoration: none;
+  padding: 0.5rem 0.7rem 0.5rem 0.7rem;
+  border-radius: 12px;
+  position: relative;
+  transition: color 0.18s, background 0.18s;
+  display: inline-block;
+  overflow: visible;
+}
+.glass-nav-link::after {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 18%;
+  right: 18%;
+  bottom: 0.3em;
+  height: 3px;
+  border-radius: 2px;
+  background: linear-gradient(90deg, #b108bd 30%, #58baff 100%);
+  opacity: 0;
+  transform: scaleX(0.5);
+  transition: all 0.32s cubic-bezier(.77,0,.18,1);
+}
+.glass-nav-link.hovered::after, .glass-nav-link:focus::after {
+  opacity: 1;
+  transform: scaleX(1);
+}
+.glass-nav-link:hover, .glass-nav-link:focus {
+  color: #58baff;
+  background: rgba(88, 186, 255, 0.10);
+}
+.glass-resume-btn {
+  background: linear-gradient(90deg, #b108bd 40%, #58baff 100%);
+  color: #fff;
+  font-weight: 700;
+  font-family: 'Inter', 'Fira Mono', monospace;
+  border-radius: 999px;
+  padding: 0.5rem 1.3rem;
+  box-shadow: 0 2px 12px #b108bd33;
+  text-decoration: none;
+  border: none;
+  transition: background 0.18s, color 0.18s;
+  margin-left: 0.7rem;
+  font-size: 1.08rem;
+}
+.glass-resume-btn:hover, .glass-resume-btn:focus {
+  background: linear-gradient(90deg, #58baff 40%, #b108bd 100%);
+  color: #fff;
+}
+.glass-status-chip {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  font-family: 'Fira Mono', 'Inter', monospace;
+  font-size: 1.01rem;
+  color: #b0b0b0;
+  background: rgba(24, 24, 40, 0.32);
+  border-radius: 12px;
+  padding: 0.3em 1.1em 0.3em 0.8em;
+  box-shadow: 0 0 8px #58baff22;
+  margin-left: 1.2rem;
+}
+.glass-status-dot {
+  width: 0.85em;
+  height: 0.85em;
+  border-radius: 50%;
+  background: #58baff;
+  box-shadow: 0 0 8px #58baff99;
+  display: inline-block;
+  margin-right: 0.2em;
+  transition: background 0.3s, box-shadow 0.3s;
+  animation: statusPulse 1.2s infinite;
+}
+.glass-status-dot.active {
+  background: #b108bd;
+  box-shadow: 0 0 12px #b108bdcc;
+}
+@keyframes statusPulse {
+  0% { box-shadow: 0 0 8px #58baff99; }
+  50% { box-shadow: 0 0 18px #b108bdcc; }
+  100% { box-shadow: 0 0 8px #58baff99; }
+}
+.glass-status-text {
+  color: #b0b0b0;
+  font-size: 1em;
+}
+.glass-status-active {
+  color: #58baff;
+  font-weight: 700;
+}
+.glass-hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  background: rgba(24,24,40,0.18);
+  cursor: pointer;
+  margin-left: 1.2rem;
+  transition: background 0.18s;
+  z-index: 1300;
+}
+.glass-hamburger span {
+  display: block;
+  width: 22px;
+  height: 3px;
+  background: #b108bd;
+  margin: 3px 0;
+  border-radius: 2px;
+  transition: all 0.3s cubic-bezier(.77,0,.18,1);
+}
+.glass-hamburger.open span:nth-child(1) {
+  transform: translateY(6px) rotate(45deg);
+}
+.glass-hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+.glass-hamburger.open span:nth-child(3) {
+  transform: translateY(-6px) rotate(-45deg);
+}
+@media (max-width: 900px) {
+  .glass-nav-content { padding: 0.7rem 1rem 0.4rem 1rem; }
+  .glass-title { font-size: 1.05rem; }
+  .glass-nav-menu { gap: 1.1rem; }
+}
+@media (max-width: 700px) {
+  .glass-nav-content { flex-wrap: wrap; gap: 0.7em; }
+  .glass-nav-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: rgba(24,24,40,0.92);
+    backdrop-filter: blur(18px);
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.2em;
+    padding: 1.2em 2em 1.2em 2em;
+    border-radius: 0 0 24px 24px;
+    box-shadow: 0 8px 32px #18182833;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-10px);
+    transition: all 0.32s cubic-bezier(.77,0,.18,1);
+    z-index: 1201;
+  }
+  .glass-nav-menu.open {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+  }
+  .glass-hamburger { display: flex; }
+  .glass-status-chip { margin-left: 0.5rem; margin-top: 0.5rem; }
+}
+@media (max-width: 500px) {
+  .glass-nav-content { padding: 0.7rem 0.3rem 0.4rem 0.3rem; }
+  .glass-title { font-size: 0.95rem; }
+  .glass-nav-menu { gap: 0.4em; }
+  .glass-resume-btn { padding: 0.4rem 0.8rem; font-size: 0.98em; }
 }

@@ -120,46 +120,36 @@
     </div>
 
     <header>
-        <nav class="navbar-enhanced">
-            <div class="nav-container">
-                <div class="nav-brand">
+        <nav class="glass-navbar">
+            <div class="glass-nav-content">
+                <div class="glass-logo">
+                    <svg class="neural-svg" width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="19" cy="19" r="16" stroke="#58baff" stroke-width="2.5" fill="rgba(24,24,40,0.2)"/>
+                        <circle cx="19" cy="19" r="4" fill="#b108bd"/>
+                        <circle cx="8" cy="19" r="2" fill="#58baff"/>
+                        <circle cx="30" cy="19" r="2" fill="#58baff"/>
+                        <circle cx="19" cy="8" r="2" fill="#58baff"/>
+                        <circle cx="19" cy="30" r="2" fill="#58baff"/>
+                        <line x1="19" y1="8" x2="19" y2="15" stroke="#b108bd" stroke-width="1.2"/>
+                        <line x1="19" y1="23" x2="19" y2="30" stroke="#b108bd" stroke-width="1.2"/>
+                        <line x1="8" y1="19" x2="15" y2="19" stroke="#b108bd" stroke-width="1.2"/>
+                        <line x1="23" y1="19" x2="30" y2="19" stroke="#b108bd" stroke-width="1.2"/>
+                    </svg>
+                    <span class="glass-title">Aziz Bahloul</span>
                 </div>
-                <ul class="nav-menu">
-                    <li class="nav-item">
-                        <a href="#home" class="nav-link">
-                            <span class="nav-text">Home</span>
-                            <div class="nav-underline"></div>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#about" class="nav-link">
-                            <span class="nav-text">About</span>
-                            <div class="nav-underline"></div>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#projects" class="nav-link">
-                            <span class="nav-text">Projects</span>
-                            <div class="nav-underline"></div>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#contact" class="nav-link">
-                            <span class="nav-text">Contact</span>
-                            <div class="nav-underline"></div>
-                        </a>
-                    </li>
-                    <li class="nav-item resume-item">
-                        <a href="resume.pdf" download class="resume-btn">
-                            <span class="resume-text">Resume</span>
-                            <div class="resume-glow"></div>
-                        </a>
-                    </li>
+                <ul class="glass-nav-menu">
+                    <li><a href="#home" class="glass-nav-link">Home</a></li>
+                    <li><a href="#about" class="glass-nav-link">About</a></li>
+                    <li><a href="#projects" class="glass-nav-link">Projects</a></li>
+                    <li><a href="#contact" class="glass-nav-link">Contact</a></li>
+                    <li><a href="resume.pdf" download class="glass-resume-btn">Resume</a></li>
                 </ul>
-                <div class="nav-toggle">
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                    <span class="bar"></span>
+                <div class="glass-status-chip">
+                    <span class="glass-status-dot"></span>
+                    <span class="glass-status-text">AI Engine: <span class="glass-status-active">Active</span></span>
+                </div>
+                <div class="glass-hamburger" id="glassHamburger" tabindex="0" aria-label="Open navigation menu">
+                    <span></span><span></span><span></span>
                 </div>
             </div>
         </nav>
@@ -176,7 +166,17 @@
                 </div>
             </div>
             <h1 class="hero-title parallax-text" data-parallax="0.1">Hi 👋</h1>
-            <h1 class="parallax-text" data-parallax="0.3">I'm <span class='gradient-text'>Mohamed Aziz Bahloul</span></h1>
+            <h1 class="parallax-text" data-parallax="0.3">I'm <span class='gradient-text'>Mohamed Aziz Bahloul</span> <span style="vertical-align: middle; margin-left: 0.3em; font-size: 1.2em;">🤖</span></h1>
+            <h2 class="parallax-text" data-parallax="0.4" style="font-weight: 400; font-size: 1.3em; color: #b108bd; margin-top: 0.5em;">Building intelligent digital solutions</h2>
+            <svg width="120" height="32" style="margin-top: 1em; opacity: 0.7;" viewBox="0 0 120 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="10" cy="16" r="3" fill="#b108bd"/>
+                <circle cx="40" cy="8" r="2" fill="#58baff"/>
+                <circle cx="80" cy="24" r="2.5" fill="#b108bd"/>
+                <circle cx="110" cy="16" r="3" fill="#58baff"/>
+                <line x1="13" y1="16" x2="38" y2="9" stroke="#b108bd" stroke-width="1.2"/>
+                <line x1="42" y1="8" x2="78" y2="24" stroke="#58baff" stroke-width="1.2"/>
+                <line x1="83" y1="24" x2="107" y2="16" stroke="#b108bd" stroke-width="1.2"/>
+            </svg>
         </div>
     </section>
 
@@ -193,7 +193,7 @@
                     </div>
                 </div>
                 <div class="text">
-                    Motivated software engineering student with a strong academic background and a passion for learning
+                    I love building robust, intelligent systems and scalable APIs. My main focus is backend and AI, but I also enjoy bringing ideas to life with simple, effective frontend logic when needed.
                 </div>
             </div>
         </div>
@@ -272,20 +272,90 @@
     <section id="contact" class="parallax-section">
         <div class="parallax-bg-contact" data-parallax="-0.4"></div>
         <div class="section-content">
-            <div data-parallax="0.1">
-                <div class="card-container-1">
-                    <a class="github-link-1" href="https://github.com/AzizBahloul" target="_blank" data-parallax="0.2">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="#fff" height="1em" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg>
-                    </a>
-                    <a class="linkedin-link-1" href="www.linkedin.com/in/mohamed-aziz-bahloul-371ba01a4" target="_blank" data-parallax="0.25">
-                        <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512" fill="#fff"><path d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"></path></svg>
-                    </a>
-                    <a class="facebook-link-1" href="https://www.facebook.com/siazizbahloul/" target="_blank" data-parallax="0.3">
-                        <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512" fill="#fff"><path d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"></path></svg>
-                    </a>
-                </div>
+            <div style="display: flex; flex-wrap: wrap; gap: 2em; justify-content: center; align-items: stretch; margin-top: 2em;">
+                <!-- GitHub Card -->
+                <a href="https://github.com/AzizBahloul" target="_blank" class="contact-card" style="text-decoration: none; color: inherit; min-width: 220px; flex: 1 1 220px; max-width: 260px; background: rgba(24,24,40,0.7); border-radius: 18px; padding: 2em 1.5em; display: flex; flex-direction: column; align-items: center; box-shadow: 0 4px 24px 0 rgba(88,186,255,0.08); transition: transform 0.2s, box-shadow 0.2s; border: 1.5px solid #222;">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="#fff" width="48" height="48" viewBox="0 0 496 512" style="margin-bottom: 1em;"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8z"/></svg>
+                    <span style="font-size: 1.2em; font-weight: 600; margin-bottom: 0.3em;">GitHub</span>
+                    <span style="font-size: 0.98em; opacity: 0.8;">@AzizBahloul</span>
+                </a>
+                <!-- LinkedIn Card -->
+                <a href="https://www.linkedin.com/feed/" target="_blank" class="contact-card" style="text-decoration: none; color: inherit; min-width: 220px; flex: 1 1 220px; max-width: 260px; background: rgba(24,24,40,0.7); border-radius: 18px; padding: 2em 1.5em; display: flex; flex-direction: column; align-items: center; box-shadow: 0 4px 24px 0 rgba(88,186,255,0.08); transition: transform 0.2s, box-shadow 0.2s; border: 1.5px solid #222;">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="#0A66C2" width="48" height="48" viewBox="0 0 448 512" style="margin-bottom: 1em;"><path d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"/></svg>
+                    <span style="font-size: 1.2em; font-weight: 600; margin-bottom: 0.3em;">LinkedIn</span>
+                    <span style="font-size: 0.98em; opacity: 0.8;">@azizbahloul</span>
+                </a>
+                <!-- PyPI Card -->
+                <a href="https://pypi.org/user/si_aziz_bahloul/" target="_blank" class="contact-card" style="text-decoration: none; color: inherit; min-width: 220px; flex: 1 1 220px; max-width: 260px; background: rgba(24,24,40,0.7); border-radius: 18px; padding: 2em 1.5em; display: flex; flex-direction: column; align-items: center; box-shadow: 0 4px 24px 0 rgba(88,186,255,0.08); transition: transform 0.2s, box-shadow 0.2s; border: 1.5px solid #222;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" style="margin-bottom: 1em;"><g><ellipse cx="12" cy="12" rx="12" ry="12" fill="#3775A9"/><ellipse cx="12" cy="12" rx="9" ry="9" fill="#FFD43B"/><ellipse cx="12" cy="12" rx="6" ry="6" fill="#3775A9"/></g></svg>
+                    <span style="font-size: 1.2em; font-weight: 600; margin-bottom: 0.3em;">PyPI</span>
+                    <span style="font-size: 0.98em; opacity: 0.8;">si_aziz_bahloul</span>
+                </a>
+                <!-- WhatsApp Card -->
+                <a href="https://wa.me/21694772560" target="_blank" class="contact-card" style="text-decoration: none; color: inherit; min-width: 220px; flex: 1 1 220px; max-width: 260px; background: linear-gradient(135deg, #25D366 0%, #128C7E 100%); border-radius: 18px; padding: 2em 1.5em; display: flex; flex-direction: column; align-items: center; box-shadow: 0 4px 24px 0 rgba(37,211,102,0.12); transition: transform 0.2s, box-shadow 0.2s; border: 1.5px solid #128C7E;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 32 32" style="margin-bottom: 1em;"><path fill="#fff" d="M16 3C9.373 3 4 8.373 4 15c0 2.385.832 4.58 2.236 6.36L4 29l7.828-2.236A11.94 11.94 0 0 0 16 27c6.627 0 12-5.373 12-12S22.627 3 16 3zm0 22c-1.77 0-3.45-.46-4.91-1.26l-.35-.2-4.65 1.33 1.33-4.53-.22-.36A9.97 9.97 0 0 1 6 15c0-5.514 4.486-10 10-10s10 4.486 10 10-4.486 10-10 10zm5.2-7.6c-.28-.14-1.65-.81-1.9-.9-.25-.09-.43-.14-.61.14-.18.28-.7.9-.86 1.08-.16.18-.32.2-.6.07-.28-.14-1.18-.44-2.25-1.4-.83-.74-1.39-1.65-1.55-1.93-.16-.28-.02-.43.12-.57.13-.13.28-.34.42-.51.14-.17.18-.29.28-.48.09-.19.05-.36-.02-.5-.07-.14-.61-1.47-.84-2.01-.22-.53-.45-.46-.62-.47-.16-.01-.36-.01-.56-.01-.19 0-.5.07-.76.34-.26.27-1 1-.99 2.43.01 1.43 1.03 2.81 1.18 3 .15.19 2.03 3.1 4.93 4.22.69.3 1.23.48 1.65.61.69.22 1.32.19 1.81.12.55-.08 1.65-.67 1.89-1.32.23-.65.23-1.2.16-1.32-.07-.12-.25-.19-.53-.33z"/></svg>
+                    <span style="font-size: 1.2em; font-weight: 600; margin-bottom: 0.3em; color: #fff;">WhatsApp</span>
+                    <span style="font-size: 1.1em; font-weight: 500; color: #fff; letter-spacing: 1px;">+216 94 772 560</span>
+                    <span style="margin-top: 0.5em; font-size: 0.98em; color: #eaffea; opacity: 0.9;">Chat on WhatsApp</span>
+                </a>
             </div>
+            <style>
+                .contact-card:hover {
+                    transform: translateY(-6px) scale(1.04);
+                    box-shadow: 0 8px 32px 0 rgba(88,186,255,0.18), 0 2px 8px 0 rgba(0,0,0,0.08);
+                    z-index: 2;
+                }
+                .contact-card:active {
+                    transform: scale(0.98);
+                }
+            </style>
         </div>
     </section>
 </body>
+<script>
+// Dark/Light Mode Toggle
+const darkModeToggle = document.getElementById('darkModeToggle');
+const darkModeIcon = document.getElementById('darkModeIcon');
+let darkMode = localStorage.getItem('darkMode') === 'true';
+function setDarkMode(on) {
+    document.body.classList.toggle('dark-mode', on);
+    darkModeIcon.innerHTML = on
+        ? '<path d="M21.64 13.64A9 9 0 1 1 12 3v0a7 7 0 0 0 9.64 10.64z"></path>'
+        : '<circle cx="12" cy="12" r="5"></circle><path d="M12 1v2m0 18v2m11-11h-2M3 12H1m16.95 7.07l-1.41-1.41M6.34 6.34l-1.41-1.41m12.02 0l-1.41 1.41M6.34 17.66l-1.41 1.41"/>';
+    localStorage.setItem('darkMode', on);
+}
+darkModeToggle.addEventListener('click', () => {
+    darkMode = !darkMode;
+    setDarkMode(darkMode);
+});
+setDarkMode(darkMode);
+
+// Glassy hamburger menu toggle
+const hamburger = document.getElementById('glassHamburger');
+const navMenu = document.querySelector('.glass-nav-menu');
+if (hamburger && navMenu) {
+  hamburger.addEventListener('click', () => {
+    navMenu.classList.toggle('open');
+    hamburger.classList.toggle('open');
+  });
+}
+// Animated status dot
+const glassStatusDot = document.querySelector('.glass-status-dot');
+if (glassStatusDot) {
+  setInterval(() => {
+    glassStatusDot.classList.toggle('active');
+  }, 1100);
+}
+// Animated underline for nav links
+const navLinks = document.querySelectorAll('.glass-nav-link');
+navLinks.forEach(link => {
+  link.addEventListener('mouseenter', function() {
+    navLinks.forEach(l => l.classList.remove('hovered'));
+    this.classList.add('hovered');
+  });
+  link.addEventListener('mouseleave', function() {
+    this.classList.remove('hovered');
+  });
+});
+</script>
 </html>
