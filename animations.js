@@ -409,3 +409,117 @@ window.addEventListener('resize', () => {
 
 // Initialize ScrollTrigger
 ScrollTrigger.refresh();
+
+// --- Experience Timeline Adaptive Scrolling (One-at-a-time) ---
+(function() {
+    const timeline = document.querySelector('.experience-timeline');
+    const items = timeline ? Array.from(timeline.querySelectorAll('.timeline-item')) : [];
+    if (!timeline || items.length === 0) return;
+
+    let current = 0;
+    let isAnimating = false;
+
+    // Initialize: show only the first item
+    function showItem(index, direction = 0) {
+        items.forEach((item, i) => {
+            if (i === index) {
+                gsap.to(item, {
+                    opacity: 1,
+                    y: 0,
+                    duration: 0.7,
+                    display: 'block',
+                    pointerEvents: 'auto',
+                    ease: 'power2.out'
+                });
+            } else {
+                gsap.to(item, {
+                    opacity: 0,
+                    y: direction > 0 ? -60 : 60,
+                    duration: 0.5,
+                    display: 'none',
+                    pointerEvents: 'none',
+                    ease: 'power2.in'
+                });
+            }
+        });
+    }
+
+    // Initial state
+    items.forEach((item, i) => {
+        gsap.set(item, {
+            opacity: i === 0 ? 1 : 0,
+            y: 0,
+            display: i === 0 ? 'block' : 'none',
+            pointerEvents: i === 0 ? 'auto' : 'none'
+        });
+    });
+
+    // Scroll handler
+    function onScroll(e) {
+        if (isAnimating) return;
+        let delta = e.deltaY || e.detail || e.wheelDelta;
+        if (Math.abs(delta) < 10) return; // Ignore small scrolls
+
+        if (delta > 0 && current < items.length - 1) {
+            isAnimating = true;
+            showItem(current + 1, 1);
+            current++;
+            setTimeout(() => isAnimating = false, 700);
+        } else if (delta < 0 && current > 0) {
+            isAnimating = true;
+            showItem(current - 1, -1);
+            current--;
+            setTimeout(() => isAnimating = false, 700);
+        }
+        e.preventDefault();
+    }
+
+    // Touch support
+    let touchStartY = null;
+    timeline.addEventListener('touchstart', e => {
+        touchStartY = e.touches[0].clientY;
+    }, { passive: false });
+    timeline.addEventListener('touchend', e => {
+        if (touchStartY === null) return;
+        let touchEndY = e.changedTouches[0].clientY;
+        let delta = touchStartY - touchEndY;
+        if (Math.abs(delta) > 30) {
+            if (delta > 0 && current < items.length - 1) {
+                isAnimating = true;
+                showItem(current + 1, 1);
+                current++;
+                setTimeout(() => isAnimating = false, 700);
+            } else if (delta < 0 && current > 0) {
+                isAnimating = true;
+                showItem(current - 1, -1);
+                current--;
+                setTimeout(() => isAnimating = false, 700);
+            }
+        }
+        touchStartY = null;
+    }, { passive: false });
+
+    // Mouse wheel/trackpad
+    timeline.addEventListener('wheel', onScroll, { passive: false });
+
+    // Optional: keyboard navigation
+    timeline.addEventListener('keydown', e => {
+        if (isAnimating) return;
+        if (e.key === 'ArrowDown' && current < items.length - 1) {
+            isAnimating = true;
+            showItem(current + 1, 1);
+            current++;
+            setTimeout(() => isAnimating = false, 700);
+            e.preventDefault();
+        } else if (e.key === 'ArrowUp' && current > 0) {
+            isAnimating = true;
+            showItem(current - 1, -1);
+            current--;
+            setTimeout(() => isAnimating = false, 700);
+            e.preventDefault();
+        }
+    });
+
+    // Make timeline focusable for keyboard
+    timeline.setAttribute('tabindex', '0');
+})();
