@@ -1,0 +1,198 @@
+/* Keyframe Animations */
+@keyframes blinkCursor {
+  50% {
+    border-right-color: transparent;
+  }
+}
+
+@keyframes typeAndDelete {
+  0%,
+  10% {
+    width: 0;
+  }
+  45%,
+  55% {
+    width: 80em;
+  }
+  90%,
+  100% {
+    width: 0;
+  }
+}
+
+@keyframes brandGlow {
+  0% {
+    filter: drop-shadow(0 0 10px rgba(177, 8, 189, 0.5));
+  }
+  100% {
+    filter: drop-shadow(0 0 20px rgba(88, 186, 255, 0.8));
+  }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { opacity: 0.7; }
+  50% { opacity: 1; }
+}
+
+@keyframes bounce_613 {
+  40% {
+    transform: scale(1.4);
+  }
+
+  60% {
+    transform: scale(0.8);
+  }
+
+  80% {
+    transform: scale(1.2);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes dot-glow {
+  0% { box-shadow: 0 0 12px 2px #222, 0 0 0 0 #444; }
+  100% { box-shadow: 0 0 24px 6px #444, 0 0 0 0 #444; }
+}
+
+@keyframes cone-fade {
+  0% { opacity: 0.7; filter: blur(2.5px); }
+  100% { opacity: 0.95; filter: blur(3.5px); }
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: #b108bd; }
+}
+
+@keyframes fill-progress {
+  0% { width: 0; }
+  100% { width: 100%; }
+}
+
+@keyframes pulse-dot {
+  0% {
+    box-shadow: 0 0 10px rgba(177, 8, 189, 0.7);
+    transform: translateX(-50%) scale(1);
+  }
+  100% {
+    box-shadow: 0 0 20px rgba(88, 186, 255, 0.9);
+    transform: translateX(-50%) scale(1.2);
+  }
+}
+
+@keyframes typing-appear {
+  0% {
+    width: 0;
+    opacity: 0;
+  }
+  100% {
+    width: 100%;
+    opacity: 1;
+  }
+}
+
+@keyframes typing-cursor {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+@keyframes typing-move {
+  0% { right: 100%; }
+  100% { right: 0; }
+}
+
+@keyframes timeline-fade-in {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes terminal-glow {
+  0% { 
+    background-position: 0% 0%;
+    opacity: 0.3;
+  }
+  100% { 
+    background-position: 100% 100%;
+    opacity: 0.6;
+  }
+}
+
+@keyframes typing-glow {
+  0% {
+    text-shadow: 0 0 5px rgba(177, 8, 189, 0.2);
+  }
+  100% {
+    text-shadow: 0 0 10px rgba(88, 186, 255, 0.4);
+  }
+}
+
+@keyframes circuit-move {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 100px 100px;
+  }
+}
+
+@keyframes connector-appear {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes glowSkill {
+  0% { filter: drop-shadow(0 0 8px #b108bd88); }
+  100% { filter: drop-shadow(0 0 18px #58baffcc); }
+}
+
+@keyframes floatSkill {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+  100% { transform: translateY(0px); }
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes statusPulse {
+  0% { box-shadow: 0 0 8px #58baff99; }
+  50% { box-shadow: 0 0 18px #b108bdcc; }
+  100% { box-shadow: 0 0 8px #58baff99; }
+}
+
+@keyframes circuit-glow {
+  0% { 
+    background-position: 0% 0%;
+    opacity: 0.3;
+  }
+  100% { 
+    background-position: 100% 100%;
+    opacity: 0.6;
+  }
+}

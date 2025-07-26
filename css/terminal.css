@@ -1,0 +1,272 @@
+/* Terminal loader styles */
+.terminal-loader {
+  border: 0.1em solid #333;
+  background-color: #1a1a1a;
+  color: #0f0;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 1em;
+  padding: 1.5em 1em;
+  width: 85em;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.terminal-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1.5em;
+  background-color: #333;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  padding: 0 0.4em;
+  box-sizing: border-box;
+}
+
+.terminal-controls {
+  float: right;
+}
+
+.control {
+  display: inline-block;
+  width: 0.6em;
+  height: 0.6em;
+  margin-left: 0.4em;
+  border-radius: 50%;
+  background-color: #777;
+}
+
+.control.close {
+  background-color: #e33;
+}
+
+.control.minimize {
+  background-color: #ee0;
+}
+
+.control.maximize {
+  background-color: #0b0;
+}
+
+.terminal-title {
+  float: left;
+  line-height: 1.5em;
+  color: #eee;
+}
+
+.text {
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 0.2em solid green;
+  animation: typeAndDelete 10s steps(220) infinite,
+    blinkCursor 0.5s step-end infinite alternate;
+  margin-top: 1.5em;
+}
+
+/* Terminal Window Styling */
+.terminal-window {
+  width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+  background: rgba(15, 15, 30, 0.9);
+  box-shadow: 
+    0 10px 30px rgba(0, 0, 0, 0.3),
+    0 0 20px rgba(177, 8, 189, 0.2);
+  border: 1px solid rgba(88, 186, 255, 0.3);
+  transition: all 0.4s ease;
+  transform: perspective(800px) rotateX(0deg);
+}
+
+.terminal-window:hover {
+  transform: perspective(800px) rotateX(5deg) translateY(-5px);
+  box-shadow: 
+    0 15px 40px rgba(0, 0, 0, 0.4),
+    0 0 30px rgba(177, 8, 189, 0.3);
+  border-color: rgba(177, 8, 189, 0.5);
+}
+
+.terminal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  background: rgba(30, 30, 50, 0.95);
+  border-bottom: 1px solid rgba(88, 186, 255, 0.2);
+}
+
+.terminal-title {
+  color: #58baff;
+  font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.terminal-controls {
+  display: flex;
+  gap: 8px;
+}
+
+.terminal-body {
+  display: flex;
+  padding: 1rem 0;
+  position: relative;
+  min-height: 200px;
+}
+
+.line-numbers {
+  display: flex;
+  flex-direction: column;
+  padding: 0 10px;
+  color: rgba(255, 255, 255, 0.3);
+  font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+  font-size: 0.9rem;
+  user-select: none;
+  text-align: right;
+  border-right: 1px solid rgba(88, 186, 255, 0.2);
+}
+
+.code-content {
+  flex: 1;
+  padding: 0 15px;
+  font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* Code syntax highlighting */
+.code-keyword {
+  color: #569CD6;
+  font-weight: bold;
+  text-shadow: 0 0 8px rgba(86, 156, 214, 0.4);
+}
+
+.code-function {
+  color: #DCDCAA;
+  text-shadow: 0 0 8px rgba(220, 220, 170, 0.4);
+}
+
+.code-class {
+  color: #4EC9B0;
+  text-shadow: 0 0 8px rgba(78, 201, 176, 0.4);
+}
+
+.code-variable {
+  color: #9CDCFE;
+  text-shadow: 0 0 8px rgba(156, 220, 254, 0.4);
+}
+
+.code-string {
+  color: #CE9178;
+  text-shadow: 0 0 8px rgba(206, 145, 120, 0.4);
+}
+
+.code-comment {
+  color: #6A9955;
+  font-style: italic;
+  text-shadow: 0 0 8px rgba(106, 153, 85, 0.4);
+}
+
+.code-punctuation {
+  color: #D4D4D4;
+}
+
+.code-operator {
+  color: #D4D4D4;
+}
+
+/* Code Line Numbers */
+.code-line-numbers {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding: 1.8em 0.5em;
+  background: rgba(0, 0, 0, 0.2);
+  color: rgba(255, 255, 255, 0.3);
+  font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+  font-size: 0.8em;
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: all 0.3s ease;
+}
+
+.ai-code-card:hover .code-line-numbers {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Typing Animation Styles */
+.typing-line {
+  position: relative;
+  white-space: nowrap;
+  overflow: hidden;
+  margin-bottom: 0.5rem;
+  opacity: 0;
+  animation: typing-appear 0.1s forwards, typing-glow 2s ease-in-out infinite alternate;
+  animation-delay: calc(var(--line-index, 0) * 0.8s);
+}
+
+.typing-line::after {
+  content: '|';
+  position: absolute;
+  right: 0;
+  color: #b108bd;
+  background-color: rgba(15, 15, 30, 0.9);
+  animation: typing-cursor 0.8s steps(1) infinite, typing-move 0.1s forwards;
+  animation-delay: calc((var(--line-index, 0) * 0.8s) + 0.5s);
+}
+
+.indent {
+  padding-left: 2rem;
+}
+
+.indent2 {
+  padding-left: 4rem;
+}
+
+/* Typing Cursor Styles */
+.typing-cursor {
+  display: inline-block;
+  color: #b108bd;
+  font-weight: bold;
+  animation: blink-cursor 0.8s step-end infinite;
+  opacity: 0;
+  position: relative;
+  margin-left: 2px;
+}
+
+/* Typing Animation */
+.typing-text {
+  overflow: hidden;
+  border-right: 0.15em solid #b108bd;
+  white-space: nowrap;
+  margin: 0 auto;
+  letter-spacing: 0.05em;
+  animation: typing 3.5s steps(30, end), blink-caret 0.75s step-end infinite;
+}
+
+/* Progress bar */
+.certificate-progress-bar {
+  width: 100%;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 2px;
+  margin-bottom: 1.2em;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  width: 0;
+  background: linear-gradient(90deg, #58baff, #b108bd);
+  animation: fill-progress 2s ease-out forwards;
+}

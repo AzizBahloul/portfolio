@@ -4,7 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>si aziz bahloul </title>
-    <link rel="stylesheet" href="style.css">
+    
+    <!-- Modular CSS files -->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/cards.css">
+    <link rel="stylesheet" href="css/terminal.css">
+    <link rel="stylesheet" href="css/timeline.css">
+    <link rel="stylesheet" href="css/skills.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="css/parallax.css">
+    <link rel="stylesheet" href="css/dark-mode.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -27,88 +40,6 @@
     <script src="fullpage-scroll.js"></script>
     <!-- Lottie Animation Player -->
     <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
-    <style>
-        /* FullPage Scroll setup */
-        html, body {
-            margin: 0;
-            padding: 0;
-            height: 100%;
-            overflow: hidden;
-            font-family: 'Inter', sans-serif;
-        }
-        
-        .fullpage-container {
-            position: relative;
-            height: 100vh;
-            width: 100%;
-        }
-        
-        /* Navigation dots styling */
-        .fp-navigation {
-            position: fixed;
-            right: 20px;
-            top: 50%;
-            transform: translateY(-50%);
-            z-index: 1000;
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-        }
-        
-        .fp-nav-dot {
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            background-color: rgba(255, 255, 255, 0.5);
-            border: 2px solid rgba(255, 255, 255, 0.8);
-            display: block;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            text-decoration: none;
-        }
-        
-        .fp-nav-dot.active {
-            background-color: rgba(255, 255, 255, 0.9);
-            transform: scale(1.2);
-        }
-        
-        .fp-nav-dot:hover {
-            background-color: rgba(255, 255, 255, 0.8);
-        }
-        
-        /* Section styling */
-        section {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            min-height: 100vh;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .section-content {
-            position: relative;
-            z-index: 2;
-            width: 100%;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        
-        /* Parallax backgrounds */
-        .parallax-bg,
-        [class*="parallax-bg-"] {
-            position: absolute;
-            top: -10%;
-            left: 0;
-            width: 100%;
-            height: 120%;
-            z-index: -1;
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-        }
-    </style>
 </head>
 
 <body>
@@ -557,6 +488,7 @@ function setDarkMode(on) {
 darkModeToggle.addEventListener('click', () => {
     darkMode = !darkMode;
     setDarkMode(darkMode);
+    
 });
 setDarkMode(darkMode);
 
@@ -619,6 +551,43 @@ document.addEventListener('DOMContentLoaded', function() {
   }, {
     threshold: 0.2
   });
+  
+  // Start observing timeline items
+  document.querySelectorAll('.timeline-item').forEach(item => {
+    observer.observe(item);
+  });
+  
+  // Add typing cursor animation to each line
+  document.querySelectorAll('.typing-line').forEach((line, index) => {
+    const cursor = document.createElement('span');
+    cursor.className = 'typing-cursor';
+    cursor.textContent = '|';
+    cursor.style.animationDelay = `${(index + 1) * 0.8}s`;
+    line.appendChild(cursor);
+  });
+});
+
+// Parallax effect for timeline items
+window.addEventListener('scroll', function() {
+  const timelineItems = document.querySelectorAll('.timeline-item');
+  
+  timelineItems.forEach((item) => {
+    const speed = item.getAttribute('data-parallax') || 0.1;
+    const rect = item.getBoundingClientRect();
+    const isInView = (
+      rect.top <= (window.innerHeight || document.documentElement.clientHeight) &&
+      rect.bottom >= 0
+    );
+    
+    if (isInView) {
+      const scrolled = window.scrollY;
+      const translateY = scrolled * speed;
+      item.style.transform = `translateY(${translateY}px)`;
+    }
+  });
+});
+</script>
+</html>
   
   // Start observing timeline items
   document.querySelectorAll('.timeline-item').forEach(item => {

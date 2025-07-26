@@ -1,0 +1,27 @@
+/* Dark Mode Styles */
+body.dark-mode {
+  background: linear-gradient(135deg, #181818, #23233a, #2d1b69);
+  color: #e0e0e0;
+}
+
+body.dark-mode .navbar-enhanced {
+  background: rgba(24, 24, 24, 0.92);
+  border-color: rgba(255,255,255,0.08);
+}
+
+body.dark-mode .card, body.dark-mode .terminal-loader {
+  background: #23233a;
+  color: #e0e0e0;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.5);
+}
+
+body.dark-mode .parallax-bg-home,
+body.dark-mode .parallax-bg-about,
+body.dark-mode .parallax-bg-projects,
+body.dark-mode .parallax-bg-contact {
+  filter: brightness(0.7) contrast(1.1);
+}
+
+body.dark-mode #darkModeIcon {
+  color: #58baff;
+}

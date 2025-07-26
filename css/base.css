@@ -1,0 +1,103 @@
+/* Core/base styles */
+html {
+  overflow-x: hidden;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  color: #fff;
+  margin: 0;
+  background: linear-gradient(0deg, #080808, #1f1e28);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* FullPage Container */
+.fullpage-container {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* Section Styling */
+section {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  will-change: transform;
+}
+
+section.active {
+  z-index: 10;
+}
+
+.section-content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+/* Typography */
+h1 {
+  font-size: 4em;
+  padding: 0;
+  margin: 0;
+  font-weight: 500;
+}
+
+p {
+  margin-top: 30px;
+  font-size: 3em;
+  font-weight: 100;
+  color: rgb(163, 163, 163);
+}
+
+.gradient-text {
+  background-image: linear-gradient(-45deg, rgb(177, 8, 189), rgb(88, 186, 255));
+  background-clip: text;
+  color: transparent;
+}
+
+/* Content Container */
+.content {
+  max-width: 1200px;
+  margin: auto;
+  padding: 16px 48px;
+}
+
+/* Hero Section */
+.hero {
+  padding-top: 60px;
+  display: flex;
+  flex-direction: row;
+  text-align: left;
+}
+
+/* Avatar Container */
+#avatar-container {
+  height: 500px;
+  margin-top: 32px;
+  margin-bottom: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#avatar-loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}

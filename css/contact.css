@@ -1,0 +1,183 @@
+/* Contact section styles */
+#contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.card-container-1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  height: auto;
+  width: auto;
+}
+
+.github-link-1, .linkedin-link-1, .twitter-link-1, .facebook-link-1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  color: whitesmoke;
+  font-size: 30px;
+  text-decoration: none;
+  transition: 0.25s;
+  border-radius: 50px;
+}
+
+.card-container-1 svg {
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  transition: opacity 0.25s;
+  z-index: 2;
+  cursor: pointer;
+}
+
+/* Social Link Hover Styles */
+.github-link-1:hover, .linkedin-link-1:hover, .twitter-link-1:hover, .facebook-link-1:hover {
+  animation: bounce_613 0.4s linear;
+}
+
+/* Enhanced Uiverse Glassy Animated Button for Portfolio Theme */
+.light-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.light-button .bt {
+  position: relative;
+  background: rgba(16,16,32,0.92);
+  border: 2px solid #444;
+  border-radius: 18px;
+  box-shadow: 0 4px 32px 0 rgba(16,16,32,0.18), 0 1.5px 8px 0 rgba(0,0,0,0.12);
+  padding: 0;
+  width: 140px;
+  height: 140px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: border-color 0.35s cubic-bezier(.4,2,.6,1), box-shadow 0.35s, transform 0.25s cubic-bezier(.4,2,.6,1), background 0.35s;
+  overflow: visible;
+  will-change: transform, box-shadow, border-color;
+}
+
+.light-button .bt .button-holder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+
+.light-button .bt .button-holder svg {
+  width: 56px;
+  height: 56px;
+  fill: #555;
+  filter: drop-shadow(0 2px 8px rgba(0,0,0,0.18));
+  transition: fill 0.35s cubic-bezier(.4,2,.6,1), filter 0.35s;
+  margin-bottom: 0.3em;
+}
+
+.light-button .bt .button-holder p,
+.light-button .bt .button-holder span {
+  color: #555;
+  font-size: 1.08em;
+  font-weight: 600;
+  margin: 0;
+  transition: color 0.35s cubic-bezier(.4,2,.6,1), text-shadow 0.35s;
+  text-shadow: 0 1px 4px rgba(0,0,0,0.12);
+}
+
+.light-button .bt .button-holder span {
+  font-size: 0.93em;
+  font-weight: 400;
+  opacity: 0.8;
+}
+
+.light-button .bt .light-holder {
+  position: absolute;
+  top: -74px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 74px;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.light-button .bt .light-holder .dot {
+  width: 16px;
+  height: 16px;
+  background: #444;
+  border-radius: 50%;
+  margin-bottom: -2px;
+  box-shadow: 0 0 12px 2px #222, 0 0 0 0 #444;
+  opacity: 0.85;
+  transition: background 0.35s, box-shadow 0.35s, filter 0.35s;
+  filter: blur(0.5px);
+  animation: dot-glow 2.2s infinite alternate;
+}
+
+.light-button .bt .light-holder .light {
+  width: 74px;
+  height: 100px;
+  background: linear-gradient(180deg, rgba(68,68,68,0.7) 0%, rgba(68,68,68,0.05) 100%);
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  filter: blur(2.5px);
+  opacity: 0.7;
+  transition: background 0.35s, filter 0.35s, opacity 0.35s;
+  animation: cone-fade 2.2s infinite alternate;
+}
+
+.light-button .bt:hover,
+.light-button .bt:focus {
+  border-color: var(--platform-color, #5865f2);
+  box-shadow: 0 12px 40px 0 var(--platform-shadow, rgba(88,101,242,0.22)), 0 2px 12px 0 rgba(0,0,0,0.18);
+  background: rgba(16,16,32,0.98);
+  transform: scale(1.07) translateY(-4px);
+}
+
+.light-button .bt:hover .button-holder svg,
+.light-button .bt:focus .button-holder svg {
+  fill: var(--platform-color, #5865f2);
+  filter: drop-shadow(0 2px 16px var(--platform-color, #5865f2));
+}
+
+.light-button .bt:hover .button-holder p,
+.light-button .bt:focus .button-holder p,
+.light-button .bt:hover .button-holder span,
+.light-button .bt:focus .button-holder span {
+  color: var(--platform-color, #5865f2);
+  text-shadow: 0 2px 12px var(--platform-color, #5865f2, 0.18);
+}
+
+.light-button .bt:hover .light-holder .dot,
+.light-button .bt:focus .light-holder .dot {
+  background: var(--platform-color, #5865f2);
+  box-shadow: 0 0 24px 8px var(--platform-color, #5865f2), 0 0 0 0 var(--platform-color, #5865f2);
+  filter: blur(0.5px);
+}
+
+.light-button .bt:hover .light-holder .light,
+.light-button .bt:focus .light-holder .light {
+  background: linear-gradient(180deg, var(--platform-color, #5865f2) 0%, rgba(68,68,68,0.05) 100%);
+  filter: blur(3.5px);
+  opacity: 0.95;
+}
+
+/* Platform-specific hover colors */
+.github-bt { --platform-color: #58baff; --platform-shadow: rgba(88,186,255,0.18); }
+.linkedin-bt { --platform-color: #0A66C2; --platform-shadow: rgba(10,102,194,0.18); }
+.pypi-bt { --platform-color: #FFD43B; --platform-shadow: rgba(255,212,59,0.18); }
+.whatsapp-bt { --platform-color: #25D366; --platform-shadow: rgba(37,211,102,0.18); }

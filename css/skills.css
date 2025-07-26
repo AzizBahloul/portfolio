@@ -1,0 +1,72 @@
+/* Enhanced Skills Section */
+#skills-chart {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2.2rem;
+  min-height: 400px;
+  width: 100%;
+  max-width: 420px;
+  margin: 0 auto;
+}
+
+.skill-row {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: 1.2rem;
+  position: relative;
+  animation: floatSkill 3.5s ease-in-out infinite;
+}
+
+.skill-icon {
+  font-size: 2rem;
+  margin-right: 0.5rem;
+  filter: drop-shadow(0 0 8px #b108bd88);
+  animation: glowSkill 2.5s alternate infinite;
+}
+
+.skill-label {
+  font-weight: 700;
+  min-width: 90px;
+  color: #fff;
+  letter-spacing: 0.5px;
+}
+
+.skill-bar-bg {
+  background: #181828;
+  border-radius: 12px;
+  height: 18px;
+  width: 100%;
+  overflow: hidden;
+  box-shadow: 0 2px 12px #b108bd22;
+  position: relative;
+}
+
+.skill-bar {
+  background: linear-gradient(90deg, #b108bd, #58baff 80%);
+  height: 100%;
+  width: 0%;
+  border-radius: 12px;
+  box-shadow: 0 0 16px #58baff88, 0 0 8px #b108bd88;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transition: width 1.4s cubic-bezier(.77,0,.18,1);
+}
+
+.skill-percent {
+  font-size: 1.1em;
+  font-weight: 600;
+  color: #58baff;
+  margin-left: 0.7rem;
+  min-width: 38px;
+  text-shadow: 0 0 8px #b108bd88;
+}
+
+@media (max-width: 600px) {
+  #skills-chart { max-width: 98vw; }
+  .skill-label { min-width: 60px; font-size: 0.98em; }
+  .skill-icon { font-size: 1.5rem; }
+}
