@@ -118,79 +118,55 @@
    <section id="experience" class="parallax-section">
     <div class="parallax-bg-about" data-parallax="-0.4"></div>
     <div class="section-content">
-        <h1 class="parallax-text code-text" data-parallax="0.1">Professional Experience<span class="blinking-cursor">_</span></h1>
-        <div class="experience-timeline">
+        <h1 class="parallax-text code-text" data-parallax="0.1">Professional Experience<span class="blinking-cursor"> </span></h1>
 
-            <!-- Experience 2 -->
-            <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-content">
-                    <div class="experience-header">
-                        <h3 class="experience-title">AI Research Assistant</h3>
-                        <div class="experience-company">MindCare-AI</div>
-                        <div class="experience-date">2021 - 2022</div>
-                    </div>
-                    <div class="experience-description">
-                        <ul>
-                            <li>Developed a Django-based mental health platform connecting users with licensed therapists</li>
-                            <li>Built AI engine analyzing user inputs for mood tracking, intelligent routing, and personalized suggestions</li>
-                            <li>Used Retrieval-Augmented Generation (RAG) to power a context-aware AI chatbot for mental health support</li>
-                            <li>Implemented secure session booking and real-time messaging with Django Channels and WebSocket</li>
-                            <li>Enabled user progress tracking, feedback collection, and session history management</li>
-                            <li>Added real-time notifications and automated email reminders with user preferences</li>
-                            <li>Architected scalable backend infrastructure using Django REST Framework, PostgreSQL, Redis, Celery, and Docker</li>
-                            <li>Developed modular AI analysis for mood, journal, and communication insights</li>
-                            <li>Automated AI-powered crisis detection and alerting for at-risk users</li>
-                        </ul>
-                    </div>
-                    <div class="tech-stack">
-                        <span class="tech-tag">TensorFlow</span>
-                        <span class="tech-tag">CNN</span>
-                        <span class="tech-tag">Transfer Learning</span>
-                        <span class="tech-tag">Medical Imaging</span>
-                        <span class="tech-tag">Python</span>
-                    </div>
+        <!-- Company expanding cards (theme-matched) -->
+        <div class="experience-cards">
+          <div class="company-card" role="list" aria-label="Professional experience">
+            <!-- MindCare-AI -->
+            <div class="panel" role="listitem" tabindex="0" aria-label="MindCare-AI experience">
+              <span class="label">MindCare-AI</span>
+              <div class="desc">
+                <h4>AI Research Assistant • <span>2021 – 2022</span></h4>
+                <ul>
+                  <li>Django platform connecting users with licensed therapists.</li>
+                  <li>AI engine for mood tracking, intelligent routing, and personalized suggestions (RAG chatbot).</li>
+                  <li>Secure booking, real-time chat (Django Channels/WebSockets), and timely notifications.</li>
+                  <li>Stack: Django REST Framework, PostgreSQL, Redis, Celery, Docker.</li>
+                </ul>
+                <div class="tech">
+                  <span>TensorFlow</span>
+                  <span>RAG</span>
+                  <span>Python</span>
                 </div>
+              </div>
             </div>
-
-            <!-- Experience 3 -->
-            <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-content">
-                    <div class="experience-header">
-                        <h3 class="experience-title">Backend Engineer</h3>
-                        <div class="experience-company">Nextunis : "Freelanso" – Freelancing Platform Development</div>
-                        <div class="experience-date">2020 - 2021</div>
-                    </div>
-                    <div class="experience-description">
-                        <ul>
-                            <li>Built a recommendation engine in Django to match freelancers with jobs and suggest talent to clients</li>
-                            <li>Developed real-time messaging using Django Channels and WebSockets</li>
-                            <li>Implemented real-time and email notifications to boost engagement</li>
-                            <li>Designed a search engine with advanced filters for jobs, users, and talent</li>
-                            <li>Built a review system to enhance trust through ratings and feedback</li>
-                            <li>Set up a data warehouse and ETL pipeline for platform analytics</li>
-                            <li>Added user preferences and subscription-based notifications</li>
-                            <li>Wrote unit and integration tests to ensure code quality</li>
-                        </ul>
-                    </div>
-                    <div class="tech-stack">
-                        <span class="tech-tag">React</span>
-                        <span class="tech-tag">Node.js</span>
-                        <span class="tech-tag">JavaScript</span>
-                        <span class="tech-tag">Database Design</span>
-                        <span class="tech-tag">Full Stack</span>
-                    </div>
+            <!-- Nextunis / Freelanso -->
+            <div class="panel" role="listitem" tabindex="0" aria-label="Nextunis Freelanso experience">
+              <span class="label">Nextunis • Freelanso</span>
+              <div class="desc">
+                <h4>Backend Engineer • <span>2020 – 2021</span></h4>
+                <ul>
+                  <li>Recommendation engine matching freelancers with jobs and surfacing talent to clients.</li>
+                  <li>Real-time messaging, email notifications, and advanced, filterable search.</li>
+                  <li>Reviews and ratings, analytics (data warehouse + ETL), user preferences, and subscriptions.</li>
+                </ul>
+                <div class="tech">
+                  <span>Django</span>
+                  <span>Channels</span>
+                  <span>PostgreSQL</span>
                 </div>
+              </div>
             </div>
+          </div>
         </div>
     </div>
-</section>
+  </section>
     
     <section id="certificates" class="parallax-section">
         <div class="parallax-bg-projects" data-parallax="-0.5"></div>
         <div class="section-content">
-            <h1 class="parallax-text code-text" data-parallax="0.1">Certificates<span class="blinking-cursor">_</span></h1>
+            <h1 class="parallax-text code-text" data-parallax="0.1">Certificates<span class="blinking-cursor"></span></h1>
             <div class="certificates-container">
                 <div class="certificate-card ai-code-card parallax-element" data-parallax="0.2">
                     <div class="card-circuit-overlay"></div>
@@ -346,77 +322,121 @@
     </section>
 
     <section id="contact" class="parallax-section">
-        <div class="parallax-bg-contact" data-parallax="-0.4"></div>
-        <div class="section-content">
-            <div style="display: flex; flex-wrap: wrap; gap: 2.5em; justify-content: center; align-items: stretch; margin-top: 2em;">
-                <!-- GitHub Button -->
-                <div class="light-button">
-                  <a href="https://github.com/AzizBahloul" target="_blank" style="text-decoration:none;">
-                    <button class="bt github-bt" style="width:140px;height:140px;">
-                      <div class="light-holder">
-                        <div class="dot"></div>
-                        <div class="light"></div>
-                      </div>
-                      <div class="button-holder">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" role="img"><path d="M12 2C6.48 2 2 6.48 2 12c0 4.42 2.87 8.17 6.84 9.49.5.09.68-.22.68-.48l-.01-1.69c-2.79.6-3.37-1.34-3.37-1.34-.46-1.16-1.12-1.47-1.12-1.47-.91-.63.07-.62.07-.62 1.01.07 1.54 1.04 1.54 1.04.9 1.54 2.37 1.1 2.95.84.09-.65.35-1.1.64-1.35-2.23-.25-4.58-1.12-4.58-4.97 0-1.1.39-2 1.04-2.7-.1-.25-.45-1.28.1-2.66 0 0 .85-.27 2.78 1.03A9.61 9.61 0 0112 7.35c.85.02 1.7.12 2.5.36 1.93-1.3 2.78-1.03 2.78-1.03.55 1.38.2 2.41.1 2.66.64.7 1.04 1.6 1.04 2.7 0 3.86-2.36 4.72-4.6 4.97.36.31.68.92.68 1.85l-.01 2.75c0 .26.18.57.69.48A10.02 10.02 0 0022 12c0-5.52-4.48-10-10-10z"/></svg>
-                        <p><span class="glow-type" data-platform="github"></span></p>
-                        <span style="font-size:0.95em;">@AzizBahloul</span>
-                      </div>
-                    </button>
-                  </a>
-                </div>
-                <!-- LinkedIn Button -->
-                <div class="light-button">
-                  <a href="https://www.linkedin.com/feed/" target="_blank" style="text-decoration:none;">
-                    <button class="bt linkedin-bt" style="width:140px;height:140px;">
-                      <div class="light-holder">
-                        <div class="dot"></div>
-                        <div class="light"></div>
-                      </div>
-                      <div class="button-holder">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" role="img"><path d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"/></svg>
-                        <p><span class="glow-type" data-platform="linkedin"></span></p>
-                        <span style="font-size:0.95em;">@azizbahloul</span>
-                      </div>
-                    </button>
-                  </a>
-                </div>
-                <!-- PyPI Button -->
-                <div class="light-button">
-                  <a href="https://pypi.org/user/si_aziz_bahloul/" target="_blank" style="text-decoration:none;">
-                    <button class="bt pypi-bt" style="width:140px;height:140px;">
-                      <div class="light-holder">
-                        <div class="dot"></div>
-                        <div class="light"></div>
-                      </div>
-                      <div class="button-holder">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" role="img"><g><ellipse cx="12" cy="12" rx="12" ry="12"/><ellipse cx="12" cy="12" rx="9" ry="9"/><ellipse cx="12" cy="12" rx="6" ry="6"/></g></svg>
-                        <p><span class="glow-type" data-platform="pypi"></span></p>
-                        
-                      </div>
-                    </button>
-                  </a>
-                </div>
-                <!-- WhatsApp Button -->
-                <div class="light-button">
-                  <a href="https://wa.me/21694772560" target="_blank" style="text-decoration:none;">
-                    <button class="bt whatsapp-bt" style="width:140px;height:140px;">
-                      <div class="light-holder">
-                        <div class="dot"></div>
-                        <div class="light"></div>
-                      </div>
-                      <div class="button-holder">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img"><path d="M16 3C9.373 3 4 8.373 4 15c0 2.385.832 4.58 2.236 6.36L4 29l7.828-2.236A11.94 11.94 0 0 0 16 27c6.627 0 12-5.373 12-12S22.627 3 16 3zm0 22c-1.77 0-3.45-.46-4.91-1.26l-.35-.2-4.65 1.33 1.33-4.53-.22-.36A9.97 9.97 0 0 1 6 15c0-5.514 4.486-10 10-10s10 4.486 10 10-4.486 10-10 10zm5.2-7.6c-.28-.14-1.65-.81-1.9-.9-.25-.09-.43-.14-.61.14-.18.28-.7.9-.86 1.08-.16.18-.32.2-.6.07-.28-.14-1.18-.44-2.25-1.4-.83-.74-1.39-1.65-1.55-1.93-.16-.28-.02-.43.12-.57.13-.13.28-.34.42-.51.14-.17.18-.29.28-.48.09-.19.05-.36-.02-.5-.07-.14-.61-1.47-.84-2.01-.22-.53-.45-.46-.62-.47-.16-.01-.36-.01-.56-.01-.19 0-.5.07-.76.34-.26.27-1 1-.99 2.43.01 1.43 1.03 2.81 1.18 3 .15.19 2.03 3.1 4.93 4.22.69.3 1.23.48 1.65.61.69.22 1.32.19 1.81.12.55-.08 1.65-.67 1.89-1.32.23-.65.23-1.2.16-1.32-.07-.12-.25-.19-.53-.33z"/></svg>
-                        <p><span class="glow-type" data-platform="whatsapp"></span></p>
-                        
-                        
-                      </div>
-                    </button>
-                  </a>
-                </div>
+    <div class="parallax-bg-contact" data-parallax="-0.4"></div>
+    <div class="section-content">
+      <h1 class="parallax-text code-text" data-parallax="0.1">Neural Network<span class="blinking-cursor">_</span></h1>
+      <p class="contact-subtitle" data-parallax="0.15">Connect through the digital synapses</p>
+      
+      <!-- Neural Contact Network -->
+      <div class="neural-network" id="neuralNetwork" data-parallax="0.2">
+        <canvas class="neural-canvas" id="neuralCanvas"></canvas>
+        
+        <!-- Central Hub -->
+        <div class="neural-hub">
+          <div class="hub-core">
+            <div class="pulse-ring"></div>
+            <div class="hub-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2L13.09 8.26L19.35 9.35L13.09 15.74L14.18 22L12 17.77L9.82 22L10.91 15.74L4.65 9.35L10.91 8.26L12 2Z"/>
+              </svg>
             </div>
+            <span class="hub-label">Neural Core</span>
+          </div>
         </div>
-    </section>
+        
+        <!-- Contact Nodes -->
+        <div class="contact-nodes">
+          <div class="neural-node node-github" data-platform="github" data-angle="0">
+            <div class="node-card">
+              <div class="holo-effect"></div>
+              <div class="node-content">
+                <div class="node-icon">
+                  <svg viewBox="0 0 24 24" width="28" height="28">
+                    <path fill="currentColor" d="M12 2C6.48 2 2 6.48 2 12c0 4.42 2.87 8.17 6.84 9.49.5.09.68-.22.68-.48l-.01-1.69c-2.79.6-3.37-1.34-3.37-1.34-.46-1.16-1.12-1.47-1.12-1.47-.91-.63.07-.62.07-.62 1.01.07 1.54 1.04 1.54 1.04.9 1.54 2.37 1.1 2.95.84.09-.65.35-1.1.64-1.35-2.23-.25-4.58-1.12-4.58-4.97 0-1.1.39-2 1.04-2.7-.1-.25-.45-1.28.1-2.66 0 0 .85-.27 2.78 1.03A9.61 9.61 0 0112 7.35c.85.02 1.7.12 2.5.36 1.93-1.3 2.78-1.03 2.78-1.03.55 1.38.2 2.41.1 2.66.64.7 1.04 1.6 1.04 2.7 0 3.86-2.36 4.72-4.6 4.97.36.31.68.92.68 1.85l-.01 2.75c0 .26.18.57.69.48A10.02 10.02 0 0022 12c0-5.52-4.48-10-10-10z"/>
+                  </svg>
+                </div>
+                <h3>GitHub</h3>
+                <p>Code Repository</p>
+                <a href="https://github.com/AzizBahloul" target="_blank" rel="noopener" class="neural-link">
+                  <span>@AzizBahloul</span>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+          
+          <div class="neural-node node-linkedin" data-platform="linkedin" data-angle="90">
+            <div class="node-card">
+              <div class="holo-effect"></div>
+              <div class="node-content">
+                <div class="node-icon">
+                  <svg viewBox="0 0 448 512" width="28" height="28">
+                    <path fill="currentColor" d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"/>
+                  </svg>
+                </div>
+                <h3>LinkedIn</h3>
+                <p>Professional Network</p>
+                <a href="https://www.linkedin.com/feed/" target="_blank" rel="noopener" class="neural-link">
+                  <span>@azizbahloul</span>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+          
+          <div class="neural-node node-pypi" data-platform="pypi" data-angle="180">
+            <div class="node-card">
+              <div class="holo-effect"></div>
+              <div class="node-content">
+                <div class="node-icon">
+                  <svg viewBox="0 0 24 24" width="28" height="28">
+                    <g fill="currentColor">
+                      <circle cx="12" cy="12" r="10" opacity=".3"/>
+                      <circle cx="12" cy="12" r="6" opacity=".6"/>
+                      <circle cx="12" cy="12" r="3"/>
+                    </g>
+                  </svg>
+                </div>
+                <h3>PyPI</h3>
+                <p>Python Packages</p>
+                <a href="https://pypi.org/user/si_aziz_bahloul/" target="_blank" rel="noopener" class="neural-link">
+                  <span>si_aziz_bahloul</span>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+          
+          <div class="neural-node node-whatsapp" data-platform="whatsapp" data-angle="270">
+            <div class="node-card">
+              <div class="holo-effect"></div>
+              <div class="node-content">
+                <div class="node-icon">
+                  <svg viewBox="0 0 32 32" width="28" height="28">
+                    <path fill="currentColor" d="M16 3C9.373 3 4 8.373 4 15c0 2.385.832 4.58 2.236 6.36L4 29l7.828-2.236A11.94 11.94 0 0 0 16 27c6.627 0 12-5.373 12-12S22.627 3 16 3zm0 22c-1.77 0-3.45-.46-4.91-1.26l-.35-.2-4.65 1.33 1.33-4.53-.22-.36A9.97 9.97 0 0 1 6 15c0-5.514 4.486-10 10-10s10 4.486 10 10-4.486 10-10 10zm5.2-7.6c-.28-.14-1.65-.81-1.9-.9-.25-.09-.43-.14-.61.14-.18.28-.7.9-.86 1.08-.16.18-.32.2-.6.07-.28-.14-1.18-.44-2.25-1.4-.83-.74-1.39-1.65-1.55-1.93-.16-.28-.02-.43.12-.57.13-.13.28-.34.42-.51.14-.17.18-.29.28-.48.09-.19.05-.36-.02-.5-.07-.14-.61-1.47-.84-2.01-.22-.53-.45-.46-.62-.47-.16-.01-.36-.01-.56-.01-.19 0-.5.07-.76.34-.26.27-1 1-.99 2.43.01 1.43 1.03 2.81 1.18 3 .15.19 2.03 3.1 4.93 4.22.69.3 1.23.48 1.65.61.69.22 1.32.19 1.81.12.55-.08 1.65-.67 1.89-1.32.23-.65.23-1.2.16-1.32-.07-.12-.25-.19-.53-.33z"/>
+                  </svg>
+                </div>
+                <h3>WhatsApp</h3>
+                <p>Direct Message</p>
+                <a href="https://wa.me/21694772560" target="_blank" rel="noopener" class="neural-link">
+                  <span>+216 94 772 560</span>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 </body>
 <script>
 // Dark/Light Mode Toggle
@@ -531,50 +551,26 @@ window.addEventListener('scroll', function() {
     }
   });
 });
+// Experience cards interactions (click/touch + pointer glow)
+document.addEventListener('DOMContentLoaded', () => {
+  const panels = document.querySelectorAll('.company-card .panel');
+  if (!panels.length) return;
+  panels.forEach(p => {
+    p.addEventListener('click', () => {
+      panels.forEach(x => x.classList.remove('active'));
+      p.classList.add('active');
+    });
+    p.addEventListener('pointermove', (e) => {
+      const rect = p.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      p.style.setProperty('--mx', `${x}px`);
+      p.style.setProperty('--my', `${y}px`);
+    });
+  });
+  // Set first active by default for better context
+  panels[0].classList.add('active');
+});
 </script>
-<script>
-        // Typewriter and glow animation for contact names
-        const platformNames = {
-          github: 'GitHub',
-          linkedin: 'LinkedIn',
-          pypi: 'PyPI',
-          whatsapp: 'WhatsApp'
-        };
-        const platformColors = {
-          github: '#58baff',
-          linkedin: '#0A66C2',
-          pypi: '#FFD43B',
-          whatsapp: '#25D366'
-        };
-        function typeWriterEffect(el, text, color, speed=150, pause=2000) {
-          let i = 0;
-          function type() {
-            if (i <= text.length) {
-              el.innerHTML = `<span style='color:${color};text-shadow:0 0 8px ${color},0 0 18px ${color}99,0 0 2px #fff;'>${text.slice(0,i)}</span><span class='type-cursor' style='color:${color};text-shadow:0 0 8px ${color};'>|</span>`;
-              i++;
-              setTimeout(type, speed);
-            } else {
-              setTimeout(() => erase(), pause);
-            }
-          }
-          function erase() {
-            if (i >= 0) {
-              el.innerHTML = `<span style='color:${color};text-shadow:0 0 8px ${color},0 0 18px ${color}99,0 0 2px #fff;'>${text.slice(0,i)}</span><span class='type-cursor' style='color:${color};text-shadow:0 0 8px ${color};'>|</span>`;
-              i--;
-              setTimeout(erase, speed/2);
-            } else {
-              setTimeout(type, 600);
-            }
-          }
-          type();
-        }
-        document.addEventListener('DOMContentLoaded', () => {
-          document.querySelectorAll('.glow-type').forEach(span => {
-            const platform = span.getAttribute('data-platform');
-            const name = platformNames[platform];
-            const color = platformColors[platform];
-            typeWriterEffect(span, name, color);
-          });
-        });
-        </script>
+<script src="neural-contact.js"></script>
 </html>
