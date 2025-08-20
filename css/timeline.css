@@ -180,6 +180,16 @@
     }
 }
 
+@media (max-width: 360px) {
+    .experience-timeline { padding: 1rem 0; }
+    .experience-timeline::before { left: 16px; }
+    .timeline-dot { left: 16px; width: 16px; height: 16px; }
+    .timeline-content { margin-left: 36px; padding: 1rem 0.75rem; width: calc(100% - 46px); }
+    .experience-title { font-size: 1.05rem; }
+    .experience-company { font-size: 0.95rem; }
+    .experience-date { font-size: 0.85rem; }
+}
+
 /* Animations */
 @keyframes slideInUp {
     to {

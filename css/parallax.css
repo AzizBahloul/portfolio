@@ -195,3 +195,23 @@
   width: 100%;
   height: 100%;
 }
+
+/* Responsive parallax tweaks */
+@media (max-width: 1024px) {
+  .parallax-layer { width: 140%; height: 140%; opacity: 0.12; }
+  .parallax-bg-home, .parallax-bg-about, .parallax-bg-projects, .parallax-bg-contact { width: 160%; height: 160%; top: -40%; left: -40%; }
+}
+
+@media (max-width: 768px) {
+  .parallax-layer { opacity: 0.09; }
+  .parallax-bg { display: none; }
+  .parallax-section { min-height: 70vh; padding: 40px 12px; }
+  .parallax-text { transform: translateY(18px); font-size: 0.98rem; }
+  .fp-navigation { right: 12px; gap: 10px; }
+}
+
+@media (max-width: 420px) {
+  .parallax-section { min-height: 60vh; padding: 28px 10px; }
+  .parallax-text { font-size: 0.92rem; }
+  .fp-navigation { right: 8px; }
+}

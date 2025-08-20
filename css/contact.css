@@ -16,6 +16,17 @@
   width: auto;
 }
 
+@media (max-width: 768px) {
+  #contact { padding: 16px; }
+  .card-container-1 { flex-direction: column; gap: 18px; }
+  .github-link-1, .linkedin-link-1, .twitter-link-1, .facebook-link-1 { width: 52px; height: 52px; font-size: 26px; }
+  .card-container-1 svg { width: 80%; height: 80%; }
+}
+
+@media (max-width: 420px) {
+  .github-link-1, .linkedin-link-1, .twitter-link-1, .facebook-link-1 { width: 48px; height: 48px; font-size: 22px; }
+}
+
 .github-link-1, .linkedin-link-1, .twitter-link-1, .facebook-link-1 {
   display: flex;
   align-items: center;

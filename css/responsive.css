@@ -151,7 +151,7 @@
 .glass-nav-content {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center; /* center nav items */
   max-width: 1200px;
   margin: 0 auto;
   padding: 0.7rem 2.2rem 0.4rem 2.2rem;
@@ -296,7 +296,8 @@
   border-radius: 10px;
   background: rgba(24,24,40,0.18);
   cursor: pointer;
-  margin-left: 1.2rem;
+  position: absolute; /* position to right */
+  right: 1.6rem;
   transition: background 0.18s;
   z-index: 1300;
 }

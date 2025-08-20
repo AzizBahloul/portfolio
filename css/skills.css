@@ -70,3 +70,10 @@
   .skill-label { min-width: 60px; font-size: 0.98em; }
   .skill-icon { font-size: 1.5rem; }
 }
+
+@media (max-width: 420px) {
+  #skills-chart { gap: 1.2rem; min-height: 280px; }
+  .skill-row { gap: 0.8rem; }
+  .skill-label { min-width: 50px; font-size: 0.9rem; }
+  .skill-percent { font-size: 0.98rem; min-width: 34px; }
+}

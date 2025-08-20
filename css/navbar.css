@@ -320,3 +320,133 @@ header.scrolled .nav-container {
   transition: color 0.3s;
   color: #b108bd;
 }
+
+/* Hide legacy brand text and AI status chip (if present in markup) */
+.glass-title,
+.glass-status-chip {
+  display: none !important;
+}
+
+/* Responsive / Mobile styles */
+/* Assumptions: a small-screen toggle will add either `header.menu-open` or `.nav-menu.open`,
+   or toggle `.nav-toggle.active` for hamburger animation. If you want a pure-CSS
+   checkbox toggle I can add that to the HTML later. */
+
+@media (max-width: 900px) {
+  .nav-menu {
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    padding: 0.5rem 1rem;
+  }
+
+  .nav-brand {
+    display: block;
+    margin-right: 1rem;
+    align-self: center;
+  }
+
+  .brand-text {
+    font-size: 1.1rem;
+  }
+
+  /* show hamburger */
+  .nav-toggle {
+    display: flex;
+    right: 1rem;
+    top: 0.9rem;
+  }
+
+  /* Mobile menu: hidden by default, opens with .open or header.menu-open */
+  .nav-menu {
+    position: fixed;
+    top: 64px;
+    right: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.5rem;
+    background: rgba(8, 8, 8, 0.95);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-radius: 12px;
+    padding: 0.75rem;
+    box-shadow: 0 12px 40px rgba(0,0,0,0.45);
+    width: min(320px, calc(100% - 2rem));
+    max-height: calc(100vh - 90px);
+    overflow-y: auto;
+    transform: translateY(-8px) scale(0.99);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 240ms cubic-bezier(0.2,0,0.2,1);
+    z-index: 1500;
+  }
+
+  /* open states (JS can toggle these) */
+  .nav-menu.open,
+  header.menu-open .nav-menu {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .nav-item {
+    width: 100%;
+  }
+
+  .nav-link {
+    width: 100%;
+    padding: 0.6rem 0.9rem;
+    border-radius: 10px;
+  }
+
+  .nav-text {
+    font-size: 0.95rem;
+    text-align: left;
+  }
+
+  .nav-underline {
+    left: 12px;
+    transform: translateX(0);
+  }
+
+  .resume-item {
+    margin-left: 0;
+    margin-top: 0.25rem;
+  }
+
+  .resume-btn {
+    width: 100%;
+    padding: 0.6rem 0.9rem;
+    border-radius: 10px;
+  }
+
+  /* Hamburger -> X animation helpers (toggle `.nav-toggle.active` via JS) */
+  .nav-toggle .bar {
+    transition: transform 220ms ease, opacity 160ms ease, background 200ms ease;
+  }
+
+  .nav-toggle.active .bar:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+  .nav-toggle.active .bar:nth-child(2) {
+    opacity: 0;
+    transform: translateX(-6px);
+  }
+  .nav-toggle.active .bar:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+}
+
+@media (max-width: 420px) {
+  .brand-text { font-size: 1rem; }
+  .nav-text { font-size: 0.9rem; }
+  .resume-text { font-size: 0.85rem; }
+  header { padding: 0.4rem 0.6rem; }
+  .nav-toggle { right: 0.6rem; }
+  .nav-menu { top: 56px; right: 0.6rem; width: calc(100% - 1.2rem); }
+}
+
