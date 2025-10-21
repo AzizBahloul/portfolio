@@ -1,29 +1,29 @@
 /* Modern Timeline Styles */
 .experience-timeline {
-    max-width: 900px;
+    max-width: clamp(320px, 90vw, 900px);
     margin: 0 auto;
     position: relative;
-    padding: 2rem 0;
+    padding: clamp(1rem, 4vw, 2rem) 0;
 }
 
 /* Move the timeline line to the left */
 .experience-timeline::before {
     content: '';
     position: absolute;
-    left: 32px;
+    left: clamp(16px, 4.5vw, 32px);
     top: 0;
     bottom: 0;
-    width: 3px;
+    width: clamp(2px, 0.4vw, 3px);
     background: linear-gradient(180deg, #b108bd, #58baff, #b108bd);
     transform: none;
     border-radius: 2px;
-    box-shadow: 0 0 20px rgba(177, 8, 189, 0.4);
+    box-shadow: 0 0 clamp(10px, 2vw, 20px) rgba(177, 8, 189, 0.4);
 }
 
 /* Timeline item always on the right of the line */
 .timeline-item {
     position: relative;
-    margin-bottom: 3rem;
+    margin-bottom: clamp(1.2rem, 3.5vw, 3rem);
     opacity: 0;
     transform: translateY(50px);
     animation: slideInUp 0.8s ease forwards;
@@ -32,14 +32,15 @@
 /* Remove left/right alternation */
 .timeline-content {
     position: relative;
-    width: calc(100% - 90px);
-    margin-left: 70px;
+    /* Use the timeline offset to calculate available width */
+    width: calc(100% - (clamp(56px, 14vw, 90px)));
+    margin-left: clamp(56px, 14vw, 70px);
     background: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 16px;
-    padding: 2rem;
-    transition: all 0.3s ease;
+    padding: clamp(1rem, 2.4vw, 2rem);
+    transition: all 0.28s ease;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
     text-align: left;
 }
@@ -47,23 +48,23 @@
 /* Timeline dot aligns with the line */
 .timeline-dot {
     position: absolute;
-    left: 32px;
-    top: 2rem;
-    width: 20px;
-    height: 20px;
+    left: clamp(16px, 4.5vw, 32px);
+    top: clamp(1.6rem, 4vw, 2rem);
+    width: clamp(12px, 2.6vw, 20px);
+    height: clamp(12px, 2.6vw, 20px);
     background: linear-gradient(135deg, #b108bd, #58baff);
     border-radius: 50%;
     transform: translateX(-50%);
     z-index: 10;
-    box-shadow: 0 0 20px rgba(177, 8, 189, 0.6);
+    box-shadow: 0 0 clamp(10px, 2vw, 20px) rgba(177, 8, 189, 0.6);
     animation: pulse 2s infinite;
 }
 
 .timeline-dot::before {
     content: '';
     position: absolute;
-    width: 12px;
-    height: 12px;
+    width: clamp(6px, 1.4vw, 12px);
+    height: clamp(6px, 1.4vw, 12px);
     background: rgba(255, 255, 255, 0.9);
     border-radius: 50%;
     top: 50%;
@@ -76,10 +77,10 @@
 }
 
 .experience-title {
-    font-size: 1.4rem;
+    font-size: clamp(1.05rem, 2.2vw, 1.4rem);
     font-weight: 600;
     color: #fff;
-    margin-bottom: 0.5rem;
+    margin-bottom: clamp(0.35rem, 1.2vw, 0.5rem);
     background: linear-gradient(135deg, #b108bd, #58baff);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -87,14 +88,14 @@
 }
 
 .experience-company {
-    font-size: 1.1rem;
+    font-size: clamp(0.95rem, 1.4vw, 1.1rem);
     color: #58baff;
     font-weight: 500;
-    margin-bottom: 0.3rem;
+    margin-bottom: clamp(0.2rem, 0.8vw, 0.3rem);
 }
 
 .experience-date {
-    font-size: 0.9rem;
+    font-size: clamp(0.8rem, 1.2vw, 0.95rem);
     color: rgba(255, 255, 255, 0.6);
     font-weight: 400;
 }
@@ -102,7 +103,7 @@
 .experience-description {
     color: rgba(255, 255, 255, 0.8);
     line-height: 1.6;
-    margin-top: 1rem;
+    margin-top: clamp(0.6rem, 1.8vw, 1rem);
 }
 
 .tech-stack {
@@ -124,12 +125,12 @@
 .tech-tag {
     background: rgba(177, 8, 189, 0.2);
     color: #b108bd;
-    padding: 0.3rem 0.8rem;
+    padding: clamp(6px, 1.2vw, 0.3rem) clamp(10px, 2.2vw, 0.8rem);
     border-radius: 20px;
-    font-size: 0.8rem;
+    font-size: clamp(0.7rem, 1.1vw, 0.8rem);
     font-weight: 500;
     border: 1px solid rgba(177, 8, 189, 0.3);
-    transition: all 0.3s ease;
+    transition: all 0.24s ease;
 }
 
 .tech-tag:hover {
@@ -140,54 +141,46 @@
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .experience-timeline::before {
-        left: 20px;
-    }
-    
-    .timeline-dot {
-        left: 20px;
-    }
-    
+    .experience-timeline::before { left: clamp(14px, 4.2vw, 20px); }
+    .timeline-dot { left: clamp(14px, 4.2vw, 20px); }
     .timeline-content {
-        width: calc(100% - 60px);
-        margin-left: 40px;
+        width: calc(100% - (clamp(44px, 12vw, 60px)));
+        margin-left: clamp(44px, 12vw, 40px);
         left: 0 !important;
         right: auto !important;
         text-align: left !important;
-        padding-left: 1.5rem !important;
-        padding-right: 1.5rem !important;
+        padding-left: clamp(12px, 3vw, 1.5rem) !important;
+        padding-right: clamp(12px, 3vw, 1.5rem) !important;
     }
-    
-    .tech-stack {
-        justify-content: flex-start !important;
-    }
+    .tech-stack { justify-content: flex-start !important; }
 }
 
 @media (max-width: 480px) {
     .timeline-content {
-        padding: 1.5rem 1rem;
-        width: calc(100% - 50px);
-        margin-left: 30px;
+        padding: clamp(10px, 3vw, 1.5rem) clamp(8px, 3vw, 1rem);
+        width: calc(100% - (clamp(36px, 10vw, 50px)));
+        margin-left: clamp(36px, 10vw, 30px);
         left: 0 !important;
     }
-    
-    .experience-title {
-        font-size: 1.2rem;
-    }
-    
-    .experience-company {
-        font-size: 1rem;
-    }
+    .experience-title { font-size: clamp(0.98rem, 2.2vw, 1.2rem); }
+    .experience-company { font-size: clamp(0.9rem, 1.6vw, 1rem); }
 }
 
 @media (max-width: 360px) {
-    .experience-timeline { padding: 1rem 0; }
+    .experience-timeline { padding: clamp(8px, 3vw, 1rem) 0; }
     .experience-timeline::before { left: 16px; }
     .timeline-dot { left: 16px; width: 16px; height: 16px; }
-    .timeline-content { margin-left: 36px; padding: 1rem 0.75rem; width: calc(100% - 46px); }
-    .experience-title { font-size: 1.05rem; }
-    .experience-company { font-size: 0.95rem; }
-    .experience-date { font-size: 0.85rem; }
+    .timeline-content { margin-left: 36px; padding: clamp(8px, 2.5vw, 1rem) 0.75rem; width: calc(100% - 46px); }
+    .experience-title { font-size: clamp(0.92rem, 2vw, 1.05rem); }
+    .experience-company { font-size: clamp(0.88rem, 1.8vw, 0.95rem); }
+    .experience-date { font-size: clamp(0.78rem, 1.6vw, 0.85rem); }
+}
+
+/* Respect reduced motion and reduce animations on touch devices */
+@media (prefers-reduced-motion: reduce), (hover: none) {
+    .timeline-item { animation: none !important; opacity: 1 !important; transform: none !important; }
+    .timeline-dot { animation: none !important; box-shadow: none !important; }
+    .tech-tag { transition: none !important; }
 }
 
 /* Animations */

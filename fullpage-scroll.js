@@ -47,6 +47,7 @@ class FullPageScroll {
         if (typeof ScrollToPlugin !== 'undefined') gsap.registerPlugin(ScrollToPlugin);
 
         this.setupDOM();
+    this.setVhCssVariable();
         this.setupSections();
         this.setupParallax();
         this.setupNavigation();
@@ -56,6 +57,24 @@ class FullPageScroll {
         this.setupLottieAnimations(); // Add this line
         
         console.log('✅ Enhanced FullPage scroll system initialized');
+    }
+
+    // Ensure CSS --vh variable is set and update on visualViewport resize
+    setVhCssVariable() {
+        const setVh = () => {
+            try {
+                const vh = (window.innerHeight || document.documentElement.clientHeight) * 0.01;
+                document.documentElement.style.setProperty('--vh', `${vh}px`);
+                // update our internal fullVh
+                this.fullVh = `calc(var(--vh, 1vh) * 100)`;
+            } catch (e) { /* ignore */ }
+        };
+
+        setVh();
+        window.addEventListener('resize', setVh);
+        if (window.visualViewport) {
+            window.visualViewport.addEventListener('resize', setVh);
+        }
     }
 
     setupDOM() {
@@ -88,9 +107,11 @@ class FullPageScroll {
             }
         }
 
+        // Use CSS variable --vh for robust mobile/secondary-monitor behavior
+        this.fullVh = 'calc(var(--vh, 1vh) * 100)';
         gsap.set(container, {
             position: 'relative',
-            height: '100vh',
+            height: this.fullVh,
             width: '100%',
             overflow: 'hidden'
         });
@@ -109,7 +130,7 @@ class FullPageScroll {
                 top: 0,
                 left: 0,
                 width: '100%',
-                height: '100vh',
+                height: this.fullVh,
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
@@ -119,7 +140,7 @@ class FullPageScroll {
 
             // Initially position all sections below the viewport except the first
             if (index > 0) {
-                gsap.set(section, { y: '100vh' });
+                gsap.set(section, { y: this.fullVh });
             }
 
             // Add section data

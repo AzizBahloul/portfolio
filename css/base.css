@@ -1,4 +1,13 @@
 /* Core/base styles */
+:root {
+  --max-content-width: 1200px;
+  --gap-base: 1rem;
+  --color-text-muted: rgb(163, 163, 163);
+}
+
+/* make sizing predictable */
+*, *::before, *::after { box-sizing: border-box; }
+
 html {
   overflow-x: hidden;
 }
@@ -42,25 +51,27 @@ section.active {
   position: relative;
   z-index: 2;
   width: 100%;
-  max-width: 1200px;
+  max-width: var(--max-content-width);
   margin: 0 auto;
   padding: 0 20px;
   text-align: center;
 }
 
-/* Typography */
+/* Typography (responsive) */
 h1 {
-  font-size: 4em;
+  font-size: clamp(1.6rem, 3.2vw + 1rem, 4.2rem);
   padding: 0;
   margin: 0;
   font-weight: 500;
+  line-height: 1.05;
 }
 
 p {
-  margin-top: 30px;
-  font-size: 3em;
-  font-weight: 100;
-  color: rgb(163, 163, 163);
+  margin-top: 1.25rem;
+  font-size: clamp(0.95rem, 1.2vw + 0.6rem, 1.5rem);
+  font-weight: 300;
+  color: var(--color-text-muted);
+  line-height: 1.45;
 }
 
 .gradient-text {
@@ -86,9 +97,10 @@ p {
 
 /* Avatar Container */
 #avatar-container {
-  height: 500px;
-  margin-top: 32px;
-  margin-bottom: 32px;
+  /* responsive avatar sizing */
+  height: clamp(180px, 28vw, 500px);
+  margin-top: clamp(8px, 2vw, 32px);
+  margin-bottom: clamp(8px, 2vw, 32px);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -100,6 +112,14 @@ p {
   align-items: center;
   width: 100%;
   height: 100%;
+}
+
+/* Responsive dotlottie avatar player */
+.avatar-player {
+  width: clamp(160px, 28vw, 420px) !important;
+  height: auto !important;
+  max-height: clamp(140px, 36vw, 500px) !important;
+  display: block !important;
 }
 
 /* Responsive adjustments for main sections (home/about/projects/etc.) */
@@ -116,7 +136,8 @@ p {
   h1 { font-size: 2.4em; }
   p { font-size: 1.4em; margin-top: 18px; }
   #avatar-container { height: 320px; margin-top: 8px; margin-bottom: 8px; }
-  section { position: relative; height: auto; min-height: 60vh; }
+  /* make sections flow for smaller viewports so content stacks naturally */
+  section { position: relative; height: auto; min-height: 50vh; padding: 40px 0; }
 }
 
 @media (max-width: 420px) {
@@ -125,4 +146,12 @@ p {
   .content { padding: 12px 12px; }
   #avatar-container { height: 220px; }
   .section-content { padding-left: 10px; padding-right: 10px; }
+}
+
+/* Utility: more reliable full-height that accounts for mobile browser chrome
+   Use `.full-height` on containers instead of plain `height:100vh` when possible.
+   JS below sets `--vh` to 1% of the viewport height. */
+.full-height {
+  height: calc(var(--vh, 1vh) * 100);
+  min-height: 100vh;
 }

@@ -4,8 +4,8 @@
   background-color: #1a1a1a;
   color: #0f0;
   font-family: "Courier New", Courier, monospace;
-  font-size: 1em;
-  padding: 1.5em 1em;
+  font-size: clamp(0.9rem, 1.2vw + 0.4rem, 1rem);
+  padding: clamp(12px, 2vw, 1.5em) clamp(8px, 2vw, 1em);
   width: 100%;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
@@ -19,11 +19,11 @@
   top: 0;
   left: 0;
   right: 0;
-  height: 1.5em;
+  height: clamp(1.2rem, 3.2vw, 1.6rem);
   background-color: #333;
   border-top-left-radius: 4px;
   border-top-right-radius: 4px;
-  padding: 0 0.4em;
+  padding: 0 clamp(6px, 1.6vw, 0.4em);
   box-sizing: border-box;
 }
 
@@ -33,9 +33,9 @@
 
 .control {
   display: inline-block;
-  width: 0.6em;
-  height: 0.6em;
-  margin-left: 0.4em;
+  width: clamp(10px, 1.6vw, 0.6em);
+  height: clamp(10px, 1.6vw, 0.6em);
+  margin-left: clamp(6px, 1.2vw, 0.4em);
   border-radius: 50%;
   background-color: #777;
 }
@@ -65,7 +65,7 @@
   border-right: 0.2em solid green;
   animation: typeAndDelete 10s steps(220) infinite,
     blinkCursor 0.5s step-end infinite alternate;
-  margin-top: 1.5em;
+  margin-top: clamp(1rem, 2.5vw, 1.5em);
 }
 
 /* Terminal Window Styling */
@@ -78,16 +78,17 @@
     0 10px 30px rgba(0, 0, 0, 0.3),
     0 0 20px rgba(177, 8, 189, 0.2);
   border: 1px solid rgba(88, 186, 255, 0.3);
-  transition: all 0.4s ease;
+  transition: all 0.28s ease;
   transform: perspective(800px) rotateX(0deg);
 }
 
 @media (max-width: 600px) {
-  .terminal-loader { padding: 1rem 0.6rem; }
+  .terminal-loader { padding: clamp(8px, 2vw, 12px) 0.6rem; }
   .terminal-header { padding: 0.4rem 0.6rem; }
-  .terminal-body { padding: 0.6rem 0.6rem; min-height: 140px; }
-  .code-content { font-size: 0.9rem; padding: 0 8px; }
+  .terminal-body { padding: 0.6rem 0.6rem; min-height: 120px; flex-direction: column; }
+  .code-content { font-size: 0.88rem; padding: 0 8px; }
   .code-line-numbers { display: none; }
+  .text { white-space: normal; border-right: none; }
 }
 
 .terminal-window:hover {
@@ -110,7 +111,7 @@
 .terminal-title {
   color: #58baff;
   font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
-  font-size: 0.9rem;
+  font-size: clamp(0.78rem, 1.2vw + 0.4rem, 0.95rem);
   font-weight: 500;
 }
 
@@ -123,7 +124,7 @@
   display: flex;
   padding: 1rem 0;
   position: relative;
-  min-height: 200px;
+  min-height: 160px;
 }
 
 .line-numbers {
@@ -132,7 +133,7 @@
   padding: 0 10px;
   color: rgba(255, 255, 255, 0.3);
   font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
-  font-size: 0.9rem;
+  font-size: clamp(0.7rem, 0.9vw + 0.4rem, 0.9rem);
   user-select: none;
   text-align: right;
   border-right: 1px solid rgba(88, 186, 255, 0.2);
@@ -142,8 +143,8 @@
   flex: 1;
   padding: 0 15px;
   font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
-  font-size: 0.95rem;
-  line-height: 1.5;
+  font-size: clamp(0.85rem, 1.1vw + 0.2rem, 0.98rem);
+  line-height: 1.45;
 }
 
 /* Code syntax highlighting */
@@ -277,4 +278,11 @@
   width: 0;
   background: linear-gradient(90deg, #58baff, #b108bd);
   animation: fill-progress 2s ease-out forwards;
+}
+
+/* Reduce motion & disable typing animations on small screens or when user prefers reduced motion */
+@media (prefers-reduced-motion: reduce), (hover: none) {
+  .text, .typing-line, .typing-text { animation: none !important; }
+  .typing-line { opacity: 1 !important; white-space: normal; }
+  .typing-line::after, .typing-cursor, .text { border-right: none !important; }
 }

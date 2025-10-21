@@ -76,10 +76,9 @@
         <div class="parallax-bg-home" data-parallax="-0.4"></div>
         <div class="section-content">
             <div id='avatar-container' data-parallax="0.2">
-                <div id='avatar-loading'>
-                    <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
-                    <dotlottie-player src="https://lottie.host/3f84d67b-c678-4630-a8bc-d5ca74d675e5/HBt6t1hsCH.lottie" background="transparent" speed="1" style="width: 300px; height: 300px" loop autoplay></dotlottie-player>
-                </div>
+        <div id='avatar-loading'>
+          <dotlottie-player class="avatar-player" src="https://lottie.host/3f84d67b-c678-4630-a8bc-d5ca74d675e5/HBt6t1hsCH.lottie" background="transparent" speed="1" loop autoplay></dotlottie-player>
+        </div>
             </div>
             <h1 class="hero-title parallax-text" data-parallax="0.1">Hi 👋</h1>
             <h1 class="parallax-text" data-parallax="0.3">I'm <span class='gradient-text'>Mohamed Aziz Bahloul</span> <span style="vertical-align: middle; margin-left: 0.3em; font-size: 1.2em;">🤖</span></h1>
@@ -574,3 +573,19 @@ document.addEventListener('DOMContentLoaded', () => {
 </script>
 <script src="neural-contact.js"></script>
 </html>
+
+<!-- Set CSS --vh variable to handle mobile browser chrome when using 100vh-based layouts -->
+<script>
+  (function() {
+    function setVh() {
+      // 1% of the viewport height
+      document.documentElement.style.setProperty('--vh', (window.innerHeight * 0.01) + 'px');
+    }
+    setVh();
+    window.addEventListener('resize', setVh);
+    // VisualViewport is useful on mobile for dynamic UI chrome
+    if (window.visualViewport) {
+      window.visualViewport.addEventListener('resize', setVh);
+    }
+  })();
+</script>

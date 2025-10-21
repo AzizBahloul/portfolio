@@ -27,6 +27,38 @@
   .glass-nav-menu { gap: 1.1rem; }
 }
 
+/* Additional mobile-first improvements */
+@media (max-width: 1024px) {
+  /* scale down hero/title spacing */
+  .hero-title { font-size: 2.2rem; }
+  .parallax-text { font-size: 1.1rem; }
+  #avatar-container { height: 380px; }
+  .section-content { padding-left: 12px; padding-right: 12px; }
+}
+
+@media (max-width: 768px) {
+  /* make sections flow instead of fixed fullpage */
+  section { position: relative; height: auto; min-height: 60vh; padding: 40px 0; }
+  .section-content { text-align: center; max-width: 760px; }
+  h1 { font-size: 1.9rem; }
+  .hero-title { font-size: 1.6rem; }
+  #avatar-container { height: 260px; }
+  .card { width: 240px; height: auto; }
+  .card-animation { height: 160px; }
+}
+
+@media (max-width: 480px) {
+  /* compact layout for very small screens */
+  .glass-nav-menu { gap: 0.5rem; }
+  .glass-resume-btn { padding: 0.35rem 0.7rem; font-size: 0.95rem; }
+  .card { width: 92%; max-width: 320px; height: auto; }
+  .card-content { padding: 14px; }
+  .section-content { padding: 10px; }
+  #avatar-container { height: 180px; }
+  h1 { font-size: 1.4rem; }
+  p { font-size: 0.95rem; }
+}
+
 @media (max-width: 700px) {
   .glass-nav-content { flex-wrap: wrap; gap: 0.7em; }
   .glass-nav-menu {

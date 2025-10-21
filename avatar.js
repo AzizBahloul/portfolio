@@ -31,8 +31,13 @@ function setupScene(gltf) {
     alpha: true,
   });
   renderer.outputColorSpace = THREE.SRGBColorSpace;
+  // Cap pixel ratio to avoid extremely large renderbuffers on high-DPI / external monitors
+  const cappedPR = Math.min(window.devicePixelRatio || 1, 2);
+  renderer.setPixelRatio(cappedPR);
   renderer.setSize(container.clientWidth, container.clientHeight);
-  renderer.setPixelRatio(window.devicePixelRatio);
+  // Ensure the canvas will not overflow visually
+  renderer.domElement.style.maxWidth = '100%';
+  renderer.domElement.style.height = 'auto';
   renderer.shadowMap.enabled = true;
   renderer.shadowMap.type = THREE.PCFSoftShadowMap;
   container.appendChild(renderer.domElement);
@@ -136,8 +141,20 @@ function setupScene(gltf) {
   window.addEventListener('resize', () => {
     camera.aspect = container.clientWidth / container.clientHeight;
     camera.updateProjectionMatrix();
+    // update renderer size; respect capped devicePixelRatio
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
     renderer.setSize(container.clientWidth, container.clientHeight);
   });
+
+  // Also listen to visualViewport for dynamic UI changes (mobile chrome / moving window between monitors)
+  if (window.visualViewport) {
+    window.visualViewport.addEventListener('resize', () => {
+      camera.aspect = container.clientWidth / container.clientHeight;
+      camera.updateProjectionMatrix();
+      renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
+      renderer.setSize(container.clientWidth, container.clientHeight);
+    });
+  }
 
   const clock = new THREE.Clock();
   function animate() {

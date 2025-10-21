@@ -3,23 +3,23 @@
   display: flex; 
   justify-content: center; 
   align-items: center; 
-  padding: 40px 20px; 
+  padding: clamp(20px, 4vw, 60px) clamp(12px, 3vw, 28px); 
   min-height: 100vh;
 }
 
 .contact-subtitle {
   text-align: center;
   color: rgba(255, 255, 255, 0.7);
-  font-size: 1.1rem;
-  margin-bottom: 40px;
+  font-size: clamp(0.95rem, 1.2vw + 0.6rem, 1.1rem);
+  margin-bottom: clamp(18px, 3.5vw, 40px);
   font-style: italic;
 }
 
 /* Neural Network Container */
 .neural-network {
   position: relative;
-  width: min(800px, 90vw);
-  height: 600px;
+  width: min(900px, 92vw);
+  height: clamp(360px, 50vw, 620px);
   margin: 0 auto;
   perspective: 1200px;
   transform-style: preserve-3d;
@@ -47,8 +47,8 @@
 
 .hub-core {
   position: relative;
-  width: 120px;
-  height: 120px;
+  width: clamp(64px, 12vw, 140px);
+  height: clamp(64px, 12vw, 140px);
   background: radial-gradient(circle at 30% 30%, 
     rgba(255, 255, 255, 0.3),
     rgba(88, 186, 255, 0.25) 30%,
@@ -69,10 +69,10 @@
 
 .pulse-ring {
   position: absolute;
-  top: -20px;
-  left: -20px;
-  right: -20px;
-  bottom: -20px;
+  top: -18%;
+  left: -18%;
+  right: -18%;
+  bottom: -18%;
   border: 1px solid rgba(88, 186, 255, 0.3);
   border-radius: 50%;
   animation: pulse-ring 2s ease-out infinite;
@@ -84,7 +84,7 @@
 }
 
 .hub-label {
-  font-size: 0.75rem;
+  font-size: clamp(0.6rem, 0.9vw + 0.4rem, 0.85rem);
   color: rgba(255, 255, 255, 0.8);
   font-weight: 500;
   letter-spacing: 0.5px;
@@ -131,8 +131,8 @@
 /* Holographic Node Cards */
 .node-card {
   position: relative;
-  width: 200px;
-  padding: 20px;
+  width: clamp(140px, 22vw, 220px);
+  padding: clamp(10px, 1.6vw, 20px);
   background: linear-gradient(135deg,
     rgba(88, 186, 255, 0.15) 0%,
     rgba(177, 8, 189, 0.1) 50%,
@@ -186,10 +186,10 @@
 }
 
 .node-icon {
-  width: 48px;
-  height: 48px;
+  width: clamp(36px, 8vw, 56px);
+  height: clamp(36px, 8vw, 56px);
   margin: 0 auto 12px;
-  padding: 12px;
+  padding: clamp(8px, 1.6vw, 12px);
   background: rgba(88, 186, 255, 0.1);
   border: 1px solid rgba(88, 186, 255, 0.3);
   border-radius: 12px;
@@ -208,7 +208,7 @@
 }
 
 .node-content h3 {
-  font-size: 1.2rem;
+  font-size: clamp(1rem, 1.2vw + 0.8rem, 1.2rem);
   font-weight: 600;
   color: #ffffff;
   margin: 12px 0 6px;
@@ -216,7 +216,7 @@
 }
 
 .node-content p {
-  font-size: 0.9rem;
+  font-size: clamp(0.8rem, 0.9vw + 0.6rem, 0.95rem);
   color: rgba(255, 255, 255, 0.7);
   margin-bottom: 16px;
 }
@@ -326,50 +326,29 @@
 }
 
 /* Responsive Design */
+
+@media (max-width: 1024px) {
+  .neural-network { width: 96vw; }
+}
+
 @media (max-width: 768px) {
-  .neural-network {
-    width: 95vw;
-    height: 500px;
-  }
-  
-  .node-card {
-    width: 160px;
-    padding: 16px;
-  }
-  
-  .hub-core {
-    width: 100px;
-    height: 100px;
-  }
-  
-  .node-content h3 {
-    font-size: 1rem;
-  }
-  
-  .node-content p {
-    font-size: 0.8rem;
-  }
+  .neural-network { height: clamp(320px, 48vw, 520px); }
+  .node-card { width: clamp(120px, 34vw, 180px); padding: 12px; }
+  .hub-core { width: clamp(72px, 18vw, 110px); height: clamp(72px, 18vw, 110px); }
 }
 
 @media (max-width: 480px) {
-  .neural-network {
-    height: 400px;
+  .neural-network { height: clamp(260px, 62vw, 420px); }
+  .node-card { width: clamp(110px, 46vw, 150px); padding: 10px; }
+  .hub-core { width: clamp(60px, 30vw, 88px); height: clamp(60px, 30vw, 88px); }
+  .neural-node[data-angle="0"], .neural-node[data-angle="90"], .neural-node[data-angle="180"], .neural-node[data-angle="270"] {
+    transform: scale(0.92);
   }
-  
-  .node-card {
-    width: 140px;
-    padding: 12px;
-  }
-  
-  .hub-core {
-    width: 80px;
-    height: 80px;
-  }
-  
-  .neural-node[data-angle="0"],
-  .neural-node[data-angle="90"],
-  .neural-node[data-angle="180"],
-  .neural-node[data-angle="270"] {
-    transform: scale(0.9);
-  }
+}
+
+/* Respect reduces-motion preference */
+@media (prefers-reduced-motion: reduce) {
+  .hub-core, .pulse-ring { animation: none !important; }
+  .node-card, .node-card:hover, .node-card .holo-effect { transition: none !important; animation: none !important; }
+  .neural-canvas { will-change: auto; }
 }

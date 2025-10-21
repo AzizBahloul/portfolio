@@ -4,7 +4,8 @@
   top: 0;
   left: 0;
   width: 100%;
-  height: 100vh;
+  /* use the --vh variable set by JS for mobile chrome reliability */
+  height: calc(var(--vh, 1vh) * 100);
   z-index: -1;
   overflow: hidden;
 }
@@ -13,8 +14,8 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 120%;
-  height: 120%;
+  width: clamp(110%, 120%, 140%);
+  height: clamp(110%, 120%, 140%);
   opacity: 0.1;
   will-change: transform;
 }
@@ -44,7 +45,9 @@
 /* Parallax Sections */
 .parallax-section {
   position: relative;
-  min-height: 100vh;
+  /* prefer the safer --vh value; allow sections to shrink a bit on small screens */
+  min-height: calc(var(--vh, 1vh) * 100);
+  min-height: min(100vh, 80vh);
   overflow: hidden;
   display: flex;
   align-items: center;
@@ -137,24 +140,24 @@
 /* FullPage Navigation Dots */
 .fp-navigation {
   position: fixed;
-  right: 20px;
+  right: clamp(12px, 2vw, 28px);
   top: 50%;
   transform: translateY(-50%);
   z-index: 1000;
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: clamp(10px, 1.5vw, 18px);
 }
 
 .fp-nav-dot {
-  width: 14px;
-  height: 14px;
+  width: clamp(12px, 1.6vw, 18px);
+  height: clamp(12px, 1.6vw, 18px);
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.3);
   border: 2px solid rgba(255, 255, 255, 0.6);
   display: block;
   cursor: pointer;
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 0.28s cubic-bezier(0.4, 0, 0.2, 1);
   text-decoration: none;
   position: relative;
   overflow: hidden;
@@ -214,4 +217,19 @@
   .parallax-section { min-height: 60vh; padding: 28px 10px; }
   .parallax-text { font-size: 0.92rem; }
   .fp-navigation { right: 8px; }
+}
+
+/* Respect reduced motion preference: disable transform-heavy parallax */
+@media (prefers-reduced-motion: reduce) {
+  .parallax-layer, [data-parallax], .parallax-bg-home, .parallax-bg-about, .parallax-bg-projects, .parallax-bg-contact {
+    will-change: auto !important;
+    transform: none !important;
+    transition: none !important;
+    animation: none !important;
+  }
+}
+
+/* Touch devices: tone down hover glows */
+@media (hover: none) {
+  .fp-nav-dot:hover, .fp-nav-dot:hover::before { box-shadow: none; }
 }

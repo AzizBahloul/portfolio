@@ -196,3 +196,21 @@
     opacity: 0.6;
   }
 }
+
+/* Respect user preference for reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Reduce heavy animations on small screens to improve performance */
+@media (max-width: 768px) {
+  .card { animation: none !important; }
+  .card-animation dotlottie-player { transform: none !important; }
+  .parallax-layer, .parallax-bg, .parallax-bg-home, .parallax-bg-about, .parallax-bg-projects, .parallax-bg-contact { display: none !important; }
+  .pulse-ring, .hub-core .pulse-ring { display: none !important; }
+}
