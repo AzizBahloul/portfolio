@@ -1,0 +1,217 @@
+/* ============================================
+   TROLL LOGIN BUTTON 😂
+   ============================================ */
+
+/* Wrapper to position at far right edge - aligned with navbar */
+.troll-nav-item {
+    position: fixed !important;
+    top: 11px !important;
+    z-index: 9999 !important;
+    list-style: none !important;
+}
+
+.troll-login-btn {
+    position: relative;
+    padding: 0.5rem 0.9rem;
+    background: linear-gradient(135deg, #b108bd, #58baff);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 1.08rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    z-index: 9999;
+    box-shadow: 0 4px 12px rgba(177, 8, 189, 0.3);
+    font-family: 'Inter', 'Fira Mono', monospace;
+    margin: 0;
+    white-space: nowrap;
+}
+
+.troll-login-btn:hover {
+    box-shadow: 0 6px 20px rgba(88, 186, 255, 0.6);
+}
+
+.troll-login-btn svg {
+    width: 18px;
+    height: 18px;
+}
+
+/* Shake animation */
+@keyframes shake {
+
+    0%,
+    100% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+
+    25% {
+        transform: translate(-5px, 0) rotate(-5deg);
+    }
+
+    75% {
+        transform: translate(5px, 0) rotate(5deg);
+    }
+}
+
+.troll-login-btn.shake {
+    animation: shake 0.3s ease-in-out;
+}
+
+/* Pulse animation */
+@keyframes trollPulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+        box-shadow: 0 4px 12px rgba(177, 8, 189, 0.3);
+    }
+
+    50% {
+        transform: scale(1.05);
+        box-shadow: 0 6px 20px rgba(88, 186, 255, 0.6);
+    }
+}
+
+.troll-login-btn.pulse {
+    animation: trollPulse 1s ease-in-out;
+}
+
+/* Tooltip */
+.troll-tooltip {
+    position: fixed;
+    background: rgba(15, 15, 30, 0.95);
+    backdrop-filter: blur(10px);
+    color: white;
+    padding: 8px 16px;
+    border-radius: 8px;
+    border: 1px solid rgba(88, 186, 255, 0.3);
+    font-size: 0.85rem;
+    font-weight: 600;
+    z-index: 10000;
+    pointer-events: none;
+    opacity: 0;
+    transform: translate(-50%, 10px);
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    white-space: nowrap;
+}
+
+.troll-tooltip.show {
+    opacity: 1;
+    transform: translate(-50%, 0);
+}
+
+.troll-tooltip::after {
+    content: '';
+    position: absolute;
+    bottom: -6px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 6px solid rgba(15, 15, 30, 0.95);
+}
+
+/* Car zoom effect going LEFT 🚗💨 */
+.troll-login-btn.zoom-car {
+    animation: speedLinesLeft 0.15s ease-out !important;
+}
+
+.troll-login-btn.zoom-car::after {
+    content: '💨';
+    position: absolute;
+    right: -30px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.5rem;
+    animation: exhaustSmokeLeft 0.15s ease-out;
+}
+
+@keyframes exhaustSmokeLeft {
+    0% {
+        opacity: 1;
+        right: -10px;
+    }
+    100% {
+        opacity: 0;
+        right: -80px;
+    }
+}
+
+/* Speed lines going LEFT */
+@keyframes speedLinesLeft {
+    0% {
+        box-shadow: 
+            20px 0 0 rgba(88, 186, 255, 0.9),
+            50px 0 0 rgba(88, 186, 255, 0.7),
+            90px 0 0 rgba(88, 186, 255, 0.5),
+            140px 0 0 rgba(88, 186, 255, 0.3);
+    }
+    100% {
+        box-shadow: 
+            100px 0 0 rgba(88, 186, 255, 0),
+            200px 0 0 rgba(88, 186, 255, 0),
+            300px 0 0 rgba(88, 186, 255, 0),
+            400px 0 0 rgba(88, 186, 255, 0);
+    }
+}
+
+/* Car zoom effect going RIGHT 💨🚗 */
+.troll-login-btn.zoom-car-reverse {
+    animation: speedLinesRight 0.15s ease-out !important;
+}
+
+.troll-login-btn.zoom-car-reverse::before {
+    content: '💨';
+    position: absolute;
+    left: -30px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.5rem;
+    animation: exhaustSmokeRight 0.15s ease-out;
+}
+
+@keyframes exhaustSmokeRight {
+    0% {
+        opacity: 1;
+        left: -10px;
+    }
+    100% {
+        opacity: 0;
+        left: -80px;
+    }
+}
+
+/* Speed lines going RIGHT */
+@keyframes speedLinesRight {
+    0% {
+        box-shadow: 
+            -20px 0 0 rgba(177, 8, 189, 0.9),
+            -50px 0 0 rgba(177, 8, 189, 0.7),
+            -90px 0 0 rgba(177, 8, 189, 0.5),
+            -140px 0 0 rgba(177, 8, 189, 0.3);
+    }
+    100% {
+        box-shadow: 
+            -100px 0 0 rgba(177, 8, 189, 0),
+            -200px 0 0 rgba(177, 8, 189, 0),
+            -300px 0 0 rgba(177, 8, 189, 0),
+            -400px 0 0 rgba(177, 8, 189, 0);
+    }
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+    .troll-login-btn {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+        margin-left: 0;
+        margin-top: 10px;
+        /* Add spacing in mobile menu */
+    }
+}

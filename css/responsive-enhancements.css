@@ -1,0 +1,347 @@
+/* ============================================
+   ENHANCED RESPONSIVE IMPROVEMENTS
+   ============================================ */
+
+/* Touch device optimizations */
+@media (hover: none) and (pointer: coarse) {
+
+    /* Larger touch targets for mobile */
+    .glass-nav-link,
+    .glass-resume-btn,
+    .fab-action,
+    .command-item,
+    .neural-link {
+        min-height: 44px;
+        min-width: 44px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* Remove hover effects on touch devices */
+    .card:hover,
+    .certificate-card:hover,
+    .experience-card:hover {
+        transform: none !important;
+    }
+
+    /* Tap highlight color */
+    * {
+        -webkit-tap-highlight-color: rgba(177, 8, 189, 0.2);
+    }
+
+    /* Smooth scrolling on touch */
+    html {
+        scroll-behavior: smooth;
+        -webkit-overflow-scrolling: touch;
+    }
+}
+
+/* Tablet landscape (1024px - 1280px) */
+@media (min-width: 1024px) and (max-width: 1280px) {
+    .section-content {
+        max-width: 960px;
+        padding: 0 24px;
+    }
+
+    .card-container {
+        gap: 35px;
+    }
+
+    .experience-cards .company-card {
+        width: 95%;
+    }
+
+    .certificates-container {
+        gap: 1.8em;
+    }
+}
+
+/* Tablet portrait (768px - 1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .card-container {
+        gap: 30px;
+    }
+
+    .card {
+        width: 280px;
+    }
+
+    .certificates-container,
+    .experience-container {
+        gap: 1.5em;
+    }
+
+    .neural-network {
+        transform: scale(0.9);
+    }
+}
+
+/* Better mobile spacing and typography */
+@media (max-width: 768px) {
+
+    /* Improve section spacing */
+    section {
+        padding: 60px 0;
+        min-height: auto;
+    }
+
+    .section-content {
+        padding: 0 20px;
+    }
+
+    /* Better typography scaling */
+    h1 {
+        font-size: clamp(1.5rem, 5vw, 2.5rem);
+        line-height: 1.2;
+    }
+
+    h2 {
+        font-size: clamp(1.2rem, 4vw, 1.8rem);
+    }
+
+    p {
+        font-size: clamp(0.95rem, 3vw, 1.1rem);
+        line-height: 1.6;
+    }
+
+    /* Better card layout */
+    .card-container {
+        gap: 25px;
+        margin-top: 30px;
+    }
+
+    .card {
+        width: min(90%, 320px);
+        height: auto;
+        min-height: 340px;
+    }
+
+    /* Certificate cards */
+    .certificates-container {
+        gap: 1.5em;
+    }
+
+    .certificate-card {
+        width: min(95%, 340px);
+    }
+
+    /* Experience cards */
+    .company-card {
+        height: auto;
+        min-height: 280px;
+    }
+
+    /* Neural network contact */
+    .neural-network {
+        transform: scale(0.85);
+    }
+
+    .contact-nodes {
+        gap: 15px;
+    }
+}
+
+/* Small mobile devices */
+@media (max-width: 480px) {
+
+    /* Compact spacing */
+    section {
+        padding: 40px 0;
+    }
+
+    .section-content {
+        padding: 0 15px;
+    }
+
+    /* Stack cards vertically */
+    .card-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .card {
+        width: min(95%, 300px);
+    }
+
+    /* Smaller avatar */
+    #avatar-container {
+        height: 200px;
+    }
+
+    /* Compact navigation */
+    .glass-nav-content {
+        padding: 0.6rem 0.8rem;
+    }
+
+    .glass-nav-menu {
+        gap: 0.8rem;
+    }
+
+    .glass-resume-btn {
+        padding: 0.4rem 0.9rem;
+        font-size: 0.95rem;
+    }
+
+    /* Better certificate layout */
+    .certificate-card {
+        width: 100%;
+        padding: 1.2em;
+    }
+
+    .certificate-logo {
+        width: 50px;
+        height: 50px;
+    }
+
+    /* Compact experience cards */
+    .company-card {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .company-card .panel {
+        min-height: 120px;
+    }
+
+    .company-card .desc {
+        padding: 15px;
+    }
+
+    /* Smaller FAB */
+    .fab-container {
+        bottom: 15px;
+        right: 15px;
+    }
+
+    .fab-main {
+        width: 50px;
+        height: 50px;
+    }
+
+    .fab-action {
+        width: 45px;
+        height: 45px;
+    }
+}
+
+/* Very small devices */
+@media (max-width: 360px) {
+    h1 {
+        font-size: 1.3rem;
+    }
+
+    .card {
+        width: 100%;
+    }
+
+    .section-content {
+        padding: 0 10px;
+    }
+
+    .neural-network {
+        transform: scale(0.75);
+    }
+}
+
+/* Landscape orientation on mobile */
+@media (max-height: 600px) and (orientation: landscape) {
+    section {
+        min-height: auto;
+        padding: 30px 0;
+    }
+
+    #avatar-container {
+        height: 150px;
+    }
+
+    .hero-title {
+        font-size: 1.8rem;
+    }
+
+    .fab-container {
+        bottom: 10px;
+        right: 10px;
+    }
+}
+
+/* Performance optimizations for mobile */
+@media (max-width: 768px) {
+
+    /* Reduce expensive effects */
+    .parallax-layer,
+    .parallax-bg,
+    .parallax-bg-home,
+    .parallax-bg-about,
+    .parallax-bg-projects,
+    .parallax-bg-contact {
+        display: none !important;
+    }
+
+    /* Disable particle system on mobile */
+    #particle-canvas {
+        display: none !important;
+    }
+
+    /* Simplify animations */
+    .card,
+    .certificate-card,
+    .experience-card {
+        animation: none !important;
+    }
+
+    /* Disable 3D transforms on mobile */
+    .tilt-card {
+        transform: none !important;
+    }
+
+    /* Reduce motion */
+    * {
+        transition-duration: 0.2s !important;
+    }
+}
+
+/* High DPI displays */
+@media (-webkit-min-device-pixel-ratio: 2),
+(min-resolution: 192dpi) {
+
+    /* Sharper text rendering */
+    body {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+}
+
+/* Dark mode adjustments for mobile */
+@media (max-width: 768px) {
+    body.dark-mode {
+        background: #0a0a0a;
+    }
+
+    .glass-navbar {
+        background: rgba(15, 15, 25, 0.95);
+    }
+}
+
+/* Print styles */
+@media print {
+
+    .glass-navbar,
+    .fab-container,
+    .scroll-progress,
+    .magnetic-cursor,
+    .magnetic-cursor-follower,
+    .command-palette,
+    .loading-screen {
+        display: none !important;
+    }
+
+    section {
+        page-break-inside: avoid;
+    }
+}

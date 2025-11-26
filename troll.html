@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Access Denied</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', 'Fira Mono', monospace;
+            background: #0a0a0a;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            overflow-x: hidden;
+            overflow-y: auto;
+            position: relative;
+            padding: 20px;
+        }
+
+        /* Animated background particles */
+        .particle {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background: linear-gradient(135deg, #b108bd, #58baff);
+            border-radius: 50%;
+            opacity: 0.6;
+            animation: float 3s infinite ease-in-out;
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0) rotate(0deg);
+            }
+
+            50% {
+                transform: translateY(-20px) rotate(180deg);
+            }
+        }
+
+        .container {
+            text-align: center;
+            z-index: 10;
+            animation: slideIn 0.8s ease-out;
+            padding: 20px;
+            max-width: 1000px;
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .glitch {
+            font-size: clamp(0.9rem, 2vw, 1.2rem);
+            color: #666;
+            margin-bottom: 10px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+
+        h1 {
+            font-size: clamp(2rem, 6vw, 3.5rem);
+            color: #fff;
+            margin-bottom: 30px;
+            font-weight: 700;
+            letter-spacing: -1px;
+        }
+
+        @keyframes gradientShift {
+
+            0%,
+            100% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+        }
+
+        .gif-container {
+            margin: 40px auto;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.8);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            max-width: 300px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .gif-container img {
+            width: 100%;
+            height: auto;
+            display: block;
+            object-fit: contain;
+            max-height: 300px;
+        }
+
+        .message {
+            font-size: clamp(1.1rem, 3vw, 1.3rem);
+            color: rgba(255, 255, 255, 0.6);
+            margin: 30px 0;
+            font-weight: 400;
+            font-style: italic;
+            padding: 0 10px;
+        }
+
+        @keyframes pulse {
+
+            0%,
+            100% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0.7;
+            }
+        }
+
+        .funny-phrases {
+            font-size: clamp(0.95rem, 2.5vw, 1.1rem);
+            color: rgba(255, 255, 255, 0.7);
+            margin: 20px auto;
+            max-width: 600px;
+            width: 100%;
+            line-height: 1.8;
+            padding: 0 20px;
+        }
+
+        .back-button {
+            margin-top: 50px;
+            padding: clamp(12px, 2vw, 14px) clamp(25px, 4vw, 35px);
+            background: rgba(255, 255, 255, 0.05);
+            color: white;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 8px;
+            font-size: clamp(1rem, 2.5vw, 1.1rem);
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+
+        .back-button:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: rgba(255, 255, 255, 0.4);
+        }
+
+
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 15px;
+            }
+
+            .gif-container {
+                margin: 30px auto;
+            }
+
+            .gif-container img {
+                max-width: 100%;
+            }
+
+            .glitch {
+                letter-spacing: 2px;
+            }
+
+            .funny-phrases {
+                line-height: 1.6;
+            }
+
+            .back-button {
+                margin-top: 30px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="glitch">Access Denied</div>
+        
+
+        <div class="gif-container">
+            <img src="assets/login/rabi3-rabye.gif" alt="Not today" onerror="this.src='https://media.tenor.com/YfAJmRcbLfkAAAAM/rabi3-rabye.gif'">
+        </div>
+
+        <div class="message">
+            Who puts a login page on a portfolio anyway?
+        </div>
+
+ 
+
+        <button class="back-button" onclick="goBack()">
+            Back to Reality
+        </button>
+    </div>
+
+    <script>
+        // Create floating particles
+        function createParticles() {
+            for (let i = 0; i < 20; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.top = Math.random() * 100 + '%';
+                particle.style.animationDelay = Math.random() * 3 + 's';
+                particle.style.animationDuration = (Math.random() * 2 + 2) + 's';
+                document.body.appendChild(particle);
+            }
+        }
+
+
+
+        function goBack() {
+            window.location.href = 'index.html';
+        }
+
+        // Initialize
+        createParticles();
+
+        // Play a sound if available (optional)
+        try {
+            const audio = new Audio('data:audio/wav;base64,UklGRnoGAABXQVZFZm10IBAAAAABAAEAQB8AAEAfAAABAAgAZGF0YQoGAACBhYqFbF1fdJivrJBhNjVgodDbq2EcBj+a2/LDciUFLIHO8tiJNwgZaLvt559NEAxQp+PwtmMcBjiR1/LMeSwFJHfH8N2QQAoUXrTp66hVFApGn+DyvmwhBTGH0fPTgjMGHm7A7+OZSA0PVqzn77BdGAg+ltryxnMpBSuBzvLZiTYIGWi77eafTRAMUKfj8LZjHAY4ktfyzHksBSR3x/DdkEAKFF606+uoVRQKRp/g8r5sIQUxh9Hz04IzBh5uwO/jmUgND1as5++wXRgIPpbb8sZzKQUrgc7y2Yk2CBlou+3mn00QDFCn4/C2YxwGOJLX8sx5LAUkd8fw3ZBACxRdtOvrqFUUCkaf4PK+bCEFMYfR89OCMwYebsDv45lIDQ9WrOfvsFwYCD6W2/LGcykFK4HO8tmJNggZaLvt5p9NEAxQp+PwtmMcBjiS1/LMeSwFJHfH8N2QQAsUXbTr66hVFApGn+DyvmwhBTGH0fPTgjMGHm7A7+OZSA0PVqzn77BcGAg+ltvyxnMpBSuBzvLZiTYIGWi77eafTRAMUKfj8LZjHAY4ktfyzHksBSR3x/DdkEALFF206+uoVRQKRp/g8r5sIQUxh9Hz04IzBh5uwO/jmUgND1as5++wXBgIPpbb8sZzKQUrgc7y2Yk2CBlou+3mn00QDFCn4/C2YxwGOJLX8sx5LAUkd8fw3ZBACxRdtOvrqFUUCkaf4PK+bCEFMYfR89OCMwYebsDv45lIDQ9WrOfvsFwYCD6W2/LGcykFK4HO8tmJNggZaLvt5p9NEAxQp+PwtmMcBjiS1/LMeSwFJHfH8N2QQAsUXbTr66hVFApGn+DyvmwhBTGH0fPTgjMGHm7A7+OZSA0PVqzn77BcGAg+ltvyxnMpBSuBzvLZiTYIGWi77eafTRAMUKfj8LZjHAY4ktfyzHksBSR3x/DdkEALFF206+uoVRQKRp/g8r5sIQUxh9Hz04IzBh5uwO/jmUgND1as5++wXBgIPpbb8sZzKQUrgc7y2Yk2CBlou+3mn00QDFCn4/C2YxwGOJLX8sx5LAUkd8fw3ZBACxRdtOvrqFUUCkaf4PK+bCEFMYfR89OCMwYebsDv45lIDQ9WrOfvsFwYCD6W2/LGcykFK4HO8tmJNggZaLvt5p9NEAxQp+PwtmMcBjiS1/LMeSwFJHfH8N2QQAsUXbTr66hVFApGn+DyvmwhBTGH0fPTgjMGHm7A7+OZSA0PVqzn77BcGAg=');
+            audio.volume = 0.3;
+            audio.play().catch(() => { });
+        } catch (e) { }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,466 @@
+/* ============================================
+   ENHANCED ANIMATIONS & EFFECTS
+   ============================================ */
+
+/* Smooth text reveal on scroll */
+@keyframes textReveal {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+        filter: blur(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+        filter: blur(0);
+    }
+}
+
+/* Gradient animation for backgrounds */
+@keyframes gradientFlow {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Glitch effect for special elements */
+@keyframes glitch {
+    0% {
+        transform: translate(0);
+    }
+
+    20% {
+        transform: translate(-2px, 2px);
+    }
+
+    40% {
+        transform: translate(-2px, -2px);
+    }
+
+    60% {
+        transform: translate(2px, 2px);
+    }
+
+    80% {
+        transform: translate(2px, -2px);
+    }
+
+    100% {
+        transform: translate(0);
+    }
+}
+
+/* Neon glow pulse */
+@keyframes neonPulse {
+
+    0%,
+    100% {
+        text-shadow:
+            0 0 5px rgba(177, 8, 189, 0.5),
+            0 0 10px rgba(177, 8, 189, 0.5),
+            0 0 20px rgba(177, 8, 189, 0.5);
+    }
+
+    50% {
+        text-shadow:
+            0 0 10px rgba(88, 186, 255, 0.8),
+            0 0 20px rgba(88, 186, 255, 0.8),
+            0 0 30px rgba(88, 186, 255, 0.8),
+            0 0 40px rgba(88, 186, 255, 0.8);
+    }
+}
+
+/* Shimmer effect */
+@keyframes shimmer {
+    0% {
+        background-position: -1000px 0;
+    }
+
+    100% {
+        background-position: 1000px 0;
+    }
+}
+
+/* Bounce in animation */
+@keyframes bounceIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.3) translateY(-100px);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1.05);
+    }
+
+    70% {
+        transform: scale(0.9);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Slide in from sides */
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Rotate and scale */
+@keyframes rotateScale {
+    0% {
+        transform: rotate(0deg) scale(1);
+    }
+
+    50% {
+        transform: rotate(180deg) scale(1.2);
+    }
+
+    100% {
+        transform: rotate(360deg) scale(1);
+    }
+}
+
+/* Breathing animation */
+@keyframes breathe {
+
+    0%,
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    50% {
+        transform: scale(1.05);
+        opacity: 0.8;
+    }
+}
+
+/* Wave animation */
+@keyframes wave {
+
+    0%,
+    100% {
+        transform: translateY(0) rotate(0deg);
+    }
+
+    25% {
+        transform: translateY(-10px) rotate(5deg);
+    }
+
+    75% {
+        transform: translateY(10px) rotate(-5deg);
+    }
+}
+
+/* Ripple effect */
+@keyframes ripple {
+    0% {
+        transform: scale(0);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(4);
+        opacity: 0;
+    }
+}
+
+/* Enhanced card hover animations */
+.card {
+    position: relative;
+    overflow: hidden;
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg,
+            transparent,
+            rgba(177, 8, 189, 0.1),
+            transparent);
+    transform: rotate(45deg);
+    transition: all 0.6s ease;
+    opacity: 0;
+}
+
+.card:hover::before {
+    opacity: 1;
+    animation: shimmer 2s infinite;
+}
+
+/* Animated gradient text */
+.gradient-text-animated {
+    background: linear-gradient(90deg,
+            #b108bd,
+            #58baff,
+            #b108bd,
+            #58baff);
+    background-size: 300% 100%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradientFlow 3s ease infinite;
+}
+
+/* Glowing border animation */
+@keyframes glowingBorder {
+
+    0%,
+    100% {
+        box-shadow:
+            0 0 5px rgba(177, 8, 189, 0.5),
+            0 0 10px rgba(177, 8, 189, 0.3),
+            inset 0 0 5px rgba(177, 8, 189, 0.2);
+    }
+
+    50% {
+        box-shadow:
+            0 0 20px rgba(88, 186, 255, 0.8),
+            0 0 30px rgba(88, 186, 255, 0.5),
+            inset 0 0 10px rgba(88, 186, 255, 0.3);
+    }
+}
+
+/* Apply animations to specific elements */
+.hero-title {
+    animation: textReveal 1s ease-out;
+}
+
+.parallax-text {
+    animation: textReveal 1.2s ease-out;
+    animation-fill-mode: both;
+}
+
+.parallax-text:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.parallax-text:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+/* Certificate cards entrance */
+.certificate-card {
+    animation: bounceIn 0.6s ease-out;
+    animation-fill-mode: both;
+}
+
+.certificate-card:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.certificate-card:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.certificate-card:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.certificate-card:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+/* Project cards entrance */
+.card-link:nth-child(1) .card {
+    animation: slideInLeft 0.8s ease-out;
+}
+
+.card-link:nth-child(2) .card {
+    animation: bounceIn 0.8s ease-out 0.2s;
+    animation-fill-mode: both;
+}
+
+.card-link:nth-child(3) .card {
+    animation: slideInRight 0.8s ease-out 0.4s;
+    animation-fill-mode: both;
+}
+
+/* Hover effects for interactive elements */
+.glass-nav-link,
+.glass-resume-btn,
+.neural-link {
+    position: relative;
+    overflow: hidden;
+}
+
+.glass-nav-link::before,
+.glass-resume-btn::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(88, 186, 255, 0.3);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+}
+
+.glass-nav-link:hover::before,
+.glass-resume-btn:hover::before {
+    width: 300px;
+    height: 300px;
+}
+
+/* Animated underline */
+.animated-underline {
+    position: relative;
+    display: inline-block;
+}
+
+.animated-underline::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #b108bd, #58baff);
+    transition: width 0.3s ease;
+}
+
+.animated-underline:hover::after {
+    width: 100%;
+}
+
+/* Loading dots animation */
+@keyframes loadingDots {
+
+    0%,
+    20% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.loading-dots span {
+    animation: loadingDots 1.4s infinite;
+}
+
+.loading-dots span:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.loading-dots span:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+/* Stagger animation utility */
+.stagger-animation>* {
+    opacity: 0;
+    animation: textReveal 0.6s ease-out forwards;
+}
+
+.stagger-animation>*:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.stagger-animation>*:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.stagger-animation>*:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.stagger-animation>*:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+.stagger-animation>*:nth-child(5) {
+    animation-delay: 0.5s;
+}
+
+/* Floating animation for icons */
+.float-animation {
+    animation: wave 3s ease-in-out infinite;
+}
+
+/* Pulse animation for attention */
+.pulse-animation {
+    animation: breathe 2s ease-in-out infinite;
+}
+
+/* Rotate on hover */
+.rotate-on-hover {
+    transition: transform 0.3s ease;
+}
+
+.rotate-on-hover:hover {
+    transform: rotate(360deg);
+}
+
+/* Scale on hover */
+.scale-on-hover {
+    transition: transform 0.3s ease;
+}
+
+.scale-on-hover:hover {
+    transform: scale(1.1);
+}
+
+/* Glow on hover */
+.glow-on-hover {
+    transition: all 0.3s ease;
+}
+
+.glow-on-hover:hover {
+    animation: glowingBorder 2s ease-in-out infinite;
+}
+
+/* Reduce motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}

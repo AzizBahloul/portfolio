@@ -1,33 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>si aziz bahloul </title>
-    
-    <!-- Modular CSS files -->
-    <link rel="stylesheet" href="css/base.css">
-    <link rel="stylesheet" href="css/animations.css">
-    <link rel="stylesheet" href="css/navbar.css">
-    <link rel="stylesheet" href="css/cards.css">
-    <link rel="stylesheet" href="css/terminal.css">
-    <link rel="stylesheet" href="css/timeline.css">
-    <link rel="stylesheet" href="css/skills.css">
-    <link rel="stylesheet" href="css/contact.css">
-    <link rel="stylesheet" href="css/parallax.css">
-    <link rel="stylesheet" href="css/dark-mode.css">
-    <link rel="stylesheet" href="css/responsive.css">
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    
-    <!-- GSAP Library -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
 
-    <script type="importmap">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Si Aziz Bahloul - Full Stack Developer & AI Engineer</title>
+
+  <!-- SEO Meta Tags -->
+  <meta name="description"
+    content="Full Stack Developer & AI Engineer specializing in Django, Python, Machine Learning, and intelligent digital solutions. View my portfolio and projects.">
+  <meta name="keywords"
+    content="Full Stack Developer, AI Engineer, Django, Python, Machine Learning, Web Development, Portfolio">
+  <meta name="author" content="Si Aziz Bahloul">
+  <meta property="og:title" content="Si Aziz Bahloul - Full Stack Developer & AI Engineer">
+  <meta property="og:description" content="Building intelligent digital solutions with Django, Python, and AI">
+  <meta property="og:type" content="website">
+
+  <!-- Modular CSS files -->
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/enhanced-animations.css">
+  <link rel="stylesheet" href="css/navbar.css">
+  <link rel="stylesheet" href="css/cards.css">
+  <link rel="stylesheet" href="css/terminal.css">
+  <link rel="stylesheet" href="css/timeline.css">
+  <link rel="stylesheet" href="css/skills.css">
+  <link rel="stylesheet" href="css/contact.css">
+  <link rel="stylesheet" href="css/parallax.css">
+  <link rel="stylesheet" href="css/dark-mode.css">
+  <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/responsive-enhancements.css">
+  <link rel="stylesheet" href="css/unique-features.css">
+    <link rel="stylesheet" href="css/troll-login.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+
+  <!-- GSAP Library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
+
+  <script type="importmap">
         {
             "imports": {
                 "three": "https://unpkg.com/three@v0.158.0/build/three.module.js",
@@ -35,314 +51,323 @@
             }
         }
     </script>
-    
-    <script type="module" src="avatar.js"></script>
-    <script src="fullpage-scroll.js"></script>
-    <!-- Lottie Animation Player -->
-    <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
+
+  <script type="module" src="avatar.js"></script>
+  <script src="fullpage-scroll.js"></script>
+  <!-- Lottie Animation Player -->
+  <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
 </head>
 
 <body>
-    <!-- Enhanced Parallax Background Elements -->
-    <div class="parallax-bg">
-        <div class="parallax-layer" data-parallax="-0.5"></div>
-        <div class="parallax-layer" data-parallax="-0.3"></div>
-        <div class="parallax-layer" data-parallax="-0.1"></div>
-    </div>
+  <!-- Enhanced Parallax Background Elements -->
+  <div class="parallax-bg">
+    <div class="parallax-layer" data-parallax="-0.5"></div>
+    <div class="parallax-layer" data-parallax="-0.3"></div>
+    <div class="parallax-layer" data-parallax="-0.1"></div>
+  </div>
 
-    <header>
-        <nav class="glass-navbar">
-            <div class="glass-nav-content">
-  <!-- logo removed to centralize navbar -->
-                <ul class="glass-nav-menu">
-                    <li><a href="#home" class="glass-nav-link">Home</a></li>
-                    <li><a href="#about" class="glass-nav-link">About</a></li>
-                    <li><a href="#experience" class="glass-nav-link">Experience</a></li>
-                    <li><a href="#certificates" class="glass-nav-link">Certificates</a></li>
-                    <li><a href="#projects" class="glass-nav-link">Projects</a></li>
-                    <li><a href="#contact" class="glass-nav-link">Contact</a></li>
-                    <li><a href="resume.pdf" download class="glass-resume-btn">Resume</a></li>
-                </ul>
-                
-                <div class="glass-hamburger" id="glassHamburger" tabindex="0" aria-label="Open navigation menu">
-                    <span></span><span></span><span></span>
-                </div>
-            </div>
-        </nav>
-    </header>
-        
-    <!-- Sections will be automatically wrapped by fullpage-scroll.js -->
-    <section id="home" class="parallax-section">
-        <div class="parallax-bg-home" data-parallax="-0.4"></div>
-        <div class="section-content">
-            <div id='avatar-container' data-parallax="0.2">
+  <header>
+    <nav class="glass-navbar">
+      <div class="glass-nav-content">
+        <!-- logo removed to centralize navbar -->
+        <ul class="glass-nav-menu">
+          <li><a href="#home" class="glass-nav-link">Home</a></li>
+          <li><a href="#about" class="glass-nav-link">About</a></li>
+          <li><a href="#experience" class="glass-nav-link">Experience</a></li>
+          <li><a href="#certificates" class="glass-nav-link">Certificates</a></li>
+          <li><a href="#projects" class="glass-nav-link">Projects</a></li>
+          <li><a href="#contact" class="glass-nav-link">Contact</a></li>
+          <li><a href="resume.pdf" download class="glass-resume-btn">Resume</a></li>
+        </ul>
+
+        <div class="glass-hamburger" id="glassHamburger" tabindex="0" aria-label="Open navigation menu">
+          <span></span><span></span><span></span>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Sections will be automatically wrapped by fullpage-scroll.js -->
+  <section id="home" class="parallax-section">
+    <div class="parallax-bg-home" data-parallax="-0.4"></div>
+    <div class="section-content">
+      <div id='avatar-container' data-parallax="0.2">
         <div id='avatar-loading'>
-          <dotlottie-player class="avatar-player" src="https://lottie.host/3f84d67b-c678-4630-a8bc-d5ca74d675e5/HBt6t1hsCH.lottie" background="transparent" speed="1" loop autoplay></dotlottie-player>
+          <dotlottie-player class="avatar-player"
+            src="https://lottie.host/3f84d67b-c678-4630-a8bc-d5ca74d675e5/HBt6t1hsCH.lottie" background="transparent"
+            speed="1" loop autoplay></dotlottie-player>
         </div>
-            </div>
-            <h1 class="hero-title parallax-text" data-parallax="0.1">Hi 👋</h1>
-            <h1 class="parallax-text" data-parallax="0.3">I'm <span class='gradient-text'>Mohamed Aziz Bahloul</span> <span style="vertical-align: middle; margin-left: 0.3em; font-size: 1.2em;">🤖</span></h1>
-            <h2 class="parallax-text" data-parallax="0.4" style="font-weight: 400; font-size: 1.3em; color: #b108bd; margin-top: 0.5em;">Building intelligent digital solutions</h2>
-            <svg width="120" height="32" style="margin-top: 1em; opacity: 0.7;" viewBox="0 0 120 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="10" cy="16" r="3" fill="#b108bd"/>
-                <circle cx="40" cy="8" r="2" fill="#58baff"/>
-                <circle cx="80" cy="24" r="2.5" fill="#b108bd"/>
-                <circle cx="110" cy="16" r="3" fill="#58baff"/>
-                <line x1="13" y1="16" x2="38" y2="9" stroke="#b108bd" stroke-width="1.2"/>
-                <line x1="42" y1="8" x2="78" y2="24" stroke="#58baff" stroke-width="1.2"/>
-                <line x1="83" y1="24" x2="107" y2="16" stroke="#b108bd" stroke-width="1.2"/>
-            </svg>
-        </div>
-    </section>
+      </div>
+      <h1 class="hero-title parallax-text" data-parallax="0.1">Hi 👋</h1>
+      <h1 class="parallax-text" data-parallax="0.3">I'm <span class='gradient-text'>Mohamed Aziz Bahloul</span> <span
+          style="vertical-align: middle; margin-left: 0.3em; font-size: 1.2em;">🤖</span></h1>
+      <h2 class="parallax-text" data-parallax="0.4"
+        style="font-weight: 400; font-size: 1.3em; color: #b108bd; margin-top: 0.5em;">Building intelligent digital
+        solutions</h2>
+      <svg width="120" height="32" style="margin-top: 1em; opacity: 0.7;" viewBox="0 0 120 32" fill="none"
+        xmlns="http://www.w3.org/2000/svg">
+        <circle cx="10" cy="16" r="3" fill="#b108bd" />
+        <circle cx="40" cy="8" r="2" fill="#58baff" />
+        <circle cx="80" cy="24" r="2.5" fill="#b108bd" />
+        <circle cx="110" cy="16" r="3" fill="#58baff" />
+        <line x1="13" y1="16" x2="38" y2="9" stroke="#b108bd" stroke-width="1.2" />
+        <line x1="42" y1="8" x2="78" y2="24" stroke="#58baff" stroke-width="1.2" />
+        <line x1="83" y1="24" x2="107" y2="16" stroke="#b108bd" stroke-width="1.2" />
+      </svg>
+    </div>
+  </section>
 
-    <section id="about" class="container parallax-section">
-        <div class="parallax-bg-about" data-parallax="-0.3"></div>
-        <div class="section-content">
-            <div class="terminal-loader parallax-element" data-parallax="0.1">
-                <div class="terminal-header">
-                    <div class="terminal-title">Status</div>
-                    <div class="terminal-controls">
-                        <div class="control close"></div>
-                        <div class="control minimize"></div>
-                        <div class="control maximize"></div>
-                    </div>
-                </div>
-                <div class="text">
-                    I love building robust, intelligent systems and scalable APIs. My main focus is backend and AI, but I also enjoy bringing ideas to life with simple, effective frontend logic when needed.
-                </div>
-            </div>
+  <section id="about" class="container parallax-section">
+    <div class="parallax-bg-about" data-parallax="-0.3"></div>
+    <div class="section-content">
+      <div class="terminal-loader parallax-element" data-parallax="0.1">
+        <div class="terminal-header">
+          <div class="terminal-title">Status</div>
+          <div class="terminal-controls">
+            <div class="control close"></div>
+            <div class="control minimize"></div>
+            <div class="control maximize"></div>
+          </div>
         </div>
-    </section>
+        <div class="text">
+          I love building robust, intelligent systems and scalable APIs. My main focus is backend and AI, but I also
+          enjoy bringing ideas to life with simple, effective frontend logic when needed.
+        </div>
+      </div>
+    </div>
+  </section>
 
-   <section id="experience" class="parallax-section">
+  <section id="experience" class="parallax-section">
     <div class="parallax-bg-about" data-parallax="-0.4"></div>
     <div class="section-content">
-        <h1 class="parallax-text code-text" data-parallax="0.1">Professional Experience<span class="blinking-cursor"> </span></h1>
+      <h1 class="parallax-text code-text" data-parallax="0.1">Professional Experience<span class="blinking-cursor">
+        </span></h1>
 
-        <!-- Company expanding cards (theme-matched) -->
-        <div class="experience-cards">
-          <div class="company-card" role="list" aria-label="Professional experience">
-            <!-- MindCare-AI -->
-            <div class="panel" role="listitem" tabindex="0" aria-label="MindCare-AI experience">
-              <span class="label">MindCare-AI</span>
-              <div class="desc">
-                <h4>AI Research Assistant • <span>2021 – 2022</span></h4>
-                <ul>
-                  <li>Django platform connecting users with licensed therapists.</li>
-                  <li>AI engine for mood tracking, intelligent routing, and personalized suggestions (RAG chatbot).</li>
-                  <li>Secure booking, real-time chat (Django Channels/WebSockets), and timely notifications.</li>
-                  <li>Stack: Django REST Framework, PostgreSQL, Redis, Celery, Docker.</li>
-                </ul>
-                <div class="tech">
-                  <span>TensorFlow</span>
-                  <span>RAG</span>
-                  <span>Python</span>
-                </div>
+      <!-- Company expanding cards (theme-matched) -->
+      <div class="experience-cards">
+        <div class="company-card" role="list" aria-label="Professional experience">
+          <!-- MindCare-AI -->
+          <div class="panel" role="listitem" tabindex="0" aria-label="MindCare-AI experience">
+            <span class="label">MindCare-AI</span>
+            <div class="desc">
+              <h4>AI Research Assistant • <span>2021 – 2022</span></h4>
+              <ul>
+                <li>Django platform connecting users with licensed therapists.</li>
+                <li>AI engine for mood tracking, intelligent routing, and personalized suggestions (RAG chatbot).</li>
+                <li>Secure booking, real-time chat (Django Channels/WebSockets), and timely notifications.</li>
+                <li>Stack: Django REST Framework, PostgreSQL, Redis, Celery, Docker.</li>
+              </ul>
+              <div class="tech">
+                <span>TensorFlow</span>
+                <span>RAG</span>
+                <span>Python</span>
               </div>
             </div>
-            <!-- Nextunis / Freelanso -->
-            <div class="panel" role="listitem" tabindex="0" aria-label="Nextunis Freelanso experience">
-              <span class="label">Nextunis • Freelanso</span>
-              <div class="desc">
-                <h4>Backend Engineer • <span>2020 – 2021</span></h4>
-                <ul>
-                  <li>Recommendation engine matching freelancers with jobs and surfacing talent to clients.</li>
-                  <li>Real-time messaging, email notifications, and advanced, filterable search.</li>
-                  <li>Reviews and ratings, analytics (data warehouse + ETL), user preferences, and subscriptions.</li>
-                </ul>
-                <div class="tech">
-                  <span>Django</span>
-                  <span>Channels</span>
-                  <span>PostgreSQL</span>
-                </div>
+          </div>
+          <!-- Nextunis / Freelanso -->
+          <div class="panel" role="listitem" tabindex="0" aria-label="Nextunis Freelanso experience">
+            <span class="label">Nextunis • Freelanso</span>
+            <div class="desc">
+              <h4>Backend Engineer • <span>2020 – 2021</span></h4>
+              <ul>
+                <li>Recommendation engine matching freelancers with jobs and surfacing talent to clients.</li>
+                <li>Real-time messaging, email notifications, and advanced, filterable search.</li>
+                <li>Reviews and ratings, analytics (data warehouse + ETL), user preferences, and subscriptions.</li>
+              </ul>
+              <div class="tech">
+                <span>Django</span>
+                <span>Channels</span>
+                <span>PostgreSQL</span>
               </div>
             </div>
           </div>
         </div>
+      </div>
     </div>
   </section>
-    
-    <section id="certificates" class="parallax-section">
-        <div class="parallax-bg-projects" data-parallax="-0.5"></div>
-        <div class="section-content">
-            <h1 class="parallax-text code-text" data-parallax="0.1">Certificates<span class="blinking-cursor"></span></h1>
-            <div class="certificates-container">
-                <div class="certificate-card ai-code-card parallax-element" data-parallax="0.2">
-                    <div class="card-circuit-overlay"></div>
-                    <div class="certificate-logo nvidia-logo">
-                        <svg viewBox="0 0 24 24" width="40" height="40">
-                            <path fill="#76B900" d="M8.11 24l4.84-8.4c.21-.36.65-.48 1.01-.27.35.21.47.66.26 1.02l-4.83 8.4c-.22.38-.7.5-1.07.27-.36-.22-.47-.66-.21-1.02zm15.66-13.34c.43-1.26.15-2.59-.76-3.49-1.02-1-2.37-1.25-3.57-.79-3.46 1.35-3.87 5.02-3.87 5.02s3.92.36 8.2-.74zm-14.23-7.36L2.28 13.54c-.21.36-.64.48-1 .28-.36-.21-.48-.64-.27-1l7.26-10.24c.21-.37.64-.48 1-.28.36.21.48.64.27 1zm4.32 3.44c.58-.06 1.08.34 1.12.9.04.55-.4 1.03-.98 1.08-.58.06-1.08-.34-1.12-.89-.04-.56.4-1.04.98-1.09zm-5.66 1.68c.58-.06 1.08.34 1.12.89.04.56-.4 1.04-.98 1.09-.58.06-1.08-.33-1.12-.89-.04-.55.4-1.04.98-1.09zm.38 2.29c.58-.06 1.08.34 1.12.9.04.55-.4 1.03-.98 1.08-.58.06-1.08-.34-1.12-.89-.04-.56.4-1.04.98-1.09zm4.9-.4c.58-.06 1.08.34 1.12.9.04.55-.4 1.03-.98 1.08-.58.06-1.08-.34-1.12-.89-.04-.56.4-1.04.98-1.09z"/>
-                        </svg>
-                    </div>
-                    <div class="certificate-content">
-                        <h3 class="typing-text">NVIDIA Deep Learning Institute</h3>
-                        <p>Fundamentals of Deep Learning</p>
-                        <div class="certificate-progress-bar">
-                            <div class="progress-fill"></div>
-                        </div>
-                        <a href="https://learn.nvidia.com/certificates?id=mxJrmP73TemYQ9Z2LpMn1Q" target="_blank" class="certificate-link">
-                            <span class="code-keyword">view</span>.<span class="code-function">certificate</span><span class="code-punctuation">()</span>
-                        </a>
-                    </div>
-                </div>
-                
-                <div class="certificate-card ai-code-card parallax-element" data-parallax="0.3">
-                    <div class="card-circuit-overlay"></div>
-                    <div class="certificate-logo google-logo">
-                        <svg viewBox="0 0 24 24" width="40" height="40">
-                            <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
-                            <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
-                            <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/>
-                            <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/>
-                        </svg>
-                    </div>
-                    <div class="certificate-content">
-                        <h3 class="typing-text">Google Cloud</h3>
-                        <p>Machine Learning with TensorFlow on Google Cloud Platform</p>
-                        <div class="certificate-progress-bar">
-                            <div class="progress-fill"></div>
-                        </div>
-                        <a href="https://coursera.org/share/a224364bb322e9c4d71dfa6b7012a32c" target="_blank" class="certificate-link">
-                            <span class="code-keyword">view</span>.<span class="code-function">certificate</span><span class="code-punctuation">()</span>
-                        </a>
-                    </div>
-                </div>
-                
-                <div class="certificate-card ai-code-card parallax-element" data-parallax="0.4">
-                    <div class="card-circuit-overlay"></div>
-                    <div class="certificate-logo coursera-logo">
-                        <svg viewBox="0 0 24 24" width="40" height="40">
-                            <path fill="#0056D2" d="M12 0c6.627 0 12 5.373 12 12s-5.373 12-12 12S0 18.627 0 12 5.373 0 12 0zm-1.218 19h2.437c.534 0 .968-.433.968-.968v-1.368c1.13-.28 2.14-.859 2.973-1.649l1.366.774c.462.264 1.05.103 1.316-.359l1.217-2.107a.967.967 0 0 0-.358-1.316l-1.368-.776c.071-.563.071-1.134 0-1.698l1.368-.776a.967.967 0 0 0 .358-1.316L20.844 7.34a.969.969 0 0 0-1.316-.359l-1.366.774a6.132 6.132 0 0 0-2.973-1.65V4.971c0-.535-.434-.968-.968-.968h-2.437a.97.97 0 0 0-.969.968v1.137a6.14 6.14 0 0 0-2.97 1.649l-1.37-.774a.969.969 0 0 0-1.315.359L5.943 9.45a.97.97 0 0 0 .358 1.316l1.368.776a6.205 6.205 0 0 0 0 1.698l-1.368.776a.97.97 0 0 0-.358 1.316l1.217 2.107c.266.462.854.623 1.316.359l1.368-.774c.832.79 1.842 1.368 2.973 1.649v1.368c0 .535.434.968.969.968z"/>
-                            <circle fill="#0056D2" cx="12" cy="12" r="3"/>
-                        </svg>
-                    </div>
-                    <div class="certificate-content">
-                        <h3 class="typing-text">Coursera</h3>
-                        <p>Deep Learning Specialization</p>
-                        <div class="certificate-progress-bar">
-                            <div class="progress-fill"></div>
-                        </div>
-                        <a href="https://coursera.org/share/b8adce3316a0e42846e5f2863a6b7a49" target="_blank" class="certificate-link">
-                            <span class="code-keyword">view</span>.<span class="code-function">certificate</span><span class="code-punctuation">()</span>
-                        </a>
-                    </div>
-                </div>
-                
-                <div class="certificate-card ai-code-card parallax-element" data-parallax="0.5">
-                    <div class="card-circuit-overlay"></div>
-                    <div class="certificate-logo ibm-logo">
-                        <svg viewBox="0 0 24 24" width="40" height="40">
-                            <path fill="#1F70C1" d="M1.126 18.756h21.748v2.224H1.126zm0-15.736h21.748v2.224H1.126zm5.437 5.437h10.874v2.224H6.563zm0 4.882h10.874v2.224H6.563z"/>
-                        </svg>
-                    </div>
-                    <div class="certificate-content">
-                        <h3 class="typing-text">IBM</h3>
-                        <p>IBM Data Science Professional Certificate</p>
-                        <div class="certificate-progress-bar">
-                            <div class="progress-fill"></div>
-                        </div>
-                        <a href="https://coursera.org/share/f84a99a5a748335cb91a1905c9134d41" target="_blank" class="certificate-link">
-                            <span class="code-keyword">view</span>.<span class="code-function">certificate</span><span class="code-punctuation">()</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <section id="projects" class="parallax-section">
-        <div class="parallax-bg-projects" data-parallax="-0.6"></div>
-        <div class="section-content">
-            <div class="card-container">
-                <a href="pages\Ai\AI.html" class="card-link parallax-element" data-parallax="0.1">
-                    <div class="card ai-card">
-                        <div class="card-animation">
-                            <dotlottie-player 
-                                src="https://lottie.host/e919da44-c907-4f89-a513-ccec788df198/lPRQrnzXn9.lottie" 
-                                background="transparent" 
-                                speed="1.2" 
-                                style="width: 100%; height: 200px; min-height: 200px;" 
-                                loop 
-                                autoplay
-                                mode="normal">
-                            </dotlottie-player>
-                        </div>
-                        <div class="card-content">
-                            <h2>AI</h2>
-                            <p>Artificial Intelligence Projects</p>
-                        </div>
-                        <div class="card-glow"></div>
-                    </div>
-                </a>
-                
-                <a href="pages\web\web.html" class="card-link parallax-element" data-parallax="0.2">
-                    <div class="card web-card">
-                        <div class="card-animation">
-                            <dotlottie-player 
-                                src="https://lottie.host/437cadb1-c7da-44ac-8576-d522a6d83c06/YMyK5gIFll.lottie" 
-                                background="transparent" 
-                                speed="1.2" 
-                                style="width: 100%; height: 200px; min-height: 200px;" 
-                                loop 
-                                autoplay
-                                mode="normal">
-                            </dotlottie-player>
-                        </div>
-                        <div class="card-content">
-                            <h2>Web</h2>
-                            <p>Full-Stack Web Development</p>
-                        </div>
-                        <div class="card-glow"></div>
-                    </div>
-                </a>
-       
-                <a href="pages\mobile\mobile.html" class="card-link parallax-element" data-parallax="0.3">
-                    <div class="card mobile-card">
-                        <div class="card-animation">
-                            <dotlottie-player 
-                                src="https://lottie.host/61843bb3-fd17-41f5-9fd2-00cd81abbdc6/DkpB1d8Sjc.lottie" 
-                                background="transparent" 
-                                speed="1.2" 
-                                style="width: 100%; height: 200px; min-height: 200px;" 
-                                loop 
-                                autoplay
-                                mode="normal">
-                            </dotlottie-player>
-                        </div>
-                        <div class="card-content">
-                            <h2>Mobile</h2>
-                            <p>Mobile App Development</p>
-                        </div>
-                        <div class="card-glow"></div>
-                    </div>
-                </a>
+  <section id="certificates" class="parallax-section">
+    <div class="parallax-bg-projects" data-parallax="-0.5"></div>
+    <div class="section-content">
+      <h1 class="parallax-text code-text" data-parallax="0.1">Certificates<span class="blinking-cursor"></span></h1>
+      <div class="certificates-container">
+        <div class="certificate-card ai-code-card parallax-element" data-parallax="0.2">
+          <div class="card-circuit-overlay"></div>
+          <div class="certificate-logo nvidia-logo">
+            <svg viewBox="0 0 24 24" width="40" height="40">
+              <path fill="#76B900"
+                d="M8.11 24l4.84-8.4c.21-.36.65-.48 1.01-.27.35.21.47.66.26 1.02l-4.83 8.4c-.22.38-.7.5-1.07.27-.36-.22-.47-.66-.21-1.02zm15.66-13.34c.43-1.26.15-2.59-.76-3.49-1.02-1-2.37-1.25-3.57-.79-3.46 1.35-3.87 5.02-3.87 5.02s3.92.36 8.2-.74zm-14.23-7.36L2.28 13.54c-.21.36-.64.48-1 .28-.36-.21-.48-.64-.27-1l7.26-10.24c.21-.37.64-.48 1-.28.36.21.48.64.27 1zm4.32 3.44c.58-.06 1.08.34 1.12.9.04.55-.4 1.03-.98 1.08-.58.06-1.08-.34-1.12-.89-.04-.56.4-1.04.98-1.09zm-5.66 1.68c.58-.06 1.08.34 1.12.89.04.56-.4 1.04-.98 1.09-.58.06-1.08-.33-1.12-.89-.04-.55.4-1.04.98-1.09zm.38 2.29c.58-.06 1.08.34 1.12.9.04.55-.4 1.03-.98 1.08-.58.06-1.08-.34-1.12-.89-.04-.56.4-1.04.98-1.09zm4.9-.4c.58-.06 1.08.34 1.12.9.04.55-.4 1.03-.98 1.08-.58.06-1.08-.34-1.12-.89-.04-.56.4-1.04.98-1.09z" />
+            </svg>
+          </div>
+          <div class="certificate-content">
+            <h3 class="typing-text">NVIDIA Deep Learning Institute</h3>
+            <p>Fundamentals of Deep Learning</p>
+            <div class="certificate-progress-bar">
+              <div class="progress-fill"></div>
             </div>
+            <a href="https://learn.nvidia.com/certificates?id=mxJrmP73TemYQ9Z2LpMn1Q" target="_blank"
+              class="certificate-link">
+              <span class="code-keyword">view</span>.<span class="code-function">certificate</span><span
+                class="code-punctuation">()</span>
+            </a>
+          </div>
         </div>
-    </section>
 
-    <section id="contact" class="parallax-section">
+        <div class="certificate-card ai-code-card parallax-element" data-parallax="0.3">
+          <div class="card-circuit-overlay"></div>
+          <div class="certificate-logo google-logo">
+            <svg viewBox="0 0 24 24" width="40" height="40">
+              <path fill="#4285F4"
+                d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" />
+              <path fill="#34A853"
+                d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" />
+              <path fill="#FBBC05"
+                d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" />
+              <path fill="#EA4335"
+                d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" />
+            </svg>
+          </div>
+          <div class="certificate-content">
+            <h3 class="typing-text">Google Cloud</h3>
+            <p>Machine Learning with TensorFlow on Google Cloud Platform</p>
+            <div class="certificate-progress-bar">
+              <div class="progress-fill"></div>
+            </div>
+            <a href="https://coursera.org/share/a224364bb322e9c4d71dfa6b7012a32c" target="_blank"
+              class="certificate-link">
+              <span class="code-keyword">view</span>.<span class="code-function">certificate</span><span
+                class="code-punctuation">()</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="certificate-card ai-code-card parallax-element" data-parallax="0.4">
+          <div class="card-circuit-overlay"></div>
+          <div class="certificate-logo coursera-logo">
+            <svg viewBox="0 0 24 24" width="40" height="40">
+              <path fill="#0056D2"
+                d="M12 0c6.627 0 12 5.373 12 12s-5.373 12-12 12S0 18.627 0 12 5.373 0 12 0zm-1.218 19h2.437c.534 0 .968-.433.968-.968v-1.368c1.13-.28 2.14-.859 2.973-1.649l1.366.774c.462.264 1.05.103 1.316-.359l1.217-2.107a.967.967 0 0 0-.358-1.316l-1.368-.776c.071-.563.071-1.134 0-1.698l1.368-.776a.967.967 0 0 0 .358-1.316L20.844 7.34a.969.969 0 0 0-1.316-.359l-1.366.774a6.132 6.132 0 0 0-2.973-1.65V4.971c0-.535-.434-.968-.968-.968h-2.437a.97.97 0 0 0-.969.968v1.137a6.14 6.14 0 0 0-2.97 1.649l-1.37-.774a.969.969 0 0 0-1.315.359L5.943 9.45a.97.97 0 0 0 .358 1.316l1.368.776a6.205 6.205 0 0 0 0 1.698l-1.368.776a.97.97 0 0 0-.358 1.316l1.217 2.107c.266.462.854.623 1.316.359l1.368-.774c.832.79 1.842 1.368 2.973 1.649v1.368c0 .535.434.968.969.968z" />
+              <circle fill="#0056D2" cx="12" cy="12" r="3" />
+            </svg>
+          </div>
+          <div class="certificate-content">
+            <h3 class="typing-text">Coursera</h3>
+            <p>Deep Learning Specialization</p>
+            <div class="certificate-progress-bar">
+              <div class="progress-fill"></div>
+            </div>
+            <a href="https://coursera.org/share/b8adce3316a0e42846e5f2863a6b7a49" target="_blank"
+              class="certificate-link">
+              <span class="code-keyword">view</span>.<span class="code-function">certificate</span><span
+                class="code-punctuation">()</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="certificate-card ai-code-card parallax-element" data-parallax="0.5">
+          <div class="card-circuit-overlay"></div>
+          <div class="certificate-logo ibm-logo">
+            <svg viewBox="0 0 24 24" width="40" height="40">
+              <path fill="#1F70C1"
+                d="M1.126 18.756h21.748v2.224H1.126zm0-15.736h21.748v2.224H1.126zm5.437 5.437h10.874v2.224H6.563zm0 4.882h10.874v2.224H6.563z" />
+            </svg>
+          </div>
+          <div class="certificate-content">
+            <h3 class="typing-text">IBM</h3>
+            <p>IBM Data Science Professional Certificate</p>
+            <div class="certificate-progress-bar">
+              <div class="progress-fill"></div>
+            </div>
+            <a href="https://coursera.org/share/f84a99a5a748335cb91a1905c9134d41" target="_blank"
+              class="certificate-link">
+              <span class="code-keyword">view</span>.<span class="code-function">certificate</span><span
+                class="code-punctuation">()</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects" class="parallax-section">
+    <div class="parallax-bg-projects" data-parallax="-0.6"></div>
+    <div class="section-content">
+      <div class="card-container">
+        <a href="pages/Ai/AI.html" class="card-link parallax-element" data-parallax="0.1">
+          <div class="card ai-card">
+            <div class="card-animation">
+              <dotlottie-player src="https://lottie.host/e919da44-c907-4f89-a513-ccec788df198/lPRQrnzXn9.lottie"
+                background="transparent" speed="1.2" style="width: 100%; height: 200px; min-height: 200px;" loop
+                autoplay mode="normal">
+              </dotlottie-player>
+            </div>
+            <div class="card-content">
+              <h2>AI</h2>
+              <p>Artificial Intelligence Projects</p>
+            </div>
+            <div class="card-glow"></div>
+          </div>
+        </a>
+
+        <a href="pages/web/web.html" class="card-link parallax-element" data-parallax="0.2">
+          <div class="card web-card">
+            <div class="card-animation">
+              <dotlottie-player src="https://lottie.host/437cadb1-c7da-44ac-8576-d522a6d83c06/YMyK5gIFll.lottie"
+                background="transparent" speed="1.2" style="width: 100%; height: 200px; min-height: 200px;" loop
+                autoplay mode="normal">
+              </dotlottie-player>
+            </div>
+            <div class="card-content">
+              <h2>Web</h2>
+              <p>Full-Stack Web Development</p>
+            </div>
+            <div class="card-glow"></div>
+          </div>
+        </a>
+
+        <a href="pages/mobile/mobile.html" class="card-link parallax-element" data-parallax="0.3">
+          <div class="card mobile-card">
+            <div class="card-animation">
+              <dotlottie-player src="https://lottie.host/61843bb3-fd17-41f5-9fd2-00cd81abbdc6/DkpB1d8Sjc.lottie"
+                background="transparent" speed="1.2" style="width: 100%; height: 200px; min-height: 200px;" loop
+                autoplay mode="normal">
+              </dotlottie-player>
+            </div>
+            <div class="card-content">
+              <h2>Mobile</h2>
+              <p>Mobile App Development</p>
+            </div>
+            <div class="card-glow"></div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="parallax-section">
     <div class="parallax-bg-contact" data-parallax="-0.4"></div>
     <div class="section-content">
       <h1 class="parallax-text code-text" data-parallax="0.1">Neural Network<span class="blinking-cursor">_</span></h1>
       <p class="contact-subtitle" data-parallax="0.15">Connect through the digital synapses</p>
-      
+
       <!-- Neural Contact Network -->
       <div class="neural-network" id="neuralNetwork" data-parallax="0.2">
         <canvas class="neural-canvas" id="neuralCanvas"></canvas>
-        
+
         <!-- Central Hub -->
         <div class="neural-hub">
           <div class="hub-core">
             <div class="pulse-ring"></div>
             <div class="hub-icon">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M12 2L13.09 8.26L19.35 9.35L13.09 15.74L14.18 22L12 17.77L9.82 22L10.91 15.74L4.65 9.35L10.91 8.26L12 2Z"/>
+                <path
+                  d="M12 2L13.09 8.26L19.35 9.35L13.09 15.74L14.18 22L12 17.77L9.82 22L10.91 15.74L4.65 9.35L10.91 8.26L12 2Z" />
               </svg>
             </div>
             <span class="hub-label">Neural Core</span>
           </div>
         </div>
-        
+
         <!-- Contact Nodes -->
         <div class="contact-nodes">
           <div class="neural-node node-github" data-platform="github" data-angle="0">
@@ -351,7 +376,8 @@
               <div class="node-content">
                 <div class="node-icon">
                   <svg viewBox="0 0 24 24" width="28" height="28">
-                    <path fill="currentColor" d="M12 2C6.48 2 2 6.48 2 12c0 4.42 2.87 8.17 6.84 9.49.5.09.68-.22.68-.48l-.01-1.69c-2.79.6-3.37-1.34-3.37-1.34-.46-1.16-1.12-1.47-1.12-1.47-.91-.63.07-.62.07-.62 1.01.07 1.54 1.04 1.54 1.04.9 1.54 2.37 1.1 2.95.84.09-.65.35-1.1.64-1.35-2.23-.25-4.58-1.12-4.58-4.97 0-1.1.39-2 1.04-2.7-.1-.25-.45-1.28.1-2.66 0 0 .85-.27 2.78 1.03A9.61 9.61 0 0112 7.35c.85.02 1.7.12 2.5.36 1.93-1.3 2.78-1.03 2.78-1.03.55 1.38.2 2.41.1 2.66.64.7 1.04 1.6 1.04 2.7 0 3.86-2.36 4.72-4.6 4.97.36.31.68.92.68 1.85l-.01 2.75c0 .26.18.57.69.48A10.02 10.02 0 0022 12c0-5.52-4.48-10-10-10z"/>
+                    <path fill="currentColor"
+                      d="M12 2C6.48 2 2 6.48 2 12c0 4.42 2.87 8.17 6.84 9.49.5.09.68-.22.68-.48l-.01-1.69c-2.79.6-3.37-1.34-3.37-1.34-.46-1.16-1.12-1.47-1.12-1.47-.91-.63.07-.62.07-.62 1.01.07 1.54 1.04 1.54 1.04.9 1.54 2.37 1.1 2.95.84.09-.65.35-1.1.64-1.35-2.23-.25-4.58-1.12-4.58-4.97 0-1.1.39-2 1.04-2.7-.1-.25-.45-1.28.1-2.66 0 0 .85-.27 2.78 1.03A9.61 9.61 0 0112 7.35c.85.02 1.7.12 2.5.36 1.93-1.3 2.78-1.03 2.78-1.03.55 1.38.2 2.41.1 2.66.64.7 1.04 1.6 1.04 2.7 0 3.86-2.36 4.72-4.6 4.97.36.31.68.92.68 1.85l-.01 2.75c0 .26.18.57.69.48A10.02 10.02 0 0022 12c0-5.52-4.48-10-10-10z" />
                   </svg>
                 </div>
                 <h3>GitHub</h3>
@@ -359,34 +385,37 @@
                 <a href="https://github.com/AzizBahloul" target="_blank" rel="noopener" class="neural-link">
                   <span>@AzizBahloul</span>
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/>
+                    <path
+                      d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z" />
                   </svg>
                 </a>
               </div>
             </div>
           </div>
-          
+
           <div class="neural-node node-linkedin" data-platform="linkedin" data-angle="90">
             <div class="node-card">
               <div class="holo-effect"></div>
               <div class="node-content">
                 <div class="node-icon">
                   <svg viewBox="0 0 448 512" width="28" height="28">
-                    <path fill="currentColor" d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"/>
+                    <path fill="currentColor"
+                      d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z" />
                   </svg>
                 </div>
                 <h3>LinkedIn</h3>
                 <p>Professional Network</p>
-                <a href="https://www.linkedin.com/feed/" target="_blank" rel="noopener" class="neural-link">
+                <a href="https://www.linkedin.com/in/azizbahloul/" target="_blank" rel="noopener" class="neural-link">
                   <span>@azizbahloul</span>
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/>
+                    <path
+                      d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z" />
                   </svg>
                 </a>
               </div>
             </div>
           </div>
-          
+
           <div class="neural-node node-pypi" data-platform="pypi" data-angle="180">
             <div class="node-card">
               <div class="holo-effect"></div>
@@ -394,9 +423,9 @@
                 <div class="node-icon">
                   <svg viewBox="0 0 24 24" width="28" height="28">
                     <g fill="currentColor">
-                      <circle cx="12" cy="12" r="10" opacity=".3"/>
-                      <circle cx="12" cy="12" r="6" opacity=".6"/>
-                      <circle cx="12" cy="12" r="3"/>
+                      <circle cx="12" cy="12" r="10" opacity=".3" />
+                      <circle cx="12" cy="12" r="6" opacity=".6" />
+                      <circle cx="12" cy="12" r="3" />
                     </g>
                   </svg>
                 </div>
@@ -405,20 +434,22 @@
                 <a href="https://pypi.org/user/si_aziz_bahloul/" target="_blank" rel="noopener" class="neural-link">
                   <span>si_aziz_bahloul</span>
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/>
+                    <path
+                      d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z" />
                   </svg>
                 </a>
               </div>
             </div>
           </div>
-          
+
           <div class="neural-node node-whatsapp" data-platform="whatsapp" data-angle="270">
             <div class="node-card">
               <div class="holo-effect"></div>
               <div class="node-content">
                 <div class="node-icon">
                   <svg viewBox="0 0 32 32" width="28" height="28">
-                    <path fill="currentColor" d="M16 3C9.373 3 4 8.373 4 15c0 2.385.832 4.58 2.236 6.36L4 29l7.828-2.236A11.94 11.94 0 0 0 16 27c6.627 0 12-5.373 12-12S22.627 3 16 3zm0 22c-1.77 0-3.45-.46-4.91-1.26l-.35-.2-4.65 1.33 1.33-4.53-.22-.36A9.97 9.97 0 0 1 6 15c0-5.514 4.486-10 10-10s10 4.486 10 10-4.486 10-10 10zm5.2-7.6c-.28-.14-1.65-.81-1.9-.9-.25-.09-.43-.14-.61.14-.18.28-.7.9-.86 1.08-.16.18-.32.2-.6.07-.28-.14-1.18-.44-2.25-1.4-.83-.74-1.39-1.65-1.55-1.93-.16-.28-.02-.43.12-.57.13-.13.28-.34.42-.51.14-.17.18-.29.28-.48.09-.19.05-.36-.02-.5-.07-.14-.61-1.47-.84-2.01-.22-.53-.45-.46-.62-.47-.16-.01-.36-.01-.56-.01-.19 0-.5.07-.76.34-.26.27-1 1-.99 2.43.01 1.43 1.03 2.81 1.18 3 .15.19 2.03 3.1 4.93 4.22.69.3 1.23.48 1.65.61.69.22 1.32.19 1.81.12.55-.08 1.65-.67 1.89-1.32.23-.65.23-1.2.16-1.32-.07-.12-.25-.19-.53-.33z"/>
+                    <path fill="currentColor"
+                      d="M16 3C9.373 3 4 8.373 4 15c0 2.385.832 4.58 2.236 6.36L4 29l7.828-2.236A11.94 11.94 0 0 0 16 27c6.627 0 12-5.373 12-12S22.627 3 16 3zm0 22c-1.77 0-3.45-.46-4.91-1.26l-.35-.2-4.65 1.33 1.33-4.53-.22-.36A9.97 9.97 0 0 1 6 15c0-5.514 4.486-10 10-10s10 4.486 10 10-4.486 10-10 10zm5.2-7.6c-.28-.14-1.65-.81-1.9-.9-.25-.09-.43-.14-.61.14-.18.28-.7.9-.86 1.08-.16.18-.32.2-.6.07-.28-.14-1.18-.44-2.25-1.4-.83-.74-1.39-1.65-1.55-1.93-.16-.28-.02-.43.12-.57.13-.13.28-.34.42-.51.14-.17.18-.29.28-.48.09-.19.05-.36-.02-.5-.07-.14-.61-1.47-.84-2.01-.22-.53-.45-.46-.62-.47-.16-.01-.36-.01-.56-.01-.19 0-.5.07-.76.34-.26.27-1 1-.99 2.43.01 1.43 1.03 2.81 1.18 3 .15.19 2.03 3.1 4.93 4.22.69.3 1.23.48 1.65.61.69.22 1.32.19 1.81.12.55-.08 1.65-.67 1.89-1.32.23-.65.23-1.2.16-1.32-.07-.12-.25-.19-.53-.33z" />
                   </svg>
                 </div>
                 <h3>WhatsApp</h3>
@@ -426,7 +457,8 @@
                 <a href="https://wa.me/21694772560" target="_blank" rel="noopener" class="neural-link">
                   <span>+216 94 772 560</span>
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/>
+                    <path
+                      d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z" />
                   </svg>
                 </a>
               </div>
@@ -438,145 +470,148 @@
   </section>
 </body>
 <script>
-// Dark/Light Mode Toggle
-const darkModeToggle = document.getElementById('darkModeToggle');
-const darkModeIcon = document.getElementById('darkModeIcon');
-let darkMode = localStorage.getItem('darkMode') === 'true';
-function setDarkMode(on) {
+  // Dark/Light Mode Toggle
+  const darkModeToggle = document.getElementById('darkModeToggle');
+  const darkModeIcon = document.getElementById('darkModeIcon');
+  let darkMode = localStorage.getItem('darkMode') === 'true';
+  function setDarkMode(on) {
     document.body.classList.toggle('dark-mode', on);
     darkModeIcon.innerHTML = on
-        ? '<path d="M21.64 13.64A9 9 0 1 1 12 3v0a7 7 0 0 0 9.64 10.64z"></path>'
-        : '<circle cx="12" cy="12" r="5"></circle><path d="M12 1v2m0 18v2m11-11h-2M3 12H1m16.95 7.07l-1.41-1.41M6.34 6.34l-1.41-1.41m12.02 0l-1.41 1.41M6.34 17.66l-1.41 1.41"/>';
+      ? '<path d="M21.64 13.64A9 9 0 1 1 12 3v0a7 7 0 0 0 9.64 10.64z"></path>'
+      : '<circle cx="12" cy="12" r="5"></circle><path d="M12 1v2m0 18v2m11-11h-2M3 12H1m16.95 7.07l-1.41-1.41M6.34 6.34l-1.41-1.41m12.02 0l-1.41 1.41M6.34 17.66l-1.41 1.41"/>';
     localStorage.setItem('darkMode', on);
-}
-darkModeToggle.addEventListener('click', () => {
+  }
+  darkModeToggle.addEventListener('click', () => {
     darkMode = !darkMode;
     setDarkMode(darkMode);
-    
-});
-setDarkMode(darkMode);
 
-// Glassy hamburger menu toggle
-const hamburger = document.getElementById('glassHamburger');
-const navMenu = document.querySelector('.glass-nav-menu');
-if (hamburger && navMenu) {
-  hamburger.addEventListener('click', () => {
-    navMenu.classList.toggle('open');
-    hamburger.classList.toggle('open');
   });
-}
-// Animated status dot
-const glassStatusDot = document.querySelector('.glass-status-dot');
-if (glassStatusDot) {
-  setInterval(() => {
-    glassStatusDot.classList.toggle('active');
-  }, 1100);
-}
-// Animated underline for nav links
-const navLinks = document.querySelectorAll('.glass-nav-link');
-navLinks.forEach(link => {
-  link.addEventListener('mouseenter', function() {
-    navLinks.forEach(l => l.classList.remove('hovered'));
-    this.classList.add('hovered');
-  });
-  link.addEventListener('mouseleave', function() {
-    this.classList.remove('hovered');
-  });
-});
+  setDarkMode(darkMode);
 
-// Enhanced typing animation for experience timeline
-document.addEventListener('DOMContentLoaded', function() {
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        const timelineItem = entry.target;
-        const typingLines = timelineItem.querySelectorAll('.typing-line');
-        
-        typingLines.forEach((line, index) => {
-          // Reset animation by removing and re-adding the element
-          const parent = line.parentNode;
-          const oldLine = line;
-          const newLine = oldLine.cloneNode(true);
-          
-          // Add a slight random delay to make typing seem more natural
-          const randomDelay = Math.random() * 0.3;
-          newLine.style.animationDelay = `${(index + 1) * 0.8 + randomDelay}s`;
-          
-          // Replace the old element with the new one
-          setTimeout(() => {
-            parent.replaceChild(newLine, oldLine);
-          }, 100);
-        });
-        
-        // Stop observing after animation is triggered
-        observer.unobserve(timelineItem);
+  // Glassy hamburger menu toggle
+  const hamburger = document.getElementById('glassHamburger');
+  const navMenu = document.querySelector('.glass-nav-menu');
+  if (hamburger && navMenu) {
+    hamburger.addEventListener('click', () => {
+      navMenu.classList.toggle('open');
+      hamburger.classList.toggle('open');
+    });
+  }
+  // Animated status dot
+  const glassStatusDot = document.querySelector('.glass-status-dot');
+  if (glassStatusDot) {
+    setInterval(() => {
+      glassStatusDot.classList.toggle('active');
+    }, 1100);
+  }
+  // Animated underline for nav links
+  const navLinks = document.querySelectorAll('.glass-nav-link');
+  navLinks.forEach(link => {
+    link.addEventListener('mouseenter', function () {
+      navLinks.forEach(l => l.classList.remove('hovered'));
+      this.classList.add('hovered');
+    });
+    link.addEventListener('mouseleave', function () {
+      this.classList.remove('hovered');
+    });
+  });
+
+  // Enhanced typing animation for experience timeline
+  document.addEventListener('DOMContentLoaded', function () {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const timelineItem = entry.target;
+          const typingLines = timelineItem.querySelectorAll('.typing-line');
+
+          typingLines.forEach((line, index) => {
+            // Reset animation by removing and re-adding the element
+            const parent = line.parentNode;
+            const oldLine = line;
+            const newLine = oldLine.cloneNode(true);
+
+            // Add a slight random delay to make typing seem more natural
+            const randomDelay = Math.random() * 0.3;
+            newLine.style.animationDelay = `${(index + 1) * 0.8 + randomDelay}s`;
+
+            // Replace the old element with the new one
+            setTimeout(() => {
+              parent.replaceChild(newLine, oldLine);
+            }, 100);
+          });
+
+          // Stop observing after animation is triggered
+          observer.unobserve(timelineItem);
+        }
+      });
+    }, {
+      threshold: 0.2
+    });
+
+    // Start observing timeline items
+    document.querySelectorAll('.timeline-item').forEach(item => {
+      observer.observe(item);
+    });
+
+    // Add typing cursor animation to each line
+    document.querySelectorAll('.typing-line').forEach((line, index) => {
+      const cursor = document.createElement('span');
+      cursor.className = 'typing-cursor';
+      cursor.textContent = '|';
+      cursor.style.animationDelay = `${(index + 1) * 0.8}s`;
+      line.appendChild(cursor);
+    });
+  });
+
+  // Parallax effect for timeline items
+  window.addEventListener('scroll', function () {
+    const timelineItems = document.querySelectorAll('.timeline-item');
+
+    timelineItems.forEach((item) => {
+      const speed = item.getAttribute('data-parallax') || 0.1;
+      const rect = item.getBoundingClientRect();
+      const isInView = (
+        rect.top <= (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.bottom >= 0
+      );
+
+      if (isInView) {
+        const scrolled = window.scrollY;
+        const translateY = scrolled * speed;
+        item.style.transform = `translateY(${translateY}px)`;
       }
     });
-  }, {
-    threshold: 0.2
   });
-  
-  // Start observing timeline items
-  document.querySelectorAll('.timeline-item').forEach(item => {
-    observer.observe(item);
-  });
-  
-  // Add typing cursor animation to each line
-  document.querySelectorAll('.typing-line').forEach((line, index) => {
-    const cursor = document.createElement('span');
-    cursor.className = 'typing-cursor';
-    cursor.textContent = '|';
-    cursor.style.animationDelay = `${(index + 1) * 0.8}s`;
-    line.appendChild(cursor);
-  });
-});
-
-// Parallax effect for timeline items
-window.addEventListener('scroll', function() {
-  const timelineItems = document.querySelectorAll('.timeline-item');
-  
-  timelineItems.forEach((item) => {
-    const speed = item.getAttribute('data-parallax') || 0.1;
-    const rect = item.getBoundingClientRect();
-    const isInView = (
-      rect.top <= (window.innerHeight || document.documentElement.clientHeight) &&
-      rect.bottom >= 0
-    );
-    
-    if (isInView) {
-      const scrolled = window.scrollY;
-      const translateY = scrolled * speed;
-      item.style.transform = `translateY(${translateY}px)`;
-    }
-  });
-});
-// Experience cards interactions (click/touch + pointer glow)
-document.addEventListener('DOMContentLoaded', () => {
-  const panels = document.querySelectorAll('.company-card .panel');
-  if (!panels.length) return;
-  panels.forEach(p => {
-    p.addEventListener('click', () => {
-      panels.forEach(x => x.classList.remove('active'));
-      p.classList.add('active');
+  // Experience cards interactions (click/touch + pointer glow)
+  document.addEventListener('DOMContentLoaded', () => {
+    const panels = document.querySelectorAll('.company-card .panel');
+    if (!panels.length) return;
+    panels.forEach(p => {
+      p.addEventListener('click', () => {
+        panels.forEach(x => x.classList.remove('active'));
+        p.classList.add('active');
+      });
+      p.addEventListener('pointermove', (e) => {
+        const rect = p.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        p.style.setProperty('--mx', `${x}px`);
+        p.style.setProperty('--my', `${y}px`);
+      });
     });
-    p.addEventListener('pointermove', (e) => {
-      const rect = p.getBoundingClientRect();
-      const x = e.clientX - rect.left;
-      const y = e.clientY - rect.top;
-      p.style.setProperty('--mx', `${x}px`);
-      p.style.setProperty('--my', `${y}px`);
-    });
+    // Set first active by default for better context
+    panels[0].classList.add('active');
   });
-  // Set first active by default for better context
-  panels[0].classList.add('active');
-});
 </script>
+<script src="unique-features.js"></script>
+<script src="troll-login.js"></script>
 <script src="neural-contact.js"></script>
+
 </html>
 
 <!-- Set CSS --vh variable to handle mobile browser chrome when using 100vh-based layouts -->
 <script>
-  (function() {
+  (function () {
     function setVh() {
       // 1% of the viewport height
       document.documentElement.style.setProperty('--vh', (window.innerHeight * 0.01) + 'px');
