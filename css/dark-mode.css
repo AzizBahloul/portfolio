@@ -21,7 +21,3 @@ body.dark-mode .parallax-bg-projects,
 body.dark-mode .parallax-bg-contact {
   filter: brightness(0.7) contrast(1.1);
 }
-
-body.dark-mode #darkModeIcon {
-  color: #58baff;
-}

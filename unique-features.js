@@ -5,6 +5,19 @@
 (function() {
   'use strict';
 
+  // Sections are stacked by fullpage-scroll.js, so native scrollIntoView does nothing:
+  // go through its API instead.
+  function goToSection(id) {
+    const list = Array.from(document.querySelectorAll('section'));
+    const index = list.findIndex((el) => el.id === id);
+    if (index >= 0 && window.fullPageScroll) window.fullPageScroll.goToSection(index);
+  }
+
+  function toggleTheme() {
+    const on = document.body.classList.toggle('dark-mode');
+    try { localStorage.setItem('theme', on ? 'dark' : 'light'); } catch (e) { /* storage blocked */ }
+  }
+
   // ============================================
   // 1. LOADING SCREEN WITH PROGRESS
   // ============================================
@@ -76,11 +89,11 @@
   magneticElements.forEach(el => {
     el.addEventListener('mouseenter', () => {
       cursor.style.transform = 'scale(2)';
-      cursor.style.borderColor = '#58baff';
+      cursor.style.borderColor = '#38bdf8';
     });
     el.addEventListener('mouseleave', () => {
       cursor.style.transform = 'scale(1)';
-      cursor.style.borderColor = '#b108bd';
+      cursor.style.borderColor = '#a855f7';
     });
   });
 
@@ -119,7 +132,7 @@
       this.size = Math.random() * 2 + 1;
       this.speedX = Math.random() * 0.5 - 0.25;
       this.speedY = Math.random() * 0.5 - 0.25;
-      this.color = Math.random() > 0.5 ? 'rgba(177, 8, 189, 0.5)' : 'rgba(88, 186, 255, 0.5)';
+      this.color = Math.random() > 0.5 ? 'rgba(168, 85, 247, 0.5)' : 'rgba(56, 189, 248, 0.5)';
     }
 
     update() {
@@ -159,7 +172,7 @@
         const distance = Math.sqrt(dx * dx + dy * dy);
 
         if (distance < 100) {
-          ctx.strokeStyle = `rgba(88, 186, 255, ${0.2 * (1 - distance / 100)})`;
+          ctx.strokeStyle = `rgba(56, 189, 248, ${0.2 * (1 - distance / 100)})`;
           ctx.lineWidth = 0.5;
           ctx.beginPath();
           ctx.moveTo(p1.x, p1.y);
@@ -264,21 +277,37 @@
       </div>
     </div>
   `;
+  commandPalette.setAttribute('role', 'dialog');
+  commandPalette.setAttribute('aria-label', 'Command palette');
+  commandPalette.setAttribute('aria-modal', 'true');
+  commandPalette.inert = true;
   document.body.appendChild(commandPalette);
 
   const commandInput = commandPalette.querySelector('.command-palette-input');
   const commandItems = commandPalette.querySelectorAll('.command-item');
+  commandInput.setAttribute('aria-label', 'Search commands');
+  const setPalette = (open) => {
+    commandPalette.classList.toggle('active', open);
+    commandPalette.inert = !open;
+  };
+  commandItems.forEach((item) => {
+    item.setAttribute('role', 'button');
+    item.tabIndex = 0;
+    item.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); item.click(); }
+    });
+  });
 
   document.addEventListener('keydown', (e) => {
     if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
       e.preventDefault();
-      commandPalette.classList.toggle('active');
+      setPalette(!commandPalette.classList.contains('active'));
       if (commandPalette.classList.contains('active')) {
         commandInput.focus();
       }
     }
     if (e.key === 'Escape') {
-      commandPalette.classList.remove('active');
+      setPalette(false);
     }
   });
 
@@ -286,26 +315,26 @@
     item.addEventListener('click', () => {
       const action = item.dataset.action;
       executeCommand(action);
-      commandPalette.classList.remove('active');
+      setPalette(false);
     });
   });
 
   function executeCommand(action) {
     switch(action) {
       case 'home':
-        document.getElementById('home').scrollIntoView({ behavior: 'smooth' });
+        goToSection('home');
         break;
       case 'about':
-        document.getElementById('about').scrollIntoView({ behavior: 'smooth' });
+        goToSection('about');
         break;
       case 'projects':
-        document.getElementById('projects').scrollIntoView({ behavior: 'smooth' });
+        goToSection('projects');
         break;
       case 'contact':
-        document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+        goToSection('contact');
         break;
       case 'theme':
-        document.body.classList.toggle('dark-mode');
+        toggleTheme();
         break;
     }
   }
@@ -415,25 +444,25 @@
       switch(e.key) {
         case 'h':
           e.preventDefault();
-          document.getElementById('home').scrollIntoView({ behavior: 'smooth' });
+          goToSection('home');
           break;
         case 'a':
           e.preventDefault();
-          document.getElementById('about').scrollIntoView({ behavior: 'smooth' });
+          goToSection('about');
           break;
         case 'p':
           e.preventDefault();
-          document.getElementById('projects').scrollIntoView({ behavior: 'smooth' });
+          goToSection('projects');
           break;
         case 'c':
           e.preventDefault();
-          document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+          goToSection('contact');
           break;
       }
     }
     if ((e.ctrlKey || e.metaKey) && e.key === 't') {
       e.preventDefault();
-      document.body.classList.toggle('dark-mode');
+      toggleTheme();
     }
   });
 

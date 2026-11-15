@@ -13,7 +13,7 @@
 .troll-login-btn {
     position: relative;
     padding: 0.5rem 0.9rem;
-    background: linear-gradient(135deg, #b108bd, #58baff);
+    background: linear-gradient(135deg, #a855f7, #38bdf8);
     color: white;
     border: none;
     border-radius: 12px;
@@ -24,14 +24,14 @@
     align-items: center;
     gap: 8px;
     z-index: 9999;
-    box-shadow: 0 4px 12px rgba(177, 8, 189, 0.3);
+    box-shadow: 0 4px 12px rgba(168, 85, 247, 0.3);
     font-family: 'Inter', 'Fira Mono', monospace;
     margin: 0;
     white-space: nowrap;
 }
 
 .troll-login-btn:hover {
-    box-shadow: 0 6px 20px rgba(88, 186, 255, 0.6);
+    box-shadow: 0 6px 20px rgba(56, 189, 248, 0.6);
 }
 
 .troll-login-btn svg {
@@ -66,12 +66,12 @@
     0%,
     100% {
         transform: scale(1);
-        box-shadow: 0 4px 12px rgba(177, 8, 189, 0.3);
+        box-shadow: 0 4px 12px rgba(168, 85, 247, 0.3);
     }
 
     50% {
         transform: scale(1.05);
-        box-shadow: 0 6px 20px rgba(88, 186, 255, 0.6);
+        box-shadow: 0 6px 20px rgba(56, 189, 248, 0.6);
     }
 }
 
@@ -87,7 +87,7 @@
     color: white;
     padding: 8px 16px;
     border-radius: 8px;
-    border: 1px solid rgba(88, 186, 255, 0.3);
+    border: 1px solid rgba(56, 189, 248, 0.3);
     font-size: 0.85rem;
     font-weight: 600;
     z-index: 10000;
@@ -147,17 +147,17 @@
 @keyframes speedLinesLeft {
     0% {
         box-shadow: 
-            20px 0 0 rgba(88, 186, 255, 0.9),
-            50px 0 0 rgba(88, 186, 255, 0.7),
-            90px 0 0 rgba(88, 186, 255, 0.5),
-            140px 0 0 rgba(88, 186, 255, 0.3);
+            20px 0 0 rgba(56, 189, 248, 0.9),
+            50px 0 0 rgba(56, 189, 248, 0.7),
+            90px 0 0 rgba(56, 189, 248, 0.5),
+            140px 0 0 rgba(56, 189, 248, 0.3);
     }
     100% {
         box-shadow: 
-            100px 0 0 rgba(88, 186, 255, 0),
-            200px 0 0 rgba(88, 186, 255, 0),
-            300px 0 0 rgba(88, 186, 255, 0),
-            400px 0 0 rgba(88, 186, 255, 0);
+            100px 0 0 rgba(56, 189, 248, 0),
+            200px 0 0 rgba(56, 189, 248, 0),
+            300px 0 0 rgba(56, 189, 248, 0),
+            400px 0 0 rgba(56, 189, 248, 0);
     }
 }
 
@@ -191,17 +191,17 @@
 @keyframes speedLinesRight {
     0% {
         box-shadow: 
-            -20px 0 0 rgba(177, 8, 189, 0.9),
-            -50px 0 0 rgba(177, 8, 189, 0.7),
-            -90px 0 0 rgba(177, 8, 189, 0.5),
-            -140px 0 0 rgba(177, 8, 189, 0.3);
+            -20px 0 0 rgba(168, 85, 247, 0.9),
+            -50px 0 0 rgba(168, 85, 247, 0.7),
+            -90px 0 0 rgba(168, 85, 247, 0.5),
+            -140px 0 0 rgba(168, 85, 247, 0.3);
     }
     100% {
         box-shadow: 
-            -100px 0 0 rgba(177, 8, 189, 0),
-            -200px 0 0 rgba(177, 8, 189, 0),
-            -300px 0 0 rgba(177, 8, 189, 0),
-            -400px 0 0 rgba(177, 8, 189, 0);
+            -100px 0 0 rgba(168, 85, 247, 0),
+            -200px 0 0 rgba(168, 85, 247, 0),
+            -300px 0 0 rgba(168, 85, 247, 0),
+            -400px 0 0 rgba(168, 85, 247, 0);
     }
 }
 

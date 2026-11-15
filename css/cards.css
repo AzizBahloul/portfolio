@@ -66,16 +66,6 @@
   border-radius: 25px 25px 0 0;
 }
 
-.card-animation dotlottie-player {
-  width: 100% !important;
-  height: auto !important;
-  max-height: clamp(120px, 18vw, 200px) !important;
-  transition: transform 0.28s ease;
-  filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.1));
-  opacity: 1 !important;
-  display: block !important;
-}
-
 /* Card Content */
 .card-content {
   position: relative;
@@ -89,7 +79,8 @@
   min-height: clamp(120px, 20vw, 200px);
 }
 
-.card h2 {
+.card h2,
+.card h3 {
   font-size: clamp(1.2rem, 1.6vw + 1rem, 2.2rem);
   margin-bottom: 10px;
   color: #fff;
@@ -155,12 +146,8 @@
   opacity: 1;
 }
 
-.card:hover .card-animation dotlottie-player {
-  transform: scale(1.1);
-  filter: drop-shadow(0 0 30px rgba(255, 255, 255, 0.2));
-}
-
-.card:hover h2 {
+.card:hover h2,
+.card:hover h3 {
   transform: translateY(-5px);
   text-shadow: 0 0 30px rgba(255, 255, 255, 0.5);
 }
@@ -179,7 +166,8 @@
     inset 0 1px 0 rgba(255, 255, 255, 0.2);
 }
 
-.ai-card:hover h2 {
+.ai-card:hover h2,
+.ai-card:hover h3 {
   color: #da70d6;
   text-shadow: 0 0 30px rgba(138, 43, 226, 0.8);
 }
@@ -193,7 +181,8 @@
     inset 0 1px 0 rgba(255, 255, 255, 0.2);
 }
 
-.web-card:hover h2 {
+.web-card:hover h2,
+.web-card:hover h3 {
   color: #1e90ff;
   text-shadow: 0 0 30px rgba(30, 144, 255, 0.8);
 }
@@ -207,7 +196,8 @@
     inset 0 1px 0 rgba(255, 255, 255, 0.2);
 }
 
-.mobile-card:hover h2 {
+.mobile-card:hover h2,
+.mobile-card:hover h3 {
   color: #32cd32;
   text-shadow: 0 0 30px rgba(50, 205, 50, 0.8);
 }
@@ -244,7 +234,6 @@
 @media (hover: none), (max-width: 768px) {
   .card-link:hover { transform: none; }
   .card:hover { transform: none; }
-  .card:hover .card-animation dotlottie-player { transform: none; }
   .card:hover .card-glow { opacity: 0.9; }
   .card { animation: none; }
   .card-container { gap: 18px; margin-top: 20px; }
@@ -254,14 +243,15 @@
 @media (max-width: 480px) {
   .card-container { gap: 14px; margin-top: 16px; }
   .card { width: 92%; max-width: 360px; min-height: 300px; }
-  .card h2 { font-size: 1.15rem; }
+  .card h2,
+  .card h3 { font-size: 1.15rem; }
   .card p { font-size: 0.95rem; }
 }
 
 /* AI Code-themed Card Styling */
 .ai-code-card {
   background: rgba(15, 15, 30, 0.85);
-  border: 1px solid rgba(88, 186, 255, 0.3);
+  border: 1px solid rgba(56, 189, 248, 0.3);
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
   position: relative;
   overflow: hidden;
@@ -270,11 +260,11 @@
 
 .ai-code-card:hover {
   transform: translateY(-10px);
-  border-color: rgba(177, 8, 189, 0.5);
+  border-color: rgba(168, 85, 247, 0.5);
   box-shadow: 
     0 15px 35px rgba(0, 0, 0, 0.3),
-    0 0 15px rgba(177, 8, 189, 0.3),
-    0 0 30px rgba(88, 186, 255, 0.2);
+    0 0 15px rgba(168, 85, 247, 0.3),
+    0 0 30px rgba(56, 189, 248, 0.2);
 }
 
 .card-circuit-overlay {
@@ -284,11 +274,11 @@
   right: 0;
   bottom: 0;
   background-image: 
-    radial-gradient(circle at 10% 20%, rgba(88, 186, 255, 0.05) 0%, transparent 20%),
-    radial-gradient(circle at 90% 80%, rgba(177, 8, 189, 0.05) 0%, transparent 20%),
-    linear-gradient(45deg, transparent 48%, rgba(88, 186, 255, 0.1) 50%, transparent 52%),
-    linear-gradient(-45deg, transparent 48%, rgba(177, 8, 189, 0.1) 50%, transparent 52%),
-    repeating-linear-gradient(90deg, transparent, transparent 6px, rgba(88, 186, 255, 0.03) 6px, rgba(88, 186, 255, 0.03) 12px);
+    radial-gradient(circle at 10% 20%, rgba(56, 189, 248, 0.05) 0%, transparent 20%),
+    radial-gradient(circle at 90% 80%, rgba(168, 85, 247, 0.05) 0%, transparent 20%),
+    linear-gradient(45deg, transparent 48%, rgba(56, 189, 248, 0.1) 50%, transparent 52%),
+    linear-gradient(-45deg, transparent 48%, rgba(168, 85, 247, 0.1) 50%, transparent 52%),
+    repeating-linear-gradient(90deg, transparent, transparent 6px, rgba(56, 189, 248, 0.03) 6px, rgba(56, 189, 248, 0.03) 12px);
   opacity: 0.3;
   transition: opacity 0.4s ease;
   pointer-events: none;
@@ -315,7 +305,7 @@
   padding: 1.5em;
   width: 300px;
   backdrop-filter: blur(10px);
-  border: 1px solid rgba(88, 186, 255, 0.1);
+  border: 1px solid rgba(56, 189, 248, 0.1);
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
   position: relative;
@@ -330,9 +320,9 @@
   width: 100%;
   height: 100%;
   background: linear-gradient(135deg, 
-              rgba(177, 8, 189, 0.1) 0%, 
+              rgba(168, 85, 247, 0.1) 0%, 
               transparent 50%, 
-              rgba(88, 186, 255, 0.1) 100%);
+              rgba(56, 189, 248, 0.1) 100%);
   opacity: 0;
   transition: opacity 0.3s ease;
   z-index: -1;
@@ -341,7 +331,7 @@
 .experience-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
-  border-color: rgba(177, 8, 189, 0.3);
+  border-color: rgba(168, 85, 247, 0.3);
 }
 
 .experience-card:hover::before {
@@ -358,7 +348,7 @@
 .experience-header h3 {
   margin: 0;
   font-size: 1.3em;
-  color: #58baff;
+  color: #38bdf8;
   font-weight: 600;
 }
 
@@ -370,7 +360,7 @@
 
 .experience-company {
   font-size: 1.1em;
-  color: #b108bd;
+  color: #a855f7;
   margin-bottom: 1em;
   font-weight: 500;
 }
@@ -401,7 +391,7 @@
   padding: 1.5em;
   width: 280px;
   backdrop-filter: blur(10px);
-  border: 1px solid rgba(88, 186, 255, 0.1);
+  border: 1px solid rgba(56, 189, 248, 0.1);
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
   display: flex;
@@ -419,9 +409,9 @@
   width: 100%;
   height: 100%;
   background: linear-gradient(135deg, 
-              rgba(177, 8, 189, 0.1) 0%, 
+              rgba(168, 85, 247, 0.1) 0%, 
               transparent 50%, 
-              rgba(88, 186, 255, 0.1) 100%);
+              rgba(56, 189, 248, 0.1) 100%);
   opacity: 0;
   transition: opacity 0.3s ease;
   z-index: -1;
@@ -430,7 +420,7 @@
 .certificate-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
-  border-color: rgba(177, 8, 189, 0.3);
+  border-color: rgba(168, 85, 247, 0.3);
 }
 
 .certificate-card:hover::before {
@@ -447,14 +437,14 @@
   background: rgba(15, 15, 25, 0.5);
   border-radius: 50%;
   padding: 10px;
-  border: 1px solid rgba(88, 186, 255, 0.2);
+  border: 1px solid rgba(56, 189, 248, 0.2);
   transition: all 0.3s ease;
 }
 
 .certificate-card:hover .certificate-logo {
   transform: scale(1.1);
-  border-color: rgba(177, 8, 189, 0.4);
-  box-shadow: 0 0 20px rgba(177, 8, 189, 0.3);
+  border-color: rgba(168, 85, 247, 0.4);
+  box-shadow: 0 0 20px rgba(168, 85, 247, 0.3);
 }
 
 .certificate-content {
@@ -465,12 +455,14 @@
 .certificate-content h3 {
   margin: 0 0 0.5em 0;
   font-size: 1.2em;
-  color: #58baff;
+  color: #38bdf8;
   font-weight: 600;
 }
 
 /* Stop typing/blinking effect within Certificates */
 #certificates .typing-text {
+  white-space: normal;
+  overflow: visible;
   animation: none !important;
   border-right: none !important;
   text-shadow: none !important;
@@ -486,8 +478,8 @@
 .certificate-link {
   display: inline-block;
   padding: 0.5em 1em;
-  background: linear-gradient(135deg, rgba(88, 186, 255, 0.2), rgba(177, 8, 189, 0.2));
-  border: 1px solid rgba(88, 186, 255, 0.3);
+  background: linear-gradient(135deg, rgba(56, 189, 248, 0.2), rgba(168, 85, 247, 0.2));
+  border: 1px solid rgba(56, 189, 248, 0.3);
   border-radius: 20px;
   color: #fff;
   text-decoration: none;
@@ -496,9 +488,9 @@
 }
 
 .certificate-link:hover {
-  background: linear-gradient(135deg, rgba(88, 186, 255, 0.4), rgba(177, 8, 189, 0.4));
+  background: linear-gradient(135deg, rgba(56, 189, 248, 0.4), rgba(168, 85, 247, 0.4));
   transform: translateY(-2px);
-  box-shadow: 0 5px 15px rgba(88, 186, 255, 0.2);
+  box-shadow: 0 5px 15px rgba(56, 189, 248, 0.2);
 }
 
 /* Company logo styling */
@@ -528,14 +520,14 @@
 }
 
 .company-card {
-  width: min(100%, 980px);
-  height: 260px;
+  width: min(100%, 1100px);
+  height: clamp(380px, 52vh, 460px);
   display: flex;
   gap: 8px;
   padding: 8px;
   border-radius: 14px;
   background: rgba(15, 15, 25, 0.65);
-  border: 1px solid rgba(88, 186, 255, 0.15);
+  border: 1px solid rgba(56, 189, 248, 0.15);
   backdrop-filter: blur(10px);
   box-shadow: 0 12px 40px rgba(0, 0, 0, 0.18);
   overflow: hidden;
@@ -548,7 +540,7 @@
   justify-content: center;
   position: relative;
   border-radius: 10px;
-  border: 1px solid rgba(177, 8, 189, 0.25);
+  border: 1px solid rgba(168, 85, 247, 0.25);
   background: linear-gradient(180deg, rgba(33,33,46,0.65), rgba(22,22,34,0.8));
   transition: all 0.45s ease;
   cursor: pointer;
@@ -556,15 +548,16 @@
 }
 
 .company-card .panel:focus-visible {
-  outline: 2px solid #58baff;
+  outline: 2px solid #38bdf8;
   outline-offset: 2px;
 }
 
 .company-card .panel:hover,
+.company-card .panel:focus-visible,
 .company-card .panel.active {
-  flex: 4;
-  border-color: rgba(88, 186, 255, 0.45);
-  box-shadow: inset 0 0 0 1px rgba(88,186,255,0.15), 0 8px 30px rgba(88,186,255,0.12);
+  flex: 5;
+  border-color: rgba(56, 189, 248, 0.45);
+  box-shadow: inset 0 0 0 1px rgba(56, 189, 248,0.15), 0 8px 30px rgba(56, 189, 248,0.12);
 }
 
 .company-card .label {
@@ -574,7 +567,7 @@
   align-items: center;
   justify-content: center;
   padding: 10px 12px;
-  color: #58baff;
+  color: #38bdf8;
   letter-spacing: .1em;
   text-transform: uppercase;
   font-weight: 600;
@@ -586,8 +579,9 @@
 }
 
 .company-card .panel:hover .label,
+.company-card .panel:focus-visible .label,
 .company-card .panel.active .label {
-  color: #b108bd;
+  color: #a855f7;
   opacity: 0.08;
 }
 
@@ -604,12 +598,15 @@
   transition: all .45s ease;
   z-index: 2;
   text-align: left;
+  pointer-events: none;
 }
 
 .company-card .panel:hover .desc,
+.company-card .panel:focus-visible .desc,
 .company-card .panel.active .desc {
   opacity: 1;
   transform: translateY(0);
+  pointer-events: auto;
 }
 
 .company-card .desc h4 {
@@ -620,15 +617,15 @@
   text-align: center;
 }
 
-.company-card .desc h4 span { color: #58baff; font-weight: 500; }
+.company-card .desc h4 span { color: #38bdf8; font-weight: 500; }
 
 .company-card .desc ul {
   margin: 0 auto;
   padding: 0;
   max-width: 780px;
   color: rgba(255,255,255,0.9);
-  font-size: 1rem;
-  line-height: 1.5rem;
+  font-size: 0.95rem;
+  line-height: 1.4rem;
   list-style: none;
 }
 
@@ -646,8 +643,8 @@
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background: radial-gradient(circle, #b108bd 0%, #58baff 100%);
-  box-shadow: 0 0 8px rgba(88,186,255,0.5);
+  background: radial-gradient(circle, #a855f7 0%, #38bdf8 100%);
+  box-shadow: 0 0 8px rgba(56, 189, 248,0.5);
 }
 
 .company-card .desc .tech {
@@ -659,9 +656,9 @@
 }
 
 .company-card .desc .tech span {
-  background: rgba(88,186,255,0.12);
-  color: #58baff;
-  border: 1px solid rgba(88,186,255,0.25);
+  background: rgba(56, 189, 248,0.12);
+  color: #38bdf8;
+  border: 1px solid rgba(56, 189, 248,0.25);
   padding: 4px 8px;
   border-radius: 999px;
   font-size: 0.78rem;
@@ -672,7 +669,7 @@
   content: '';
   position: absolute;
   inset: -2px;
-  background: radial-gradient(120px 120px at var(--mx, 50%) var(--my, 50%), rgba(88, 186, 255, 0.18), transparent 60%);
+  background: radial-gradient(120px 120px at var(--mx, 50%) var(--my, 50%), rgba(56, 189, 248, 0.18), transparent 60%);
   pointer-events: none;
   opacity: 0;
   transition: opacity .35s ease;
@@ -683,27 +680,57 @@
 
 /* Responsive */
 @media (max-width: 900px) {
-  .company-card { height: 320px; }
+  .company-card { height: 440px; }
+  .company-card .desc { padding: 16px 18px; }
 }
 
-@media (max-width: 720px) {
+/* Stacked: every role is shown in full, no hover needed */
+@media (max-width: 900px) {
   .company-card {
     flex-direction: column;
     height: auto;
+    max-height: calc(100svh - 200px);
+    overflow-y: auto;
   }
   .company-card .panel {
-    min-height: 140px;
+    flex: none;
+    display: block;
+    min-height: 0;
+    overflow: visible;
   }
-  .company-card .label { opacity: 1; }
-  .company-card .desc { padding: 16px; }
+  .company-card .panel:hover,
+  .company-card .panel:focus-visible,
+  .company-card .panel.active { flex: none; }
+  .company-card .label,
+  .company-card .panel:hover .label,
+  .company-card .panel:focus-visible .label,
+  .company-card .panel.active .label {
+    position: static;
+    inset: auto;
+    justify-content: flex-start;
+    padding: 14px 16px 0;
+    opacity: 1;
+    color: #38bdf8;
+  }
+  .company-card .desc {
+    position: static;
+    inset: auto;
+    opacity: 1;
+    transform: none;
+    padding: 6px 16px 16px;
+    overflow: visible;
+    pointer-events: auto;
+  }
+  .company-card .desc h4 { text-align: left; font-size: 1rem; }
+  .company-card .desc ul { font-size: 0.9rem; line-height: 1.35rem; }
 }
 
 /* Dark mode adjustments */
 body.dark-mode .company-card {
   background: rgba(20, 20, 35, 0.7);
-  border-color: rgba(88, 186, 255, 0.18);
+  border-color: rgba(56, 189, 248, 0.18);
 }
 body.dark-mode .company-card .panel {
   background: linear-gradient(180deg, rgba(28,28,42,0.75), rgba(18,18,28,0.85));
-  border-color: rgba(177, 8, 189, 0.28);
+  border-color: rgba(168, 85, 247, 0.28);
 }

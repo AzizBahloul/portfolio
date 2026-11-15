@@ -23,7 +23,7 @@
 .skill-icon {
   font-size: clamp(1.2rem, 2.6vw, 2rem);
   margin-right: 0.5rem;
-  filter: drop-shadow(0 0 8px #b108bd88);
+  filter: drop-shadow(0 0 8px #a855f788);
   animation: glowSkill 2.5s alternate infinite;
 }
 
@@ -41,16 +41,16 @@
   height: clamp(12px, 1.6vw, 20px);
   width: 100%;
   overflow: hidden;
-  box-shadow: 0 2px 12px #b108bd22;
+  box-shadow: 0 2px 12px #a855f722;
   position: relative;
 }
 
 .skill-bar {
-  background: linear-gradient(90deg, #b108bd, #58baff 80%);
+  background: linear-gradient(90deg, #a855f7, #38bdf8 80%);
   height: 100%;
   width: 0%;
   border-radius: 12px;
-  box-shadow: 0 0 16px #58baff88, 0 0 8px #b108bd88;
+  box-shadow: 0 0 16px #38bdf888, 0 0 8px #a855f788;
   position: absolute;
   left: 0;
   top: 0;
@@ -60,10 +60,10 @@
 .skill-percent {
   font-size: clamp(0.95rem, 1.2vw, 1.1rem);
   font-weight: 600;
-  color: #58baff;
+  color: #38bdf8;
   margin-left: 0.7rem;
   min-width: 36px;
-  text-shadow: 0 0 8px #b108bd88;
+  text-shadow: 0 0 8px #a855f788;
 }
 
 @media (max-width: 600px) {

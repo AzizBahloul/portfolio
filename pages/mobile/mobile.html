@@ -3,10 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mobile Slider</title>
+    <meta name="description" content="Mobile development by Mohamed Aziz Bahloul: Flutter, AOSP and React Native.">
+    <title>Mobile Projects | Mohamed Aziz Bahloul</title>
     <link rel="stylesheet" href="mobile.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+    <link rel="stylesheet" href="../shared/shared.css">
 </head>
 <body>
+    <h1 class="visually-hidden">Mobile Projects</h1>
     <header>
         <nav class="navbar-enhanced">
             <div class="nav-container">
@@ -44,53 +50,36 @@
             <li class='item' style="background-image: url('../../assets/mobile/smartphone2.png')">
                 <div class='content'>
                     <h2 class='title'>My Mobile Projects</h2>
-                    <p class='description'>Explore my mobile development projects showcasing modern app development skills</p>
+                    <p class='description'>Cross-platform apps and Android platform work. Use Next to browse.</p>
                 </div>
             </li>
-            <li class='item' style="background-image: url('https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80')">
+            <li class='item' style="background-image: linear-gradient(135deg,#0b3d91,#56ccf2)">
                 <div class='content'>
-                    <h2 class='title'>React Native Apps</h2>
-                    <p class='description'>Cross-platform mobile applications built with React Native for iOS and Android</p>
-                    <button>View Projects</button>
+                    <h2 class='title'>Flutter</h2>
+                    <p class='description'>Cross-platform mobile app development with Flutter.</p>
                 </div>
             </li>
-            <li class='item' style="background-image: url('https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80')">
+            <li class='item' style="background-image: linear-gradient(135deg,#1b4332,#74c69d)">
                 <div class='content'>
-                    <h2 class='title'>Flutter Applications</h2>
-                    <p class='description'>Beautiful and performant apps built with Google's Flutter framework</p>
-                    <button>Explore</button>
+                    <h2 class='title'>AOSP Development</h2>
+                    <p class='description'>Android Open Source Project development.</p>
                 </div>
             </li>
-            <li class='item' style="background-image: url('https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80')">
+            <li class='item' style="background-image: linear-gradient(135deg,#1d2b64,#f8cdda)">
                 <div class='content'>
-                    <h2 class='title'>Native iOS/Android</h2>
-                    <p class='description'>Platform-specific applications utilizing native development capabilities</p>
-                    <button>View Code</button>
-                </div>
-            </li>
-            <li class='item' style="background-image: url('https://images.unsplash.com/photo-1559028006-448665bd7c7f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2073&q=80')">
-                <div class='content'>
-                    <h2 class='title'>Progressive Web Apps</h2>
-                    <p class='description'>Mobile-first web applications with native app-like experiences</p>
-                    <button>Demo</button>
-                </div>
-            </li>
-            <li class='item' style="background-image: url('https://images.unsplash.com/photo-1586953208448-f2b6762ac9dd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80')">
-                <div class='content'>
-                    <h2 class='title'>Mobile UI/UX Design</h2>
-                    <p class='description'>Modern and intuitive mobile interface designs and user experience flows</p>
-                    <button>View Designs</button>
+                    <h2 class='title'>React Native</h2>
+                    <p class='description'>Cross-platform mobile apps with React Native.</p>
                 </div>
             </li>
         </ul>
         <nav class='nav-controls'>
             <button class='btn prev-btn'>
-                <ion-icon class='btn prev' name="arrow-back-outline"></ion-icon>
+                <ion-icon class='btn prev' aria-hidden="true" name="arrow-back-outline"></ion-icon>
                 <span class='btn-text'>Previous</span>
                 <div class='btn-glow'></div>
             </button>
             <button class='btn next-btn'>
-                <ion-icon class='btn next' name="arrow-forward-outline"></ion-icon>
+                <ion-icon class='btn next' aria-hidden="true" name="arrow-forward-outline"></ion-icon>
                 <span class='btn-text'>Next</span>
                 <div class='btn-glow'></div>
             </button>
@@ -99,6 +88,6 @@
 
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-    <script src="mobile.js"></script>
+    <script src="../shared/slider.js"></script>
 </body>
 </html>

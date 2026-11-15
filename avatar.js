@@ -12,12 +12,9 @@ function loadModel() {
       setupScene(gltf);
       document.getElementById('avatar-loading').style.display = 'none';
     },
-    (xhr) => {
-      const percentCompletion = Math.round((xhr.loaded / xhr.total) * 100);
-      console.log(`Loading model... ${percentCompletion}%`);
-    },
+    undefined,
     (error) => {
-      console.log(error);
+      console.error('Avatar model failed to load:', error);
     }
   );
 }
@@ -99,11 +96,6 @@ function setupScene(gltf) {
   // Load animations
   const mixer = new THREE.AnimationMixer(avatar);
   const clips = gltf.animations;
-
-  // Log animation clip names
-  clips.forEach((clip) => {
-    console.log('Animation Clip Name:', clip.name);
-  });
 
   const laughClip = THREE.AnimationClip.findByName(clips, 'laugh');
   const pushClip = THREE.AnimationClip.findByName(clips, 'push');

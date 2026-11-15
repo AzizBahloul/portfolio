@@ -12,6 +12,8 @@
             box-sizing: border-box;
         }
 
+        html { overflow-x: hidden; }
+
         body {
             font-family: 'Inter', 'Fira Mono', monospace;
             background: #0a0a0a;
@@ -31,7 +33,7 @@
             position: absolute;
             width: 10px;
             height: 10px;
-            background: linear-gradient(135deg, #b108bd, #58baff);
+            background: linear-gradient(135deg, #a855f7, #38bdf8);
             border-radius: 50%;
             opacity: 0.6;
             animation: float 3s infinite ease-in-out;
@@ -73,7 +75,7 @@
 
         .glitch {
             font-size: clamp(0.9rem, 2vw, 1.2rem);
-            color: #666;
+            color: #a3a3a3;
             margin-bottom: 10px;
             letter-spacing: 3px;
             text-transform: uppercase;
@@ -226,7 +228,7 @@
             for (let i = 0; i < 20; i++) {
                 const particle = document.createElement('div');
                 particle.className = 'particle';
-                particle.style.left = Math.random() * 100 + '%';
+                particle.style.left = (Math.random() * 96) + '%';
                 particle.style.top = Math.random() * 100 + '%';
                 particle.style.animationDelay = Math.random() * 3 + 's';
                 particle.style.animationDuration = (Math.random() * 2 + 2) + 's';

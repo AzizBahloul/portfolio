@@ -1,5 +1,4 @@
 // Enhanced FullPage.js-like Scroll Implementation with Advanced Parallax
-console.log('🚀 Initializing Enhanced FullPage Scroll System...');
 
 class FullPageScroll {
     constructor(options = {}) {
@@ -34,7 +33,6 @@ class FullPageScroll {
     }
 
     init() {
-        console.log('🔧 Initializing Enhanced FullPage scroll system...');
         
         // Check for GSAP
         if (typeof gsap === 'undefined') {
@@ -54,9 +52,7 @@ class FullPageScroll {
         this.bindEvents();
         this.goToSection(0, false); // Start at first section
         this.setupSectionAnimations();
-        this.setupLottieAnimations(); // Add this line
         
-        console.log('✅ Enhanced FullPage scroll system initialized');
     }
 
     // Ensure CSS --vh variable is set and update on visualViewport resize
@@ -121,7 +117,6 @@ class FullPageScroll {
         this.sections = document.querySelectorAll('section');
         this.totalSections = this.sections.length;
 
-        console.log(`📋 Found ${this.totalSections} sections`);
 
         this.sections.forEach((section, index) => {
             // Set section styles
@@ -241,7 +236,6 @@ class FullPageScroll {
         // Find all parallax elements
         this.parallaxElements = document.querySelectorAll('[data-parallax]');
         
-        console.log(`🎨 Found ${this.parallaxElements.length} parallax elements`);
 
         this.parallaxElements.forEach(element => {
             const speed = parseFloat(element.getAttribute('data-parallax')) || 0.5;
@@ -493,7 +487,6 @@ class FullPageScroll {
     goToSection(index, animate = true) {
         if (index < 0 || index >= this.totalSections || this.isScrolling) return;
 
-        console.log(`🎯 Going to section ${index}`);
 
         const direction = index > this.currentSection ? 1 : -1;
         const prevSection = this.currentSection;
@@ -512,6 +505,7 @@ class FullPageScroll {
             });
             this.updateParallax(0);
             this.isScrolling = false;
+            this.onSectionChange(index, prevSection);
             this.animateSectionIn(index);
             return;
         }
@@ -610,7 +604,6 @@ class FullPageScroll {
     }
 
     onSectionChange(newIndex, oldIndex) {
-        console.log(`📍 Section changed from ${oldIndex} to ${newIndex}`);
         
         // Trigger custom event
         const event = new CustomEvent('sectionChange', {
@@ -627,45 +620,6 @@ class FullPageScroll {
         this.sections.forEach((section, i) => {
             section.classList.toggle('active', i === newIndex);
         });
-    }
-
-    // Add Lottie animation initialization and debugging
-    setupLottieAnimations() {
-        console.log('🎬 Setting up Lottie animations...');
-        
-        // Wait for Lottie player component to be ready
-        setTimeout(() => {
-            const lottieElements = document.querySelectorAll('dotlottie-player');
-            console.log(`Found ${lottieElements.length} Lottie players`);
-            
-            lottieElements.forEach((player, index) => {
-                // Ensure player is visible
-                player.style.visibility = 'visible';
-                player.style.opacity = '1';
-                player.style.display = 'block';
-                
-                // Add loading event listeners
-                player.addEventListener('ready', () => {
-                    console.log(`✅ Lottie player ${index + 1} ready`);
-                    player.play();
-                });
-                
-                player.addEventListener('load', () => {
-                    console.log(`📽️ Lottie player ${index + 1} loaded`);
-                });
-                
-                player.addEventListener('error', (e) => {
-                    console.error(`❌ Lottie player ${index + 1} error:`, e);
-                });
-                
-                // Force play if not already playing
-                setTimeout(() => {
-                    if (player.currentState !== 'playing') {
-                        player.play();
-                    }
-                }, 1000);
-            });
-        }, 500);
     }
 
     // Public API methods
@@ -715,13 +669,11 @@ class FullPageScroll {
         gsap.set(['html', 'body'], { clearProps: 'all' });
         gsap.set(this.sections, { clearProps: 'all' });
         
-        console.log('🗑️ FullPage scroll system destroyed');
     }
 }
 
 // Auto-initialize when DOM is ready
 document.addEventListener('DOMContentLoaded', () => {
-    console.log('🌟 DOM ready, initializing Enhanced FullPage scroll...');
     
     // Wait for other resources to load
     setTimeout(() => {

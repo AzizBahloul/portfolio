@@ -24,22 +24,17 @@
     li.appendChild(trollButton);
     document.body.appendChild(li);
     
-    // Base offset from the right edge (matches navbar spacing)
-    const initialRight = 30;
-    
+    // Distance from the right edge. Below 1100px the hamburger sits at the right edge,
+    // so the button moves left of it instead of covering it.
+    const rightOffset = () => (window.innerWidth <= 1100 ? 76 : 30);
+    const restLeft = () => window.innerWidth - li.offsetWidth - rightOffset();
+
     // Wait a frame for the element to be rendered
     requestAnimationFrame(() => {
-      const nav = document.querySelector('.glass-nav-menu');
-      const navRect = nav ? nav.getBoundingClientRect() : null;
+      // Left target of the first dodge
+      const leftPosition = 30;
 
-      const rightPosition = navRect
-        ? window.innerWidth - navRect.left - initialRight - li.offsetWidth
-        : window.innerWidth - li.offsetWidth - initialRight;
-
-      // Left target roughly aligned with the left side of the navbar
-      const leftPosition = navRect ? navRect.left + 10 : 30;
-
-      li.style.left = rightPosition + 'px';
+      li.style.left = restLeft() + 'px';
       li.style.right = 'auto';
       
       let trollPhase = 0; // 0 = first hover, 1 = zoomed left, 2 = can click
@@ -73,16 +68,9 @@
 
         trollButton.classList.add('zoom-car-reverse');
         
-        // Animate back to right using current navbar position
-        const nav = document.querySelector('.glass-nav-menu');
-        const navRect = nav ? nav.getBoundingClientRect() : null;
-
-        const currentRightPos = navRect
-          ? window.innerWidth - navRect.left - initialRight - li.offsetWidth
-          : window.innerWidth - li.offsetWidth - initialRight;
-
+        // Animate back to the resting position at the right edge
         li.style.transition = 'left 0.3s cubic-bezier(0.1, 0, 0.9, 0)';
-        li.style.left = currentRightPos + 'px';
+        li.style.left = restLeft() + 'px';
         
         showTooltip('Coming back.');
         
@@ -98,7 +86,7 @@
       window.addEventListener('resize', () => {
         if (trollPhase === 0 || trollPhase === 2) {
           li.style.transition = 'none';
-          li.style.left = (window.innerWidth - li.offsetWidth - initialRight) + 'px';
+          li.style.left = restLeft() + 'px';
         }
       });
 

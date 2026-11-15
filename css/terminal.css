@@ -59,13 +59,50 @@
 }
 
 .text {
+  display: block;
+  white-space: normal;
+  overflow-wrap: anywhere;
+  line-height: 1.55;
+  margin-top: clamp(1.6rem, 3.5vw, 2.1em);
+  color: #e6ffe6;
+}
+
+.text::after {
+  content: '';
   display: inline-block;
-  white-space: nowrap;
-  overflow: hidden;
-  border-right: 0.2em solid green;
-  animation: typeAndDelete 10s steps(220) infinite,
-    blinkCursor 0.5s step-end infinite alternate;
-  margin-top: clamp(1rem, 2.5vw, 1.5em);
+  width: 0.55em;
+  height: 1.05em;
+  margin-left: 0.15em;
+  vertical-align: text-bottom;
+  background: #0f0;
+  animation: blinkCursor 0.9s step-end infinite;
+}
+
+.terminal-meta {
+  margin: 1rem 0 0;
+  padding-top: 0.9rem;
+  border-top: 1px dashed #333;
+  display: grid;
+  gap: 0.35rem;
+  font-size: 0.88em;
+  line-height: 1.45;
+  text-align: left;
+}
+
+.terminal-meta > div {
+  display: grid;
+  grid-template-columns: 6.5em 1fr;
+  gap: 0.6em;
+}
+
+.terminal-meta dt { color: #38bdf8; }
+.terminal-meta dt::after { content: ':'; }
+.terminal-meta dt:empty::after { content: ''; }
+.terminal-meta dd { margin: 0; color: #cfcfcf; }
+
+@media (max-width: 560px) {
+  .terminal-meta > div { grid-template-columns: 1fr; gap: 0; }
+  .terminal-meta dt:empty { display: none; }
 }
 
 /* Terminal Window Styling */
@@ -76,8 +113,8 @@
   background: rgba(15, 15, 30, 0.9);
   box-shadow: 
     0 10px 30px rgba(0, 0, 0, 0.3),
-    0 0 20px rgba(177, 8, 189, 0.2);
-  border: 1px solid rgba(88, 186, 255, 0.3);
+    0 0 20px rgba(168, 85, 247, 0.2);
+  border: 1px solid rgba(56, 189, 248, 0.3);
   transition: all 0.28s ease;
   transform: perspective(800px) rotateX(0deg);
 }
@@ -88,15 +125,14 @@
   .terminal-body { padding: 0.6rem 0.6rem; min-height: 120px; flex-direction: column; }
   .code-content { font-size: 0.88rem; padding: 0 8px; }
   .code-line-numbers { display: none; }
-  .text { white-space: normal; border-right: none; }
 }
 
 .terminal-window:hover {
   transform: perspective(800px) rotateX(5deg) translateY(-5px);
   box-shadow: 
     0 15px 40px rgba(0, 0, 0, 0.4),
-    0 0 30px rgba(177, 8, 189, 0.3);
-  border-color: rgba(177, 8, 189, 0.5);
+    0 0 30px rgba(168, 85, 247, 0.3);
+  border-color: rgba(168, 85, 247, 0.5);
 }
 
 .terminal-header {
@@ -105,11 +141,11 @@
   align-items: center;
   padding: 0.5rem 1rem;
   background: rgba(30, 30, 50, 0.95);
-  border-bottom: 1px solid rgba(88, 186, 255, 0.2);
+  border-bottom: 1px solid rgba(56, 189, 248, 0.2);
 }
 
 .terminal-title {
-  color: #58baff;
+  color: #38bdf8;
   font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
   font-size: clamp(0.78rem, 1.2vw + 0.4rem, 0.95rem);
   font-weight: 500;
@@ -136,7 +172,7 @@
   font-size: clamp(0.7rem, 0.9vw + 0.4rem, 0.9rem);
   user-select: none;
   text-align: right;
-  border-right: 1px solid rgba(88, 186, 255, 0.2);
+  border-right: 1px solid rgba(56, 189, 248, 0.2);
 }
 
 .code-content {
@@ -228,7 +264,7 @@
   content: '|';
   position: absolute;
   right: 0;
-  color: #b108bd;
+  color: #a855f7;
   background-color: rgba(15, 15, 30, 0.9);
   animation: typing-cursor 0.8s steps(1) infinite, typing-move 0.1s forwards;
   animation-delay: calc((var(--line-index, 0) * 0.8s) + 0.5s);
@@ -245,7 +281,7 @@
 /* Typing Cursor Styles */
 .typing-cursor {
   display: inline-block;
-  color: #b108bd;
+  color: #a855f7;
   font-weight: bold;
   animation: blink-cursor 0.8s step-end infinite;
   opacity: 0;
@@ -256,7 +292,7 @@
 /* Typing Animation */
 .typing-text {
   overflow: hidden;
-  border-right: 0.15em solid #b108bd;
+  border-right: 0.15em solid #a855f7;
   white-space: nowrap;
   margin: 0 auto;
   letter-spacing: 0.05em;
@@ -276,13 +312,13 @@
 .progress-fill {
   height: 100%;
   width: 0;
-  background: linear-gradient(90deg, #58baff, #b108bd);
+  background: linear-gradient(90deg, #38bdf8, #a855f7);
   animation: fill-progress 2s ease-out forwards;
 }
 
 /* Reduce motion & disable typing animations on small screens or when user prefers reduced motion */
 @media (prefers-reduced-motion: reduce), (hover: none) {
-  .text, .typing-line, .typing-text { animation: none !important; }
+  .text, .text::after, .typing-line, .typing-text { animation: none !important; }
   .typing-line { opacity: 1 !important; white-space: normal; }
-  .typing-line::after, .typing-cursor, .text { border-right: none !important; }
+  .typing-line::after, .typing-cursor { border-right: none !important; }
 }

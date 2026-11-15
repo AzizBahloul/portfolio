@@ -4,16 +4,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Si Aziz Bahloul - Full Stack Developer & AI Engineer</title>
+  <title>Mohamed Aziz Bahloul | Software Engineer</title>
 
   <!-- SEO Meta Tags -->
   <meta name="description"
-    content="Full Stack Developer & AI Engineer specializing in Django, Python, Machine Learning, and intelligent digital solutions. View my portfolio and projects.">
+    content="Software Engineer focused on robust backend systems, AI integration and IoT. FastAPI, Django, Next.js, RAG, PyTorch. View experience, projects and certificates.">
   <meta name="keywords"
-    content="Full Stack Developer, AI Engineer, Django, Python, Machine Learning, Web Development, Portfolio">
-  <meta name="author" content="Si Aziz Bahloul">
-  <meta property="og:title" content="Si Aziz Bahloul - Full Stack Developer & AI Engineer">
-  <meta property="og:description" content="Building intelligent digital solutions with Django, Python, and AI">
+    content="Software Engineer, Backend Engineer, AI Engineer, FastAPI, Django, Next.js, RAG, PyTorch, LangChain, Portfolio">
+  <meta name="author" content="Mohamed Aziz Bahloul">
+  <meta property="og:title" content="Mohamed Aziz Bahloul | Software Engineer">
+  <meta property="og:description" content="Robust backend systems, AI integration and IoT">
   <meta property="og:type" content="website">
 
   <!-- Modular CSS files -->
@@ -32,6 +32,7 @@
     <link rel="stylesheet" href="css/responsive-enhancements.css">
   <link rel="stylesheet" href="css/unique-features.css">
     <link rel="stylesheet" href="css/troll-login.css">
+  <link rel="stylesheet" href="css/textures.css">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -55,10 +56,11 @@
   <script type="module" src="avatar.js"></script>
   <script src="fullpage-scroll.js"></script>
   <!-- Lottie Animation Player -->
-  <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
 </head>
 
 <body>
+  <div class="aurora" aria-hidden="true"><i></i><i></i><i></i></div>
+  <div class="scroll-progress" aria-hidden="true"><span></span></div>
   <!-- Enhanced Parallax Background Elements -->
   <div class="parallax-bg">
     <div class="parallax-layer" data-parallax="-0.5"></div>
@@ -70,7 +72,7 @@
     <nav class="glass-navbar">
       <div class="glass-nav-content">
         <!-- logo removed to centralize navbar -->
-        <ul class="glass-nav-menu">
+        <ul class="glass-nav-menu" id="glassNavMenu">
           <li><a href="#home" class="glass-nav-link">Home</a></li>
           <li><a href="#about" class="glass-nav-link">About</a></li>
           <li><a href="#experience" class="glass-nav-link">Experience</a></li>
@@ -80,41 +82,38 @@
           <li><a href="resume.pdf" download class="glass-resume-btn">Resume</a></li>
         </ul>
 
-        <div class="glass-hamburger" id="glassHamburger" tabindex="0" aria-label="Open navigation menu">
+        <button type="button" class="glass-hamburger" id="glassHamburger" aria-label="Open navigation menu"
+          aria-expanded="false" aria-controls="glassNavMenu">
           <span></span><span></span><span></span>
-        </div>
+        </button>
       </div>
     </nav>
   </header>
 
   <!-- Sections will be automatically wrapped by fullpage-scroll.js -->
   <section id="home" class="parallax-section">
+    <div class="iridescent" aria-hidden="true"></div>
     <div class="parallax-bg-home" data-parallax="-0.4"></div>
     <div class="section-content">
       <div id='avatar-container' data-parallax="0.2">
-        <div id='avatar-loading'>
-          <dotlottie-player class="avatar-player"
-            src="https://lottie.host/3f84d67b-c678-4630-a8bc-d5ca74d675e5/HBt6t1hsCH.lottie" background="transparent"
-            speed="1" loop autoplay></dotlottie-player>
+        <div id='avatar-loading' role="status" aria-label="Loading 3D avatar"><span class="avatar-spinner"></span>
         </div>
       </div>
-      <h1 class="hero-title parallax-text" data-parallax="0.1">Hi 👋</h1>
-      <h1 class="parallax-text" data-parallax="0.3">I'm <span class='gradient-text'>Mohamed Aziz Bahloul</span> <span
-          style="vertical-align: middle; margin-left: 0.3em; font-size: 1.2em;">🤖</span></h1>
+      <div class="hero-title parallax-text" data-parallax="0.1" aria-hidden="true">Hi 👋</div>
+      <h1 class="parallax-text" data-parallax="0.3"><span class="visually-hidden">Hi, </span>I'm <span class='gradient-text'>Mohamed Aziz Bahloul</span> <span
+          style="vertical-align: middle; margin-left: 0.3em; font-size: 1.2em;" aria-hidden="true">🤖</span></h1>
       <h2 class="parallax-text" data-parallax="0.4"
-        style="font-weight: 400; font-size: 1.3em; color: #b108bd; margin-top: 0.5em;">Building intelligent digital
+        style="font-weight: 400; font-size: 1.3em; color: #d8b4fe; margin-top: 0.5em;">Building intelligent digital
         solutions</h2>
-      <svg width="120" height="32" style="margin-top: 1em; opacity: 0.7;" viewBox="0 0 120 32" fill="none"
-        xmlns="http://www.w3.org/2000/svg">
-        <circle cx="10" cy="16" r="3" fill="#b108bd" />
-        <circle cx="40" cy="8" r="2" fill="#58baff" />
-        <circle cx="80" cy="24" r="2.5" fill="#b108bd" />
-        <circle cx="110" cy="16" r="3" fill="#58baff" />
-        <line x1="13" y1="16" x2="38" y2="9" stroke="#b108bd" stroke-width="1.2" />
-        <line x1="42" y1="8" x2="78" y2="24" stroke="#58baff" stroke-width="1.2" />
-        <line x1="83" y1="24" x2="107" y2="16" stroke="#b108bd" stroke-width="1.2" />
-      </svg>
+      <p class="hero-role parallax-text" data-parallax="0.4">Software Engineer · Backend · AI · IoT</p>
+      <ul class="hero-stats" aria-label="Highlights">
+        <li><b data-count="10" data-suffix="K+">10K+</b><span>transactions processed daily</span></li>
+        <li><b data-count="85" data-suffix="%">85%</b><span>sentiment classification accuracy</span></li>
+        <li><b data-count="40" data-suffix="%">40%</b><span>faster therapist matching</span></li>
+        <li><b data-count="80" data-suffix="%">80%</b><span>job-match success rate</span></li>
+      </ul>
     </div>
+    <div class="skills-marquee" aria-hidden="true"><div class="track"><span>Django</span><span>FastAPI</span><span>Next.js</span><span>Spring Boot</span><span>PostgreSQL</span><span>Redis</span><span>Elasticsearch</span><span>Docker</span><span>PyTorch</span><span>TensorFlow</span><span>LangChain</span><span>RAG</span><span>FAISS</span><span>Flutter</span><span>React Native</span><span>AOSP</span><span>MLOps</span><span>Django</span><span>FastAPI</span><span>Next.js</span><span>Spring Boot</span><span>PostgreSQL</span><span>Redis</span><span>Elasticsearch</span><span>Docker</span><span>PyTorch</span><span>TensorFlow</span><span>LangChain</span><span>RAG</span><span>FAISS</span><span>Flutter</span><span>React Native</span><span>AOSP</span><span>MLOps</span></div></div>
   </section>
 
   <section id="about" class="container parallax-section">
@@ -130,9 +129,19 @@
           </div>
         </div>
         <div class="text">
-          I love building robust, intelligent systems and scalable APIs. My main focus is backend and AI, but I also
-          enjoy bringing ideas to life with simple, effective frontend logic when needed.
+          Software Engineer focused on building robust systems that solve real-world problems. Experience spans
+          backend development, AI integration and IoT. Comfortable working across the stack and adapting to new
+          technologies quickly.
         </div>
+        <dl class="terminal-meta">
+          <div><dt>education</dt><dd>Software Engineering, Horizon School of Digital Technologies (2022 – 2025)</dd></div>
+          <div><dt></dt><dd>Electronique, Electrotechnique et Automatique, ISSAT Sousse (2021 – 2022)</dd></div>
+          <div><dt>web</dt><dd>Spring Boot, Next.js, Django, Tkinter</dd></div>
+          <div><dt>mobile</dt><dd>Flutter, AOSP development, React Native</dd></div>
+          <div><dt>ai/ml</dt><dd>TensorFlow, PyTorch, LangChain, YOLO, scikit-learn, RAG, generative AI, FAISS, prompt engineering, data pipelines</dd></div>
+          <div><dt>practices</dt><dd>Agile/Scrum, MLOps, workflow orchestration, microservices</dd></div>
+          <div><dt>languages</dt><dd>English, French, Arabic</dd></div>
+        </dl>
       </div>
     </div>
   </section>
@@ -140,27 +149,48 @@
   <section id="experience" class="parallax-section">
     <div class="parallax-bg-about" data-parallax="-0.4"></div>
     <div class="section-content">
-      <h1 class="parallax-text code-text" data-parallax="0.1">Professional Experience<span class="blinking-cursor">
-        </span></h1>
+      <h2 class="section-title parallax-text code-text" data-parallax="0.1">Professional Experience<span class="blinking-cursor">
+        </span></h2>
 
       <!-- Company expanding cards (theme-matched) -->
       <div class="experience-cards">
         <div class="company-card" role="list" aria-label="Professional experience">
-          <!-- MindCare-AI -->
-          <div class="panel" role="listitem" tabindex="0" aria-label="MindCare-AI experience">
-            <span class="label">MindCare-AI</span>
+          <!-- ScoutIQ / Africascout -->
+          <div class="panel" role="listitem" tabindex="0" aria-label="ScoutIQ Africascout experience">
+            <span class="label">ScoutIQ • Africascout</span>
             <div class="desc">
-              <h4>AI Research Assistant • <span>2021 – 2022</span></h4>
+              <h4>Full Stack Engineer • <span>2026</span></h4>
               <ul>
-                <li>Django platform connecting users with licensed therapists.</li>
-                <li>AI engine for mood tracking, intelligent routing, and personalized suggestions (RAG chatbot).</li>
-                <li>Secure booking, real-time chat (Django Channels/WebSockets), and timely notifications.</li>
-                <li>Stack: Django REST Framework, PostgreSQL, Redis, Celery, Docker.</li>
+                <li>AI-powered football scouting and analytics platform: FastAPI, Next.js, PostgreSQL, Redis, Docker.</li>
+                <li>Football data warehouse and ETL pipeline turning millions of tagged match events into player, team and match analytics.</li>
+                <li>AI Scout assistant (LLMs, RAG, TF-IDF) for natural-language search, player similarity, market value estimation and performance prediction.</li>
+                <li>Real-time event tagging platform with collaborative workflows and quality assurance.</li>
+                <li>Secure payments with Stripe and Orange Money.</li>
               </ul>
               <div class="tech">
-                <span>TensorFlow</span>
+                <span>FastAPI</span>
+                <span>Next.js</span>
                 <span>RAG</span>
-                <span>Python</span>
+                <span>PostgreSQL</span>
+              </div>
+            </div>
+          </div>
+          <!-- Mobilite / MindCare AI -->
+          <div class="panel" role="listitem" tabindex="0" aria-label="Mobilite MindCare AI experience">
+            <span class="label">Mobilite • MindCare AI</span>
+            <div class="desc">
+              <h4>Backend Engineer, Final Year Internship • <span>2025</span></h4>
+              <ul>
+                <li>Django mental health platform connecting users with licensed therapists.</li>
+                <li>AI engine on PyTorch and NLP models for mood analysis: 85% sentiment classification accuracy, therapist matching time reduced by 40%.</li>
+                <li>RAG chatbot with LangChain and FAISS for context-aware support.</li>
+                <li>Secure booking system and real-time messaging with Django Channels and WebSockets.</li>
+              </ul>
+              <div class="tech">
+                <span>Django</span>
+                <span>PyTorch</span>
+                <span>LangChain</span>
+                <span>FAISS</span>
               </div>
             </div>
           </div>
@@ -168,16 +198,19 @@
           <div class="panel" role="listitem" tabindex="0" aria-label="Nextunis Freelanso experience">
             <span class="label">Nextunis • Freelanso</span>
             <div class="desc">
-              <h4>Backend Engineer • <span>2020 – 2021</span></h4>
+              <h4>Backend Engineer • <span>2023 – 2024</span></h4>
               <ul>
-                <li>Recommendation engine matching freelancers with jobs and surfacing talent to clients.</li>
-                <li>Real-time messaging, email notifications, and advanced, filterable search.</li>
-                <li>Reviews and ratings, analytics (data warehouse + ETL), user preferences, and subscriptions.</li>
+                <li>AI-powered recommendation engine (collaborative filtering) matching freelancers with relevant jobs.</li>
+                <li>Real-time messaging with Django Channels and WebSockets.</li>
+                <li>High-performance multi-criteria search with Elasticsearch.</li>
+                <li>ETL pipeline on PostgreSQL and Pandas processing 10K+ transactions daily.</li>
+                <li>Secure escrow payment system integrating Stripe and Flouci.</li>
               </ul>
               <div class="tech">
                 <span>Django</span>
-                <span>Channels</span>
+                <span>Elasticsearch</span>
                 <span>PostgreSQL</span>
+                <span>Stripe</span>
               </div>
             </div>
           </div>
@@ -189,7 +222,7 @@
   <section id="certificates" class="parallax-section">
     <div class="parallax-bg-projects" data-parallax="-0.5"></div>
     <div class="section-content">
-      <h1 class="parallax-text code-text" data-parallax="0.1">Certificates<span class="blinking-cursor"></span></h1>
+      <h2 class="section-title parallax-text code-text" data-parallax="0.1">Certificates<span class="blinking-cursor"></span></h2>
       <div class="certificates-container">
         <div class="certificate-card ai-code-card parallax-element" data-parallax="0.2">
           <div class="card-circuit-overlay"></div>
@@ -205,7 +238,7 @@
             <div class="certificate-progress-bar">
               <div class="progress-fill"></div>
             </div>
-            <a href="https://learn.nvidia.com/certificates?id=mxJrmP73TemYQ9Z2LpMn1Q" target="_blank"
+            <a href="https://learn.nvidia.com/certificates?id=mxJrmP73TemYQ9Z2LpMn1Q" target="_blank" rel="noopener noreferrer"
               class="certificate-link">
               <span class="code-keyword">view</span>.<span class="code-function">certificate</span><span
                 class="code-punctuation">()</span>
@@ -233,7 +266,7 @@
             <div class="certificate-progress-bar">
               <div class="progress-fill"></div>
             </div>
-            <a href="https://coursera.org/share/a224364bb322e9c4d71dfa6b7012a32c" target="_blank"
+            <a href="https://coursera.org/share/a224364bb322e9c4d71dfa6b7012a32c" target="_blank" rel="noopener noreferrer"
               class="certificate-link">
               <span class="code-keyword">view</span>.<span class="code-function">certificate</span><span
                 class="code-punctuation">()</span>
@@ -251,12 +284,12 @@
             </svg>
           </div>
           <div class="certificate-content">
-            <h3 class="typing-text">Coursera</h3>
+            <h3 class="typing-text">deeplearning.ai</h3>
             <p>Deep Learning Specialization</p>
             <div class="certificate-progress-bar">
               <div class="progress-fill"></div>
             </div>
-            <a href="https://coursera.org/share/b8adce3316a0e42846e5f2863a6b7a49" target="_blank"
+            <a href="https://coursera.org/share/b8adce3316a0e42846e5f2863a6b7a49" target="_blank" rel="noopener noreferrer"
               class="certificate-link">
               <span class="code-keyword">view</span>.<span class="code-function">certificate</span><span
                 class="code-punctuation">()</span>
@@ -278,11 +311,28 @@
             <div class="certificate-progress-bar">
               <div class="progress-fill"></div>
             </div>
-            <a href="https://coursera.org/share/f84a99a5a748335cb91a1905c9134d41" target="_blank"
+            <a href="https://coursera.org/share/f84a99a5a748335cb91a1905c9134d41" target="_blank" rel="noopener noreferrer"
               class="certificate-link">
               <span class="code-keyword">view</span>.<span class="code-function">certificate</span><span
                 class="code-punctuation">()</span>
             </a>
+          </div>
+        </div>
+
+        <div class="certificate-card ai-code-card parallax-element" data-parallax="0.6">
+          <div class="card-circuit-overlay"></div>
+          <div class="certificate-logo data-logo">
+            <svg viewBox="0 0 24 24" width="40" height="40" aria-hidden="true">
+              <path fill="#38bdf8"
+                d="M12 3C7.58 3 4 4.34 4 6v12c0 1.66 3.58 3 8 3s8-1.34 8-3V6c0-1.66-3.58-3-8-3zm0 2c3.87 0 6 .98 6 1s-2.13 1-6 1-6-.98-6-1 2.13-1 6-1zm6 13c0 .02-2.13 1-6 1s-6-.98-6-1v-2.2c1.5.78 3.75 1.2 6 1.2s4.5-.42 6-1.2V18zm0-4c0 .02-2.13 1-6 1s-6-.98-6-1v-2.2c1.5.78 3.75 1.2 6 1.2s4.5-.42 6-1.2V14zm-6-3c-3.87 0-6-.98-6-1V7.8C7.5 8.58 9.75 9 12 9s4.5-.42 6-1.2V10c0 .02-2.13 1-6 1z" />
+            </svg>
+          </div>
+          <div class="certificate-content">
+            <h3 class="typing-text">Data Warehouse and Data Integration</h3>
+            <p>Data engineering certificate</p>
+            <div class="certificate-progress-bar">
+              <div class="progress-fill"></div>
+            </div>
           </div>
         </div>
       </div>
@@ -296,13 +346,18 @@
         <a href="pages/Ai/AI.html" class="card-link parallax-element" data-parallax="0.1">
           <div class="card ai-card">
             <div class="card-animation">
-              <dotlottie-player src="https://lottie.host/e919da44-c907-4f89-a513-ccec788df198/lPRQrnzXn9.lottie"
-                background="transparent" speed="1.2" style="width: 100%; height: 200px; min-height: 200px;" loop
-                autoplay mode="normal">
-              </dotlottie-player>
+              <svg class="motion-icon mi-ai" viewBox="0 0 200 200" role="img" aria-label="Neural network animation">
+                <g class="mi-links" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M40 60 L100 40 L160 60 M40 60 L70 130 L130 130 L160 60 M100 40 L70 130 M100 40 L130 130 M40 60 L130 130 M160 60 L70 130 M70 130 L100 170 L130 130"/>
+                </g>
+                <g class="mi-nodes" fill="currentColor">
+                  <circle cx="40" cy="60" r="8"/><circle cx="100" cy="40" r="8"/><circle cx="160" cy="60" r="8"/>
+                  <circle cx="70" cy="130" r="8"/><circle cx="130" cy="130" r="8"/><circle cx="100" cy="170" r="8"/>
+                </g>
+              </svg>
             </div>
             <div class="card-content">
-              <h2>AI</h2>
+              <h3>AI</h3>
               <p>Artificial Intelligence Projects</p>
             </div>
             <div class="card-glow"></div>
@@ -312,13 +367,17 @@
         <a href="pages/web/web.html" class="card-link parallax-element" data-parallax="0.2">
           <div class="card web-card">
             <div class="card-animation">
-              <dotlottie-player src="https://lottie.host/437cadb1-c7da-44ac-8576-d522a6d83c06/YMyK5gIFll.lottie"
-                background="transparent" speed="1.2" style="width: 100%; height: 200px; min-height: 200px;" loop
-                autoplay mode="normal">
-              </dotlottie-player>
+              <svg class="motion-icon mi-web" viewBox="0 0 200 200" role="img" aria-label="Browser window animation">
+                <rect x="20" y="40" width="160" height="120" rx="12" fill="none" stroke="currentColor" stroke-width="3"/>
+                <path d="M20 70 H180" stroke="currentColor" stroke-width="3"/>
+                <circle cx="38" cy="55" r="4" fill="currentColor"/><circle cx="52" cy="55" r="4" fill="currentColor"/><circle cx="66" cy="55" r="4" fill="currentColor"/>
+                <g class="mi-lines" stroke="currentColor" stroke-width="6" stroke-linecap="round">
+                  <path d="M40 95 H120"/><path d="M40 115 H150"/><path d="M40 135 H100"/>
+                </g>
+              </svg>
             </div>
             <div class="card-content">
-              <h2>Web</h2>
+              <h3>Web</h3>
               <p>Full-Stack Web Development</p>
             </div>
             <div class="card-glow"></div>
@@ -328,13 +387,16 @@
         <a href="pages/mobile/mobile.html" class="card-link parallax-element" data-parallax="0.3">
           <div class="card mobile-card">
             <div class="card-animation">
-              <dotlottie-player src="https://lottie.host/61843bb3-fd17-41f5-9fd2-00cd81abbdc6/DkpB1d8Sjc.lottie"
-                background="transparent" speed="1.2" style="width: 100%; height: 200px; min-height: 200px;" loop
-                autoplay mode="normal">
-              </dotlottie-player>
+              <svg class="motion-icon mi-mobile" viewBox="0 0 200 200" role="img" aria-label="Phone animation">
+                <rect x="62" y="22" width="76" height="156" rx="16" fill="none" stroke="currentColor" stroke-width="3"/>
+                <path d="M88 36 H112" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
+                <g class="mi-cards" fill="currentColor">
+                  <rect x="76" y="58" width="48" height="24" rx="6"/><rect x="76" y="92" width="48" height="24" rx="6"/><rect x="76" y="126" width="48" height="24" rx="6"/>
+                </g>
+              </svg>
             </div>
             <div class="card-content">
-              <h2>Mobile</h2>
+              <h3>Mobile</h3>
               <p>Mobile App Development</p>
             </div>
             <div class="card-glow"></div>
@@ -347,8 +409,9 @@
   <section id="contact" class="parallax-section">
     <div class="parallax-bg-contact" data-parallax="-0.4"></div>
     <div class="section-content">
-      <h1 class="parallax-text code-text" data-parallax="0.1">Neural Network<span class="blinking-cursor">_</span></h1>
+      <h2 class="section-title parallax-text code-text" data-parallax="0.1">Neural Network<span class="blinking-cursor">_</span></h2>
       <p class="contact-subtitle" data-parallax="0.15">Connect through the digital synapses</p>
+      <p class="contact-email"><a href="mailto:azizbahloul3@gmail.com">azizbahloul3@gmail.com</a></p>
 
       <!-- Neural Contact Network -->
       <div class="neural-network" id="neuralNetwork" data-parallax="0.2">
@@ -470,32 +533,25 @@
   </section>
 </body>
 <script>
-  // Dark/Light Mode Toggle
-  const darkModeToggle = document.getElementById('darkModeToggle');
-  const darkModeIcon = document.getElementById('darkModeIcon');
-  let darkMode = localStorage.getItem('darkMode') === 'true';
-  function setDarkMode(on) {
-    document.body.classList.toggle('dark-mode', on);
-    darkModeIcon.innerHTML = on
-      ? '<path d="M21.64 13.64A9 9 0 1 1 12 3v0a7 7 0 0 0 9.64 10.64z"></path>'
-      : '<circle cx="12" cy="12" r="5"></circle><path d="M12 1v2m0 18v2m11-11h-2M3 12H1m16.95 7.07l-1.41-1.41M6.34 6.34l-1.41-1.41m12.02 0l-1.41 1.41M6.34 17.66l-1.41 1.41"/>';
-    localStorage.setItem('darkMode', on);
-  }
-  darkModeToggle.addEventListener('click', () => {
-    darkMode = !darkMode;
-    setDarkMode(darkMode);
-
-  });
-  setDarkMode(darkMode);
+  // Dark mode: the on-page toggle button was removed; the theme is switched by the
+  // keyboard shortcut / command palette in unique-features.js. Restore a saved choice only.
+  try {
+    document.body.classList.toggle('dark-mode', localStorage.getItem('theme') === 'dark');
+  } catch (e) { /* storage blocked */ }
 
   // Glassy hamburger menu toggle
   const hamburger = document.getElementById('glassHamburger');
   const navMenu = document.querySelector('.glass-nav-menu');
   if (hamburger && navMenu) {
-    hamburger.addEventListener('click', () => {
-      navMenu.classList.toggle('open');
-      hamburger.classList.toggle('open');
-    });
+    const setMenu = (open) => {
+      navMenu.classList.toggle('open', open);
+      hamburger.classList.toggle('open', open);
+      hamburger.setAttribute('aria-expanded', String(open));
+      hamburger.setAttribute('aria-label', open ? 'Close navigation menu' : 'Open navigation menu');
+    };
+    hamburger.addEventListener('click', () => setMenu(!navMenu.classList.contains('open')));
+    navMenu.addEventListener('click', (e) => { if (e.target.closest('a')) setMenu(false); });
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') setMenu(false); });
   }
   // Animated status dot
   const glassStatusDot = document.querySelector('.glass-status-dot');
@@ -606,6 +662,7 @@
 <script src="unique-features.js"></script>
 <script src="troll-login.js"></script>
 <script src="neural-contact.js"></script>
+<script src="motion.js"></script>
 
 </html>
 

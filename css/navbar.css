@@ -31,7 +31,7 @@ header {
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(177, 8, 189, 0.1), transparent);
+  background: linear-gradient(90deg, transparent, rgba(168, 85, 247, 0.1), transparent);
   transition: left 0.5s;
 }
 
@@ -54,7 +54,7 @@ header {
 .brand-text {
   font-size: clamp(1rem, 1.6vw + 0.6rem, 1.4rem);
   font-weight: 700;
-  background: linear-gradient(-45deg, rgb(177, 8, 189), rgb(88, 186, 255));
+  background: linear-gradient(-45deg, rgb(168, 85, 247), rgb(56, 189, 248));
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
@@ -66,8 +66,8 @@ header {
 
 .brand-text:hover {
   transform: scale(1.05) translateY(-2px);
-  filter: drop-shadow(0 0 15px rgba(177, 8, 189, 0.7));
-  text-shadow: 0 0 20px rgba(177, 8, 189, 0.4);
+  filter: drop-shadow(0 0 15px rgba(168, 85, 247, 0.7));
+  text-shadow: 0 0 20px rgba(168, 85, 247, 0.4);
 }
 
 .brand-text:active {
@@ -85,7 +85,7 @@ header {
   left: 50%;
   width: 0;
   height: 2px;
-  background: linear-gradient(90deg, rgb(177, 8, 189), rgb(88, 186, 255));
+  background: linear-gradient(90deg, rgb(168, 85, 247), rgb(56, 189, 248));
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   transform: translateX(-50%);
 }
@@ -128,7 +128,7 @@ header {
   left: 50%;
   width: 0;
   height: 0;
-  background: radial-gradient(circle, rgba(177, 8, 189, 0.3), rgba(88, 186, 255, 0.3));
+  background: radial-gradient(circle, rgba(168, 85, 247, 0.3), rgba(56, 189, 248, 0.3));
   border-radius: 50%;
   transform: translate(-50%, -50%);
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
@@ -163,7 +163,7 @@ header {
   left: 50%;
   width: 0;
   height: 2px;
-  background: linear-gradient(90deg, rgb(177, 8, 189), rgb(88, 186, 255));
+  background: linear-gradient(90deg, rgb(168, 85, 247), rgb(56, 189, 248));
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   transform: translateX(-50%);
 }
@@ -184,12 +184,12 @@ header {
   align-items: center;
   justify-content: center;
   padding: clamp(8px, 1.2vw, 12px) clamp(10px, 1.4vw, 20px);
-  background: linear-gradient(45deg, rgba(177, 8, 189, 0.8), rgba(88, 186, 255, 0.8));
+  background: linear-gradient(45deg, rgba(168, 85, 247, 0.8), rgba(56, 189, 248, 0.8));
   border-radius: 25px;
   text-decoration: none;
   overflow: hidden;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  box-shadow: 0 4px 15px rgba(177, 8, 189, 0.3);
+  box-shadow: 0 4px 15px rgba(168, 85, 247, 0.3);
 }
 
 .resume-btn::before {
@@ -209,9 +209,9 @@ header {
 
 .resume-btn:hover {
   transform: translateY(-3px) scale(1.05);
-  box-shadow: 0 8px 30px rgba(177, 8, 189, 0.6),
-              0 0 0 1px rgba(177, 8, 189, 0.3);
-  background: linear-gradient(45deg, rgba(177, 8, 189, 0.9), rgba(88, 186, 255, 0.9));
+  box-shadow: 0 8px 30px rgba(168, 85, 247, 0.6),
+              0 0 0 1px rgba(168, 85, 247, 0.3);
+  background: linear-gradient(45deg, rgba(168, 85, 247, 0.9), rgba(56, 189, 248, 0.9));
 }
 
 .resume-btn:active {
@@ -233,7 +233,7 @@ header {
   inset: 0;
   border-radius: 25px;
   padding: 2px;
-  background: linear-gradient(45deg, rgb(177, 8, 189), rgb(88, 186, 255));
+  background: linear-gradient(45deg, rgb(168, 85, 247), rgb(56, 189, 248));
   mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   mask-composite: exclude;
@@ -260,13 +260,13 @@ header {
 .bar {
   width: 25px;
   height: 3px;
-  background: linear-gradient(90deg, rgb(177, 8, 189), rgb(88, 186, 255));
+  background: linear-gradient(90deg, rgb(168, 85, 247), rgb(56, 189, 248));
   transition: all 0.3s ease;
   border-radius: 2px;
 }
 
 .nav-toggle:hover .bar {
-  background: linear-gradient(90deg, rgb(88, 186, 255), rgb(177, 8, 189));
+  background: linear-gradient(90deg, rgb(56, 189, 248), rgb(168, 85, 247));
 }
 
 /* Active link styles */
@@ -281,7 +281,7 @@ header {
 .nav-link.active::after {
   width: 80px;
   height: 80px;
-  background: radial-gradient(circle, rgba(177, 8, 189, 0.2), rgba(88, 186, 255, 0.2));
+  background: radial-gradient(circle, rgba(168, 85, 247, 0.2), rgba(56, 189, 248, 0.2));
 }
 
 /* Navbar scroll effect */
@@ -295,30 +295,6 @@ header.scrolled .navbar-enhanced {
 
 header.scrolled .nav-container {
   padding: 0;
-}
-
-/* Dark Mode Toggle */
-#darkModeToggle {
-  background: none;
-  border: none;
-  cursor: pointer;
-  margin-left: 1rem;
-  padding: 0.3rem;
-  border-radius: 50%;
-  transition: background 0.2s;
-  outline: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-#darkModeToggle:hover {
-  background: rgba(177, 8, 189, 0.12);
-}
-
-#darkModeIcon {
-  transition: color 0.3s;
-  color: #b108bd;
 }
 
 /* Hide legacy brand text and AI status chip (if present in markup) */
