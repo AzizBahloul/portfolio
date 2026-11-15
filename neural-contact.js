@@ -182,6 +182,11 @@ class NeuralContact {
     
     animate() {
         if (!this.ctx) return;
+        const section = document.getElementById('contact');
+        if (document.hidden || (section && !section.classList.contains('active'))) {
+            this.animationId = requestAnimationFrame(() => this.animate());
+            return;
+        }
         
         const time = Date.now();
         

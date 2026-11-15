@@ -29,7 +29,7 @@ function setupScene(gltf) {
   });
   renderer.outputColorSpace = THREE.SRGBColorSpace;
   // Cap pixel ratio to avoid extremely large renderbuffers on high-DPI / external monitors
-  const cappedPR = Math.min(window.devicePixelRatio || 1, 2);
+  const cappedPR = Math.min(window.devicePixelRatio || 1, 1.5);
   renderer.setPixelRatio(cappedPR);
   renderer.setSize(container.clientWidth, container.clientHeight);
   // Ensure the canvas will not overflow visually
@@ -134,7 +134,7 @@ function setupScene(gltf) {
     camera.aspect = container.clientWidth / container.clientHeight;
     camera.updateProjectionMatrix();
     // update renderer size; respect capped devicePixelRatio
-    renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 1.5));
     renderer.setSize(container.clientWidth, container.clientHeight);
   });
 
@@ -143,15 +143,20 @@ function setupScene(gltf) {
     window.visualViewport.addEventListener('resize', () => {
       camera.aspect = container.clientWidth / container.clientHeight;
       camera.updateProjectionMatrix();
-      renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
+      renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 1.5));
       renderer.setSize(container.clientWidth, container.clientHeight);
     });
   }
 
   const clock = new THREE.Clock();
+  const home = document.getElementById('home');
   function animate() {
     requestAnimationFrame(animate);
-    mixer.update(clock.getDelta());
+    const delta = clock.getDelta();
+    // nothing to draw when the hero is off-screen or the tab is hidden
+    if (document.hidden || (home && !home.classList.contains('active') && home.dataset.seen)) return;
+    if (home) home.dataset.seen = '1';
+    mixer.update(delta);
     renderer.render(scene, camera);
   }
 

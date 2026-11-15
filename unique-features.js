@@ -158,6 +158,7 @@
   }
 
   function animateParticles() {
+    if (document.hidden) { requestAnimationFrame(animateParticles); return; }
     ctx.clearRect(0, 0, particleCanvas.width, particleCanvas.height);
     particles.forEach(particle => {
       particle.update();
@@ -165,10 +166,13 @@
     });
 
     // Draw connections
-    particles.forEach((p1, i) => {
-      particles.slice(i + 1).forEach(p2 => {
+    for (let i = 0; i < particles.length; i++) {
+      const p1 = particles[i];
+      for (let j = i + 1; j < particles.length; j++) {
+        const p2 = particles[j];
         const dx = p1.x - p2.x;
         const dy = p1.y - p2.y;
+        if (dx > 100 || dx < -100 || dy > 100 || dy < -100) continue;
         const distance = Math.sqrt(dx * dx + dy * dy);
 
         if (distance < 100) {
@@ -179,8 +183,8 @@
           ctx.lineTo(p2.x, p2.y);
           ctx.stroke();
         }
-      });
-    });
+      }
+    }
 
     requestAnimationFrame(animateParticles);
   }

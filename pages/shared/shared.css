@@ -1,44 +1,11 @@
-/* Sub-pages: blueprint grid + grain + soft aurora behind the slider.
-   Same palette as the main site (violet / cyan). */
+/* Sub-pages: plain dark base, same palette as the main site (violet / cyan). */
 :root {
   --c-violet: #a855f7;
   --c-cyan: #38bdf8;
   --c-ink: #0b0b16;
-  --tx-grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 .6 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
 }
 
-body {
-  background-color: var(--c-ink);
-  background-image:
-    radial-gradient(ellipse 60% 50% at 20% 10%, color-mix(in srgb, var(--c-violet) 30%, transparent), transparent 70%),
-    radial-gradient(ellipse 55% 45% at 85% 90%, color-mix(in srgb, var(--c-cyan) 22%, transparent), transparent 70%);
-  background-attachment: fixed;
-}
-
-body::before,
-body::after {
-  content: '';
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-}
-
-body::before {
-  z-index: 0;
-  background-image:
-    linear-gradient(color-mix(in srgb, var(--c-cyan) 14%, transparent) 1px, transparent 1px),
-    linear-gradient(90deg, color-mix(in srgb, var(--c-cyan) 14%, transparent) 1px, transparent 1px);
-  background-size: 40px 40px;
-  -webkit-mask-image: radial-gradient(ellipse 80% 70% at 50% 50%, #000 20%, transparent 80%);
-  mask-image: radial-gradient(ellipse 80% 70% at 50% 50%, #000 20%, transparent 80%);
-}
-
-body::after {
-  z-index: 3;
-  background-image: var(--tx-grain);
-  opacity: 0.05;
-  mix-blend-mode: overlay;
-}
+body { background-color: var(--c-ink); }
 
 main { position: relative; z-index: 1; background: transparent !important; }
 
