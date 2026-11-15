@@ -22,10 +22,10 @@
 
 @keyframes brandGlow {
   0% {
-    filter: drop-shadow(0 0 10px rgba(168, 85, 247, 0.5));
+    filter: drop-shadow(0 0 10px rgba(177, 8, 189, 0.5));
   }
   100% {
-    filter: drop-shadow(0 0 20px rgba(56, 189, 248, 0.8));
+    filter: drop-shadow(0 0 20px rgba(88, 186, 255, 0.8));
   }
 }
 
@@ -74,7 +74,7 @@
 
 @keyframes blink-caret {
   from, to { border-color: transparent }
-  50% { border-color: #a855f7; }
+  50% { border-color: #b108bd; }
 }
 
 @keyframes fill-progress {
@@ -84,11 +84,11 @@
 
 @keyframes pulse-dot {
   0% {
-    box-shadow: 0 0 10px rgba(168, 85, 247, 0.7);
+    box-shadow: 0 0 10px rgba(177, 8, 189, 0.7);
     transform: translateX(-50%) scale(1);
   }
   100% {
-    box-shadow: 0 0 20px rgba(56, 189, 248, 0.9);
+    box-shadow: 0 0 20px rgba(88, 186, 255, 0.9);
     transform: translateX(-50%) scale(1.2);
   }
 }
@@ -134,10 +134,10 @@
 
 @keyframes typing-glow {
   0% {
-    text-shadow: 0 0 5px rgba(168, 85, 247, 0.2);
+    text-shadow: 0 0 5px rgba(177, 8, 189, 0.2);
   }
   100% {
-    text-shadow: 0 0 10px rgba(56, 189, 248, 0.4);
+    text-shadow: 0 0 10px rgba(88, 186, 255, 0.4);
   }
 }
 
@@ -157,8 +157,8 @@
 }
 
 @keyframes glowSkill {
-  0% { filter: drop-shadow(0 0 8px #a855f788); }
-  100% { filter: drop-shadow(0 0 18px #38bdf8cc); }
+  0% { filter: drop-shadow(0 0 8px #b108bd88); }
+  100% { filter: drop-shadow(0 0 18px #58baffcc); }
 }
 
 @keyframes floatSkill {
@@ -181,9 +181,9 @@
 }
 
 @keyframes statusPulse {
-  0% { box-shadow: 0 0 8px #38bdf899; }
-  50% { box-shadow: 0 0 18px #a855f7cc; }
-  100% { box-shadow: 0 0 8px #38bdf899; }
+  0% { box-shadow: 0 0 8px #58baff99; }
+  50% { box-shadow: 0 0 18px #b108bdcc; }
+  100% { box-shadow: 0 0 8px #58baff99; }
 }
 
 @keyframes circuit-glow {

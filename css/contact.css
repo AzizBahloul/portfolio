@@ -51,19 +51,19 @@
   height: clamp(64px, 12vw, 140px);
   background: radial-gradient(circle at 30% 30%, 
     rgba(255, 255, 255, 0.3),
-    rgba(56, 189, 248, 0.25) 30%,
-    rgba(168, 85, 247, 0.2) 60%,
+    rgba(88, 186, 255, 0.25) 30%,
+    rgba(177, 8, 189, 0.2) 60%,
     rgba(10, 10, 20, 0.95));
-  border: 2px solid rgba(56, 189, 248, 0.5);
+  border: 2px solid rgba(88, 186, 255, 0.5);
   border-radius: 50%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   box-shadow: 
-    0 0 40px rgba(56, 189, 248, 0.4),
-    0 0 80px rgba(168, 85, 247, 0.3),
-    inset 0 0 30px rgba(56, 189, 248, 0.2);
+    0 0 40px rgba(88, 186, 255, 0.4),
+    0 0 80px rgba(177, 8, 189, 0.3),
+    inset 0 0 30px rgba(88, 186, 255, 0.2);
   animation: hub-pulse 3s ease-in-out infinite;
 }
 
@@ -73,13 +73,13 @@
   left: -18%;
   right: -18%;
   bottom: -18%;
-  border: 1px solid rgba(56, 189, 248, 0.3);
+  border: 1px solid rgba(88, 186, 255, 0.3);
   border-radius: 50%;
   animation: pulse-ring 2s ease-out infinite;
 }
 
 .hub-icon {
-  color: rgba(56, 189, 248, 0.9);
+  color: rgba(88, 186, 255, 0.9);
   margin-bottom: 4px;
 }
 
@@ -134,15 +134,15 @@
   width: clamp(140px, 22vw, 220px);
   padding: clamp(10px, 1.6vw, 20px);
   background: linear-gradient(135deg,
-    rgba(56, 189, 248, 0.15) 0%,
-    rgba(168, 85, 247, 0.1) 50%,
+    rgba(88, 186, 255, 0.15) 0%,
+    rgba(177, 8, 189, 0.1) 50%,
     rgba(10, 10, 20, 0.9) 100%);
-  border: 1px solid rgba(56, 189, 248, 0.3);
+  border: 1px solid rgba(88, 186, 255, 0.3);
   border-radius: 16px;
   backdrop-filter: blur(10px);
   box-shadow: 
     0 10px 30px rgba(0, 0, 0, 0.3),
-    0 0 20px rgba(56, 189, 248, 0.2),
+    0 0 20px rgba(88, 186, 255, 0.2),
     inset 0 1px 2px rgba(255, 255, 255, 0.1);
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   transform-style: preserve-3d;
@@ -152,9 +152,9 @@
   transform: translateZ(20px) scale(1.05);
   box-shadow: 
     0 20px 50px rgba(0, 0, 0, 0.4),
-    0 0 40px rgba(56, 189, 248, 0.4),
+    0 0 40px rgba(88, 186, 255, 0.4),
     inset 0 1px 2px rgba(255, 255, 255, 0.2);
-  border-color: rgba(56, 189, 248, 0.6);
+  border-color: rgba(88, 186, 255, 0.6);
 }
 
 /* Holographic Effect */
@@ -167,7 +167,7 @@
   border-radius: inherit;
   background: linear-gradient(45deg,
     transparent 30%,
-    rgba(56, 189, 248, 0.1) 50%,
+    rgba(88, 186, 255, 0.1) 50%,
     transparent 70%);
   opacity: 0;
   transition: opacity 0.3s ease;
@@ -190,21 +190,21 @@
   height: clamp(36px, 8vw, 56px);
   margin: 0 auto 12px;
   padding: clamp(8px, 1.6vw, 12px);
-  background: rgba(56, 189, 248, 0.1);
-  border: 1px solid rgba(56, 189, 248, 0.3);
+  background: rgba(88, 186, 255, 0.1);
+  border: 1px solid rgba(88, 186, 255, 0.3);
   border-radius: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: rgba(56, 189, 248, 0.9);
+  color: rgba(88, 186, 255, 0.9);
   transition: all 0.3s ease;
 }
 
 .node-card:hover .node-icon {
-  background: rgba(56, 189, 248, 0.2);
-  border-color: rgba(56, 189, 248, 0.5);
-  color: #38bdf8;
-  box-shadow: 0 0 15px rgba(56, 189, 248, 0.3);
+  background: rgba(88, 186, 255, 0.2);
+  border-color: rgba(88, 186, 255, 0.5);
+  color: #58baff;
+  box-shadow: 0 0 15px rgba(88, 186, 255, 0.3);
 }
 
 .node-content h3 {
@@ -227,10 +227,10 @@
   align-items: center;
   gap: 6px;
   padding: 8px 16px;
-  background: rgba(56, 189, 248, 0.1);
-  border: 1px solid rgba(56, 189, 248, 0.3);
+  background: rgba(88, 186, 255, 0.1);
+  border: 1px solid rgba(88, 186, 255, 0.3);
   border-radius: 20px;
-  color: rgba(56, 189, 248, 0.9);
+  color: rgba(88, 186, 255, 0.9);
   text-decoration: none;
   font-size: 0.85rem;
   font-weight: 500;
@@ -238,19 +238,19 @@
 }
 
 .neural-link:hover {
-  background: rgba(56, 189, 248, 0.2);
-  border-color: rgba(56, 189, 248, 0.5);
-  color: #38bdf8;
-  box-shadow: 0 0 15px rgba(56, 189, 248, 0.3);
+  background: rgba(88, 186, 255, 0.2);
+  border-color: rgba(88, 186, 255, 0.5);
+  color: #58baff;
+  box-shadow: 0 0 15px rgba(88, 186, 255, 0.3);
   transform: translateY(-2px);
 }
 
 /* Platform-specific Colors */
 .node-github .node-icon,
 .node-github .neural-link {
-  background: rgba(56, 189, 248, 0.1);
-  border-color: rgba(56, 189, 248, 0.3);
-  color: rgba(56, 189, 248, 0.9);
+  background: rgba(88, 186, 255, 0.1);
+  border-color: rgba(88, 186, 255, 0.3);
+  color: rgba(88, 186, 255, 0.9);
 }
 
 .node-linkedin .node-icon,
@@ -278,15 +278,15 @@
 @keyframes hub-pulse {
   0%, 100% { 
     box-shadow: 
-      0 0 40px rgba(56, 189, 248, 0.4),
-      0 0 80px rgba(168, 85, 247, 0.3),
-      inset 0 0 30px rgba(56, 189, 248, 0.2);
+      0 0 40px rgba(88, 186, 255, 0.4),
+      0 0 80px rgba(177, 8, 189, 0.3),
+      inset 0 0 30px rgba(88, 186, 255, 0.2);
   }
   50% { 
     box-shadow: 
-      0 0 60px rgba(56, 189, 248, 0.6),
-      0 0 120px rgba(168, 85, 247, 0.4),
-      inset 0 0 40px rgba(56, 189, 248, 0.3);
+      0 0 60px rgba(88, 186, 255, 0.6),
+      0 0 120px rgba(177, 8, 189, 0.4),
+      inset 0 0 40px rgba(88, 186, 255, 0.3);
   }
 }
 
@@ -387,7 +387,7 @@
 }
 
 .contact-email a {
-  color: #38bdf8;
+  color: #58baff;
   text-decoration: underline;
   text-underline-offset: 3px;
 }

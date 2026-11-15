@@ -14,10 +14,10 @@
     top: 0;
     bottom: 0;
     width: clamp(2px, 0.4vw, 3px);
-    background: linear-gradient(180deg, #a855f7, #38bdf8, #a855f7);
+    background: linear-gradient(180deg, #b108bd, #58baff, #b108bd);
     transform: none;
     border-radius: 2px;
-    box-shadow: 0 0 clamp(10px, 2vw, 20px) rgba(168, 85, 247, 0.4);
+    box-shadow: 0 0 clamp(10px, 2vw, 20px) rgba(177, 8, 189, 0.4);
 }
 
 /* Timeline item always on the right of the line */
@@ -52,11 +52,11 @@
     top: clamp(1.6rem, 4vw, 2rem);
     width: clamp(12px, 2.6vw, 20px);
     height: clamp(12px, 2.6vw, 20px);
-    background: linear-gradient(135deg, #a855f7, #38bdf8);
+    background: linear-gradient(135deg, #b108bd, #58baff);
     border-radius: 50%;
     transform: translateX(-50%);
     z-index: 10;
-    box-shadow: 0 0 clamp(10px, 2vw, 20px) rgba(168, 85, 247, 0.6);
+    box-shadow: 0 0 clamp(10px, 2vw, 20px) rgba(177, 8, 189, 0.6);
     animation: pulse 2s infinite;
 }
 
@@ -81,7 +81,7 @@
     font-weight: 600;
     color: #fff;
     margin-bottom: clamp(0.35rem, 1.2vw, 0.5rem);
-    background: linear-gradient(135deg, #a855f7, #38bdf8);
+    background: linear-gradient(135deg, #b108bd, #58baff);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -89,7 +89,7 @@
 
 .experience-company {
     font-size: clamp(0.95rem, 1.4vw, 1.1rem);
-    color: #38bdf8;
+    color: #58baff;
     font-weight: 500;
     margin-bottom: clamp(0.2rem, 0.8vw, 0.3rem);
 }
@@ -123,20 +123,20 @@
 }
 
 .tech-tag {
-    background: rgba(168, 85, 247, 0.2);
-    color: #a855f7;
+    background: rgba(177, 8, 189, 0.2);
+    color: #b108bd;
     padding: clamp(6px, 1.2vw, 0.3rem) clamp(10px, 2.2vw, 0.8rem);
     border-radius: 20px;
     font-size: clamp(0.7rem, 1.1vw, 0.8rem);
     font-weight: 500;
-    border: 1px solid rgba(168, 85, 247, 0.3);
+    border: 1px solid rgba(177, 8, 189, 0.3);
     transition: all 0.24s ease;
 }
 
 .tech-tag:hover {
-    background: rgba(168, 85, 247, 0.3);
+    background: rgba(177, 8, 189, 0.3);
     transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(168, 85, 247, 0.3);
+    box-shadow: 0 4px 12px rgba(177, 8, 189, 0.3);
 }
 
 /* Responsive Design */
@@ -193,9 +193,9 @@
 
 @keyframes pulse {
     0%, 100% {
-        box-shadow: 0 0 20px rgba(168, 85, 247, 0.6);
+        box-shadow: 0 0 20px rgba(177, 8, 189, 0.6);
     }
     50% {
-        box-shadow: 0 0 30px rgba(168, 85, 247, 0.9), 0 0 40px rgba(56, 189, 248, 0.4);
+        box-shadow: 0 0 30px rgba(177, 8, 189, 0.9), 0 0 40px rgba(88, 186, 255, 0.4);
     }
 }

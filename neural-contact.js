@@ -122,12 +122,12 @@ class NeuralContact {
         
         // Dynamic styling based on activity
         if (active) {
-            this.ctx.strokeStyle = `rgba(56, 189, 248, ${0.6 + Math.sin(time * 0.005 + pulseOffset) * 0.3})`;
+            this.ctx.strokeStyle = `rgba(88, 186, 255, ${0.6 + Math.sin(time * 0.005 + pulseOffset) * 0.3})`;
             this.ctx.lineWidth = 2;
             this.ctx.setLineDash([5, 10]);
             this.ctx.lineDashOffset = -time * 0.1;
         } else {
-            this.ctx.strokeStyle = 'rgba(56, 189, 248, 0.2)';
+            this.ctx.strokeStyle = 'rgba(88, 186, 255, 0.2)';
             this.ctx.lineWidth = 1;
             this.ctx.setLineDash([2, 8]);
             this.ctx.lineDashOffset = -time * 0.05;
@@ -138,7 +138,7 @@ class NeuralContact {
         // Add glow effect for active connections
         if (active) {
             this.ctx.shadowBlur = 10;
-            this.ctx.shadowColor = '#38bdf8';
+            this.ctx.shadowColor = '#58baff';
             this.ctx.stroke();
             this.ctx.shadowBlur = 0;
         }
@@ -169,12 +169,12 @@ class NeuralContact {
         this.particles.forEach(particle => {
             this.ctx.beginPath();
             this.ctx.arc(particle.x, particle.y, particle.size * particle.life, 0, Math.PI * 2);
-            this.ctx.fillStyle = `rgba(168, 85, 247, ${particle.life * 0.8})`;
+            this.ctx.fillStyle = `rgba(177, 8, 189, ${particle.life * 0.8})`;
             this.ctx.fill();
             
             // Add glow
             this.ctx.shadowBlur = 8;
-            this.ctx.shadowColor = '#a855f7';
+            this.ctx.shadowColor = '#b108bd';
             this.ctx.fill();
             this.ctx.shadowBlur = 0;
         });
@@ -265,7 +265,7 @@ class NodeInteractions {
             position: absolute;
             width: 4px;
             height: 4px;
-            background: rgba(56, 189, 248, 0.6);
+            background: rgba(88, 186, 255, 0.6);
             border-radius: 50%;
             pointer-events: none;
             left: ${x}px;

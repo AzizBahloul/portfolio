@@ -251,7 +251,7 @@
 /* AI Code-themed Card Styling */
 .ai-code-card {
   background: rgba(15, 15, 30, 0.85);
-  border: 1px solid rgba(56, 189, 248, 0.3);
+  border: 1px solid rgba(88, 186, 255, 0.3);
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
   position: relative;
   overflow: hidden;
@@ -260,11 +260,11 @@
 
 .ai-code-card:hover {
   transform: translateY(-10px);
-  border-color: rgba(168, 85, 247, 0.5);
+  border-color: rgba(177, 8, 189, 0.5);
   box-shadow: 
     0 15px 35px rgba(0, 0, 0, 0.3),
-    0 0 15px rgba(168, 85, 247, 0.3),
-    0 0 30px rgba(56, 189, 248, 0.2);
+    0 0 15px rgba(177, 8, 189, 0.3),
+    0 0 30px rgba(88, 186, 255, 0.2);
 }
 
 .card-circuit-overlay {
@@ -274,11 +274,11 @@
   right: 0;
   bottom: 0;
   background-image: 
-    radial-gradient(circle at 10% 20%, rgba(56, 189, 248, 0.05) 0%, transparent 20%),
-    radial-gradient(circle at 90% 80%, rgba(168, 85, 247, 0.05) 0%, transparent 20%),
-    linear-gradient(45deg, transparent 48%, rgba(56, 189, 248, 0.1) 50%, transparent 52%),
-    linear-gradient(-45deg, transparent 48%, rgba(168, 85, 247, 0.1) 50%, transparent 52%),
-    repeating-linear-gradient(90deg, transparent, transparent 6px, rgba(56, 189, 248, 0.03) 6px, rgba(56, 189, 248, 0.03) 12px);
+    radial-gradient(circle at 10% 20%, rgba(88, 186, 255, 0.05) 0%, transparent 20%),
+    radial-gradient(circle at 90% 80%, rgba(177, 8, 189, 0.05) 0%, transparent 20%),
+    linear-gradient(45deg, transparent 48%, rgba(88, 186, 255, 0.1) 50%, transparent 52%),
+    linear-gradient(-45deg, transparent 48%, rgba(177, 8, 189, 0.1) 50%, transparent 52%),
+    repeating-linear-gradient(90deg, transparent, transparent 6px, rgba(88, 186, 255, 0.03) 6px, rgba(88, 186, 255, 0.03) 12px);
   opacity: 0.3;
   transition: opacity 0.4s ease;
   pointer-events: none;
@@ -305,7 +305,7 @@
   padding: 1.5em;
   width: 300px;
   backdrop-filter: blur(10px);
-  border: 1px solid rgba(56, 189, 248, 0.1);
+  border: 1px solid rgba(88, 186, 255, 0.1);
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
   position: relative;
@@ -320,9 +320,9 @@
   width: 100%;
   height: 100%;
   background: linear-gradient(135deg, 
-              rgba(168, 85, 247, 0.1) 0%, 
+              rgba(177, 8, 189, 0.1) 0%, 
               transparent 50%, 
-              rgba(56, 189, 248, 0.1) 100%);
+              rgba(88, 186, 255, 0.1) 100%);
   opacity: 0;
   transition: opacity 0.3s ease;
   z-index: -1;
@@ -331,7 +331,7 @@
 .experience-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
-  border-color: rgba(168, 85, 247, 0.3);
+  border-color: rgba(177, 8, 189, 0.3);
 }
 
 .experience-card:hover::before {
@@ -348,7 +348,7 @@
 .experience-header h3 {
   margin: 0;
   font-size: 1.3em;
-  color: #38bdf8;
+  color: #58baff;
   font-weight: 600;
 }
 
@@ -360,7 +360,7 @@
 
 .experience-company {
   font-size: 1.1em;
-  color: #a855f7;
+  color: #b108bd;
   margin-bottom: 1em;
   font-weight: 500;
 }
@@ -391,7 +391,7 @@
   padding: 1.5em;
   width: 280px;
   backdrop-filter: blur(10px);
-  border: 1px solid rgba(56, 189, 248, 0.1);
+  border: 1px solid rgba(88, 186, 255, 0.1);
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
   display: flex;
@@ -409,9 +409,9 @@
   width: 100%;
   height: 100%;
   background: linear-gradient(135deg, 
-              rgba(168, 85, 247, 0.1) 0%, 
+              rgba(177, 8, 189, 0.1) 0%, 
               transparent 50%, 
-              rgba(56, 189, 248, 0.1) 100%);
+              rgba(88, 186, 255, 0.1) 100%);
   opacity: 0;
   transition: opacity 0.3s ease;
   z-index: -1;
@@ -420,7 +420,7 @@
 .certificate-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
-  border-color: rgba(168, 85, 247, 0.3);
+  border-color: rgba(177, 8, 189, 0.3);
 }
 
 .certificate-card:hover::before {
@@ -437,14 +437,14 @@
   background: rgba(15, 15, 25, 0.5);
   border-radius: 50%;
   padding: 10px;
-  border: 1px solid rgba(56, 189, 248, 0.2);
+  border: 1px solid rgba(88, 186, 255, 0.2);
   transition: all 0.3s ease;
 }
 
 .certificate-card:hover .certificate-logo {
   transform: scale(1.1);
-  border-color: rgba(168, 85, 247, 0.4);
-  box-shadow: 0 0 20px rgba(168, 85, 247, 0.3);
+  border-color: rgba(177, 8, 189, 0.4);
+  box-shadow: 0 0 20px rgba(177, 8, 189, 0.3);
 }
 
 .certificate-content {
@@ -455,7 +455,7 @@
 .certificate-content h3 {
   margin: 0 0 0.5em 0;
   font-size: 1.2em;
-  color: #38bdf8;
+  color: #58baff;
   font-weight: 600;
 }
 
@@ -478,8 +478,8 @@
 .certificate-link {
   display: inline-block;
   padding: 0.5em 1em;
-  background: linear-gradient(135deg, rgba(56, 189, 248, 0.2), rgba(168, 85, 247, 0.2));
-  border: 1px solid rgba(56, 189, 248, 0.3);
+  background: linear-gradient(135deg, rgba(88, 186, 255, 0.2), rgba(177, 8, 189, 0.2));
+  border: 1px solid rgba(88, 186, 255, 0.3);
   border-radius: 20px;
   color: #fff;
   text-decoration: none;
@@ -488,9 +488,9 @@
 }
 
 .certificate-link:hover {
-  background: linear-gradient(135deg, rgba(56, 189, 248, 0.4), rgba(168, 85, 247, 0.4));
+  background: linear-gradient(135deg, rgba(88, 186, 255, 0.4), rgba(177, 8, 189, 0.4));
   transform: translateY(-2px);
-  box-shadow: 0 5px 15px rgba(56, 189, 248, 0.2);
+  box-shadow: 0 5px 15px rgba(88, 186, 255, 0.2);
 }
 
 /* Company logo styling */
@@ -527,7 +527,7 @@
   padding: 8px;
   border-radius: 14px;
   background: rgba(15, 15, 25, 0.65);
-  border: 1px solid rgba(56, 189, 248, 0.15);
+  border: 1px solid rgba(88, 186, 255, 0.15);
   backdrop-filter: blur(10px);
   box-shadow: 0 12px 40px rgba(0, 0, 0, 0.18);
   overflow: hidden;
@@ -540,7 +540,7 @@
   justify-content: center;
   position: relative;
   border-radius: 10px;
-  border: 1px solid rgba(168, 85, 247, 0.25);
+  border: 1px solid rgba(177, 8, 189, 0.25);
   background: linear-gradient(180deg, rgba(33,33,46,0.65), rgba(22,22,34,0.8));
   transition: all 0.45s ease;
   cursor: pointer;
@@ -548,7 +548,7 @@
 }
 
 .company-card .panel:focus-visible {
-  outline: 2px solid #38bdf8;
+  outline: 2px solid #58baff;
   outline-offset: 2px;
 }
 
@@ -556,8 +556,8 @@
 .company-card .panel:focus-visible,
 .company-card .panel.active {
   flex: 5;
-  border-color: rgba(56, 189, 248, 0.45);
-  box-shadow: inset 0 0 0 1px rgba(56, 189, 248,0.15), 0 8px 30px rgba(56, 189, 248,0.12);
+  border-color: rgba(88, 186, 255, 0.45);
+  box-shadow: inset 0 0 0 1px rgba(88, 186, 255,0.15), 0 8px 30px rgba(88, 186, 255,0.12);
 }
 
 .company-card .label {
@@ -567,7 +567,7 @@
   align-items: center;
   justify-content: center;
   padding: 10px 12px;
-  color: #38bdf8;
+  color: #58baff;
   letter-spacing: .1em;
   text-transform: uppercase;
   font-weight: 600;
@@ -581,7 +581,7 @@
 .company-card .panel:hover .label,
 .company-card .panel:focus-visible .label,
 .company-card .panel.active .label {
-  color: #a855f7;
+  color: #b108bd;
   opacity: 0.08;
 }
 
@@ -617,7 +617,7 @@
   text-align: center;
 }
 
-.company-card .desc h4 span { color: #38bdf8; font-weight: 500; }
+.company-card .desc h4 span { color: #58baff; font-weight: 500; }
 
 .company-card .desc ul {
   margin: 0 auto;
@@ -643,8 +643,8 @@
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background: radial-gradient(circle, #a855f7 0%, #38bdf8 100%);
-  box-shadow: 0 0 8px rgba(56, 189, 248,0.5);
+  background: radial-gradient(circle, #b108bd 0%, #58baff 100%);
+  box-shadow: 0 0 8px rgba(88, 186, 255,0.5);
 }
 
 .company-card .desc .tech {
@@ -656,9 +656,9 @@
 }
 
 .company-card .desc .tech span {
-  background: rgba(56, 189, 248,0.12);
-  color: #38bdf8;
-  border: 1px solid rgba(56, 189, 248,0.25);
+  background: rgba(88, 186, 255,0.12);
+  color: #58baff;
+  border: 1px solid rgba(88, 186, 255,0.25);
   padding: 4px 8px;
   border-radius: 999px;
   font-size: 0.78rem;
@@ -669,7 +669,7 @@
   content: '';
   position: absolute;
   inset: -2px;
-  background: radial-gradient(120px 120px at var(--mx, 50%) var(--my, 50%), rgba(56, 189, 248, 0.18), transparent 60%);
+  background: radial-gradient(120px 120px at var(--mx, 50%) var(--my, 50%), rgba(88, 186, 255, 0.18), transparent 60%);
   pointer-events: none;
   opacity: 0;
   transition: opacity .35s ease;
@@ -710,7 +710,7 @@
     justify-content: flex-start;
     padding: 14px 16px 0;
     opacity: 1;
-    color: #38bdf8;
+    color: #58baff;
   }
   .company-card .desc {
     position: static;
@@ -728,9 +728,9 @@
 /* Dark mode adjustments */
 body.dark-mode .company-card {
   background: rgba(20, 20, 35, 0.7);
-  border-color: rgba(56, 189, 248, 0.18);
+  border-color: rgba(88, 186, 255, 0.18);
 }
 body.dark-mode .company-card .panel {
   background: linear-gradient(180deg, rgba(28,28,42,0.75), rgba(18,18,28,0.85));
-  border-color: rgba(168, 85, 247, 0.28);
+  border-color: rgba(177, 8, 189, 0.28);
 }

@@ -95,7 +95,7 @@
   gap: 0.6em;
 }
 
-.terminal-meta dt { color: #38bdf8; }
+.terminal-meta dt { color: #58baff; }
 .terminal-meta dt::after { content: ':'; }
 .terminal-meta dt:empty::after { content: ''; }
 .terminal-meta dd { margin: 0; color: #cfcfcf; }
@@ -113,8 +113,8 @@
   background: rgba(15, 15, 30, 0.9);
   box-shadow: 
     0 10px 30px rgba(0, 0, 0, 0.3),
-    0 0 20px rgba(168, 85, 247, 0.2);
-  border: 1px solid rgba(56, 189, 248, 0.3);
+    0 0 20px rgba(177, 8, 189, 0.2);
+  border: 1px solid rgba(88, 186, 255, 0.3);
   transition: all 0.28s ease;
   transform: perspective(800px) rotateX(0deg);
 }
@@ -131,8 +131,8 @@
   transform: perspective(800px) rotateX(5deg) translateY(-5px);
   box-shadow: 
     0 15px 40px rgba(0, 0, 0, 0.4),
-    0 0 30px rgba(168, 85, 247, 0.3);
-  border-color: rgba(168, 85, 247, 0.5);
+    0 0 30px rgba(177, 8, 189, 0.3);
+  border-color: rgba(177, 8, 189, 0.5);
 }
 
 .terminal-header {
@@ -141,11 +141,11 @@
   align-items: center;
   padding: 0.5rem 1rem;
   background: rgba(30, 30, 50, 0.95);
-  border-bottom: 1px solid rgba(56, 189, 248, 0.2);
+  border-bottom: 1px solid rgba(88, 186, 255, 0.2);
 }
 
 .terminal-title {
-  color: #38bdf8;
+  color: #58baff;
   font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
   font-size: clamp(0.78rem, 1.2vw + 0.4rem, 0.95rem);
   font-weight: 500;
@@ -172,7 +172,7 @@
   font-size: clamp(0.7rem, 0.9vw + 0.4rem, 0.9rem);
   user-select: none;
   text-align: right;
-  border-right: 1px solid rgba(56, 189, 248, 0.2);
+  border-right: 1px solid rgba(88, 186, 255, 0.2);
 }
 
 .code-content {
@@ -264,7 +264,7 @@
   content: '|';
   position: absolute;
   right: 0;
-  color: #a855f7;
+  color: #b108bd;
   background-color: rgba(15, 15, 30, 0.9);
   animation: typing-cursor 0.8s steps(1) infinite, typing-move 0.1s forwards;
   animation-delay: calc((var(--line-index, 0) * 0.8s) + 0.5s);
@@ -281,7 +281,7 @@
 /* Typing Cursor Styles */
 .typing-cursor {
   display: inline-block;
-  color: #a855f7;
+  color: #b108bd;
   font-weight: bold;
   animation: blink-cursor 0.8s step-end infinite;
   opacity: 0;
@@ -292,7 +292,7 @@
 /* Typing Animation */
 .typing-text {
   overflow: hidden;
-  border-right: 0.15em solid #a855f7;
+  border-right: 0.15em solid #b108bd;
   white-space: nowrap;
   margin: 0 auto;
   letter-spacing: 0.05em;
@@ -312,7 +312,7 @@
 .progress-fill {
   height: 100%;
   width: 0;
-  background: linear-gradient(90deg, #38bdf8, #a855f7);
+  background: linear-gradient(90deg, #58baff, #b108bd);
   animation: fill-progress 2s ease-out forwards;
 }
 

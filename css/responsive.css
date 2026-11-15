@@ -207,11 +207,11 @@
   font-weight: 700;
   color: #fff;
   letter-spacing: 1.5px;
-  text-shadow: 0 0 8px #a855f733;
+  text-shadow: 0 0 8px #b108bd33;
 }
 
 .neural-svg {
-  filter: drop-shadow(0 0 8px #38bdf844);
+  filter: drop-shadow(0 0 8px #58baff44);
 }
 
 .glass-nav-menu {
@@ -246,7 +246,7 @@
   bottom: 0.3em;
   height: 3px;
   border-radius: 2px;
-  background: linear-gradient(90deg, #a855f7 30%, #38bdf8 100%);
+  background: linear-gradient(90deg, #b108bd 30%, #58baff 100%);
   opacity: 0;
   transform: scaleX(0.5);
   transition: all 0.32s cubic-bezier(.77,0,.18,1);
@@ -258,18 +258,18 @@
 }
 
 .glass-nav-link:hover, .glass-nav-link:focus {
-  color: #38bdf8;
-  background: rgba(56, 189, 248, 0.10);
+  color: #58baff;
+  background: rgba(88, 186, 255, 0.10);
 }
 
 .glass-resume-btn {
-  background: linear-gradient(90deg, #a855f7 40%, #38bdf8 100%);
+  background: linear-gradient(90deg, #b108bd 40%, #58baff 100%);
   color: #fff;
   font-weight: 700;
   font-family: 'Inter', 'Fira Mono', monospace;
   border-radius: 999px;
   padding: 0.5rem 1.3rem;
-  box-shadow: 0 2px 12px #a855f733;
+  box-shadow: 0 2px 12px #b108bd33;
   text-decoration: none;
   border: none;
   transition: background 0.18s, color 0.18s;
@@ -278,7 +278,7 @@
 }
 
 .glass-resume-btn:hover, .glass-resume-btn:focus {
-  background: linear-gradient(90deg, #38bdf8 40%, #a855f7 100%);
+  background: linear-gradient(90deg, #58baff 40%, #b108bd 100%);
   color: #fff;
 }
 
@@ -292,7 +292,7 @@
   background: rgba(24, 24, 40, 0.32);
   border-radius: 12px;
   padding: 0.3em 1.1em 0.3em 0.8em;
-  box-shadow: 0 0 8px #38bdf822;
+  box-shadow: 0 0 8px #58baff22;
   margin-left: 1.2rem;
 }
 
@@ -300,8 +300,8 @@
   width: 0.85em;
   height: 0.85em;
   border-radius: 50%;
-  background: #38bdf8;
-  box-shadow: 0 0 8px #38bdf899;
+  background: #58baff;
+  box-shadow: 0 0 8px #58baff99;
   display: inline-block;
   margin-right: 0.2em;
   transition: background 0.3s, box-shadow 0.3s;
@@ -309,8 +309,8 @@
 }
 
 .glass-status-dot.active {
-  background: #a855f7;
-  box-shadow: 0 0 12px #a855f7cc;
+  background: #b108bd;
+  box-shadow: 0 0 12px #b108bdcc;
 }
 
 .glass-status-text {
@@ -319,7 +319,7 @@
 }
 
 .glass-status-active {
-  color: #38bdf8;
+  color: #58baff;
   font-weight: 700;
 }
 
@@ -345,7 +345,7 @@
   display: block;
   width: 22px;
   height: 3px;
-  background: #a855f7;
+  background: #b108bd;
   margin: 3px 0;
   border-radius: 2px;
   transition: all 0.3s cubic-bezier(.77,0,.18,1);

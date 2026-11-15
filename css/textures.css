@@ -6,8 +6,8 @@
    ============================================================ */
 
 :root {
-  --c-violet: #a855f7;
-  --c-cyan: #38bdf8;
+  --c-violet: #b108bd;
+  --c-cyan: #58baff;
   --c-pink: #f472b6;
   --c-amber: #fde68a;
   --c-white: #ffffff;
@@ -55,14 +55,6 @@
 }
 
 /* ---------- components ---------- */
-
-/* NAVBAR: fluted glass (vertical flutes + frosted blur) */
-.glass-navbar {
-  background-image:
-    repeating-linear-gradient(90deg, color-mix(in srgb, var(--c-white) 7%, transparent) 0 2px, color-mix(in srgb, var(--c-white) 0%, transparent) 2px 7px, color-mix(in srgb, var(--c-black) 12%, transparent) 7px 8px),
-    linear-gradient(180deg, color-mix(in srgb, var(--c-violet) 12%, transparent), color-mix(in srgb, var(--c-cyan) 5%, transparent));
-  border-bottom: 1px solid color-mix(in srgb, var(--c-white) 10%, transparent);
-}
 
 /* ---------- navbar: scrollspy state ---------- */
 

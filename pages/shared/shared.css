@@ -1,7 +1,7 @@
 /* Sub-pages: plain dark base, same palette as the main site (violet / cyan). */
 :root {
-  --c-violet: #a855f7;
-  --c-cyan: #38bdf8;
+  --c-violet: #b108bd;
+  --c-cyan: #58baff;
   --c-ink: #0b0b16;
 }
 
@@ -16,19 +16,7 @@ main { overflow-x: clip; }
 /* ---- shared typography + navbar, matching the main site ---- */
 body, button { font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif; }
 
-.navbar-enhanced {
-  background-image:
-    repeating-linear-gradient(90deg, color-mix(in srgb, #ffffff 7%, transparent) 0 2px, transparent 2px 7px),
-    linear-gradient(135deg, color-mix(in srgb, var(--c-violet) 22%, transparent), color-mix(in srgb, var(--c-cyan) 14%, transparent));
-  border: 1px solid color-mix(in srgb, #ffffff 14%, transparent);
-  max-width: calc(100vw - 2rem);
-}
-
-.nav-link .nav-underline { background: linear-gradient(90deg, var(--c-violet), var(--c-cyan)); }
-.nav-link.active .nav-text,
-.nav-link:hover .nav-text { text-shadow: 0 0 10px color-mix(in srgb, var(--c-violet) 70%, transparent); }
-.nav-link::after { background: radial-gradient(circle, color-mix(in srgb, var(--c-violet) 30%, transparent), color-mix(in srgb, var(--c-cyan) 20%, transparent)); }
-.nav-text { color: #b9b9c9; }
+.navbar-enhanced { max-width: calc(100vw - 2rem); }
 
 @media (max-width: 560px) {
   header { padding: 0.6rem 0.75rem; }

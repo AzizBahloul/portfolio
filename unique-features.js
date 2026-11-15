@@ -89,11 +89,11 @@
   magneticElements.forEach(el => {
     el.addEventListener('mouseenter', () => {
       cursor.style.transform = 'scale(2)';
-      cursor.style.borderColor = '#38bdf8';
+      cursor.style.borderColor = '#58baff';
     });
     el.addEventListener('mouseleave', () => {
       cursor.style.transform = 'scale(1)';
-      cursor.style.borderColor = '#a855f7';
+      cursor.style.borderColor = '#b108bd';
     });
   });
 
@@ -132,7 +132,7 @@
       this.size = Math.random() * 2 + 1;
       this.speedX = Math.random() * 0.5 - 0.25;
       this.speedY = Math.random() * 0.5 - 0.25;
-      this.color = Math.random() > 0.5 ? 'rgba(168, 85, 247, 0.5)' : 'rgba(56, 189, 248, 0.5)';
+      this.color = Math.random() > 0.5 ? 'rgba(177, 8, 189, 0.5)' : 'rgba(88, 186, 255, 0.5)';
     }
 
     update() {
@@ -176,7 +176,7 @@
         const distance = Math.sqrt(dx * dx + dy * dy);
 
         if (distance < 100) {
-          ctx.strokeStyle = `rgba(56, 189, 248, ${0.2 * (1 - distance / 100)})`;
+          ctx.strokeStyle = `rgba(88, 186, 255, ${0.2 * (1 - distance / 100)})`;
           ctx.lineWidth = 0.5;
           ctx.beginPath();
           ctx.moveTo(p1.x, p1.y);
